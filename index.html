@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153d52">
+  <title>点群实验室 · 看见对称性</title>
+  <link rel="stylesheet" href="styles.css?v=1.0">
+  <script defer src="math.js?v=1.0"></script>
+  <script defer src="learning-data.js?v=1.0"></script>
+  <script defer src="app.js?v=1.0"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#lab" aria-label="点群实验室首页"><span class="brand-mark" aria-hidden="true">✧</span><span>点群实验室<small>SYMMETRY LAB</small></span></a>
+    <nav aria-label="主要页面">
+      <button class="nav-item active" data-page="lab" aria-current="page">操作实验室</button>
+      <button class="nav-item" data-page="atlas">32 点群图谱</button>
+      <button class="nav-item" data-page="group">组合与群</button>
+      <button class="nav-item" data-page="quiz">小练习</button>
+    </nav>
+    <span class="course-tag">MATSCI 402 · Lecture 03</span>
+  </header>
+
+  <main>
+    <section class="page active" id="page-lab" aria-label="操作实验室">
+      <div class="page-heading"><div><p class="eyebrow">MOVE IT. SEE IT. UNDERSTAND IT.</p><h1>动一下，<span>还是它。</span></h1><p class="lead">当操作结束，结构能否与原来重合？亲手试一试。</p></div><button class="quiet-button" id="intro-toggle" aria-expanded="false">入门提示 <span aria-hidden="true">↗</span></button></div>
+      <div class="intro-panel" id="intro-panel" hidden><p><strong>对称操作</strong>是使结构在终态与原结构不可区分的变换；<strong>对称元素</strong>是操作所依托的轴、面或点。点群的全部操作至少共享一个不动点，本项目将它设在原点 O。</p><p>标签 H1、H2 用来追踪原子；同种原子可以互换位置。旋转物体的操作与拖动鼠标改变观察视角是两件不同的事。</p></div>
+
+      <div class="lab-grid">
+        <aside class="controls panel">
+          <div class="section-label"><span class="step-number">01</span> 选择结构</div>
+          <label class="sr-only" for="model-select">示例结构</label><select id="model-select"></select>
+          <div class="model-note"><strong id="model-group"></strong><p id="model-description"></p></div>
+          <div class="section-label"><span class="step-number">02</span> 选择操作</div>
+          <div class="operation-grid" id="operation-grid">
+            <button class="op-button" data-type="E"><span class="op-symbol">1</span><span>恒等<small>E</small></span></button>
+            <button class="op-button selected" data-type="rotation"><span class="op-symbol">n</span><span>旋转<small>Cₙ</small></span></button>
+            <button class="op-button" data-type="reflection"><span class="op-symbol">m</span><span>镜映<small>σ</small></span></button>
+            <button class="op-button" data-type="inversion"><span class="op-symbol"><span class="overbar">1</span></span><span>反演<small>i</small></span></button>
+            <button class="op-button" data-type="rotoinversion"><span class="op-symbol"><span class="overbar">n</span></span><span>旋转反演<small>课件重点</small></span></button>
+            <button class="op-button" data-type="improper"><span class="op-symbol">Sₙ</span><span>旋转镜映<small>化学补充</small></span></button>
+          </div>
+          <div class="parameter-row" id="n-row"><label for="n-select">旋转重数 n</label><select id="n-select"><option value="1">1 · 360°</option><option value="2" selected>2 · 180°</option><option value="3">3 · 120°</option><option value="4">4 · 90°</option><option value="5">5 · 72°（有限模型）</option><option value="6">6 · 60°</option></select></div>
+          <div class="parameter-row" id="axis-row"><label for="axis-select">操作轴</label><select id="axis-select"><option value="z">z 轴 [001]</option><option value="x">x 轴 [100]</option><option value="y">y 轴 [010]</option><option value="diagonal">体对角线 [111]</option></select></div>
+          <div class="parameter-row" id="plane-row" hidden><label for="plane-select">镜面</label><select id="plane-select"><option value="xz">xz 面 · y = 0</option><option value="yz">yz 面 · x = 0</option><option value="xy">xy 面 · z = 0</option><option value="diagonal">对角面 · x = y</option></select></div>
+          <p class="restriction" id="restriction" hidden>五重旋转可以出现在有限分子中；不属于三维周期晶体允许的旋转。</p>
+          <div class="operation-description"><p class="mini-label">这个操作做什么？</p><p id="op-explanation"></p><div class="formula" id="op-formula"></div></div>
+        </aside>
+
+        <div class="scene-column">
+          <div class="viewport panel">
+            <div class="viewport-heading"><div><span class="mini-label">三维观察台</span><h2 id="scene-title">水分子 · 二重旋转</h2></div><span class="phase-pill" id="phase-pill">起始状态</span></div>
+            <canvas id="main-canvas" tabindex="0" aria-label="交互三维结构。拖动改变视角，滚轮缩放，点击原子查看坐标；方向键调整视角，加减键缩放。"></canvas>
+            <div class="view-tools"><button data-view="perspective" class="view-button active" aria-pressed="true">立体</button><button data-view="top" class="view-button" aria-pressed="false">沿 z 轴</button><button data-view="front" class="view-button" aria-pressed="false">沿 y 轴</button><button id="camera-reset" class="view-button" aria-label="恢复视角与缩放">↺ 视角</button></div>
+            <div class="scene-legend"><span><i class="legend-dot solid"></i>当前结构</span><span><i class="legend-dot outline"></i>原始位置</span><span><i class="legend-line"></i>选中原子轨迹</span></div>
+            <span class="camera-hint">拖动视角 · 滚轮缩放 · 点击原子</span>
+          </div>
+          <div class="playback panel">
+            <div class="playback-top"><button class="primary-button" id="play-button"><span id="play-icon" aria-hidden="true">▶</span> <span id="play-text">播放操作</span></button><button class="secondary-button" id="step-button">下一步</button><button class="secondary-button" id="repeat-button" disabled>再作用一次</button><button class="icon-button" id="reset-button" aria-label="恢复原结构和播放进度" title="恢复原结构">↺</button><label class="speed-label" for="speed-select">速度 <select id="speed-select"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div>
+            <div class="timeline"><span id="progress-label">0%</span><input type="range" id="progress" min="0" max="1000" value="0" aria-label="操作播放进度"><span>终态</span></div>
+            <div class="stage-track" id="stage-track"></div>
+            <div class="display-toggles"><label><input id="ghost-toggle" type="checkbox" checked> 原始轮廓</label><label><input id="labels-toggle" type="checkbox" checked> 原子标签</label><label><input id="path-toggle" type="checkbox" checked> 运动轨迹</label><label><input id="orbit-toggle" type="checkbox"> 重复操作的等价点</label></div>
+            <p class="animation-note" id="animation-note">终态决定是否对称；中间动画只是帮助理解的过程。</p>
+          </div>
+          <div class="results-grid">
+            <div class="result-card panel" id="symmetry-card"><div class="mini-label">终态检验 · 与最初结构比较</div><h3 id="symmetry-result"></h3><p id="symmetry-detail"></p><div class="atom-mapping" id="atom-mapping"></div></div>
+            <div class="coordinate-card panel"><div class="mini-label">追踪一个原子 <select id="atom-select" aria-label="选择追踪原子"></select></div><div class="coordinate-pair"><div><span>最初坐标</span><code id="coord-before"></code></div><span class="coordinate-arrow">→</span><div><span>此刻坐标</span><code id="coord-after"></code></div></div><p id="coordinate-note">示意坐标 · 任意单位</p></div>
+          </div>
+          <details class="matrix-panel panel"><summary>查看操作矩阵 <span id="matrix-summary"></span></summary><div class="matrix-content"><div id="matrix-display" class="matrix"></div><div><p><strong>p′ = M p</strong> · 使用列向量</p><p id="matrix-note"></p><p id="order-note"></p></div></div></details>
+        </div>
+      </div>
+
+      <div class="guided-heading"><h2>从这四个小实验开始</h2><p>每个实验只关注一个关键问题。</p></div>
+      <div class="experiment-grid">
+        <button class="experiment-card" data-experiment="water-rotation"><span class="experiment-number">01 / 交换位置</span><strong>H1 和 H2 换了位置，<br>为什么仍是对称？</strong><span>H₂O · 2 / C₂ <b>↗</b></span></button>
+        <button class="experiment-card" data-experiment="water-inversion"><span class="experiment-number">02 / 一个反例</span><strong>有二重轴，<br>就一定有反演中心吗？</strong><span>H₂O · 1̄ / i <b>↗</b></span></button>
+        <button class="experiment-card" data-experiment="methane-roto"><span class="experiment-number">03 / 分两步看</span><strong>先旋转再反演，<br>四面体如何回到原状？</strong><span>CH₄ · 4̄ <b>↗</b></span></button>
+        <button class="experiment-card" data-experiment="probe-compare"><span class="experiment-number">04 / 符号辨析</span><strong>3̄ 和 S₃，<br>是同一个操作吗？</strong><span>示踪点 · 两种复合操作 <b>↗</b></span></button>
+      </div>
+    </section>
+
+    <section class="page" id="page-atlas" aria-label="32 点群图谱" hidden>
+      <div class="page-heading"><div><p class="eyebrow">THE BIG PICTURE</p><h1>32 种组合，<span>7 个晶系。</span></h1><p class="lead">晶体学点群速查：把国际符号和 Schoenflies 符号放在一起看。</p></div><span class="large-badge">32</span></div>
+      <div class="atlas-controls panel"><label for="system-filter">晶系 <select id="system-filter"><option value="all">全部晶系</option></select></label><label for="property-filter">对称性 <select id="property-filter"><option value="all">全部点群</option><option value="centro">含反演中心</option><option value="chiral">仅含保手性操作</option><option value="other">其余非中心对称群</option></select></label><span id="atlas-count" aria-live="polite"></span></div>
+      <div class="atlas-note"><strong>读图提示</strong><span>群的阶 |G| 是操作总数；n 是某个轴的折数。两者不能混用。“仅含保手性操作”指群的性质，不能仅据此断言一个未指定结构具有手性。</span></div>
+      <div id="atlas-grid" class="atlas-grid"></div>
+      <div class="atlas-detail panel" id="atlas-detail" aria-live="polite"></div>
+      <div class="reading-card panel"><h2>为什么这里没有 5？</h2><p>三维周期晶格允许的旋转折数为 1、2、3、4、6。有限分子可以有五重轴甚至更高折数；“32 种”说的是晶体学点群，并非所有有限物体的点群。</p><p>图谱是分类速查；实验室的模型是少量理想结构，不能用一次操作检验自动判定任意结构的完整点群。</p></div>
+    </section>
+
+    <section class="page" id="page-group" aria-label="组合与群" hidden>
+      <div class="page-heading"><div><p class="eyebrow">ONE OPERATION AFTER ANOTHER</p><h1>先做哪个，<span>有时很重要。</span></h1><p class="lead">矩阵乘积 A B 表示先做 B，再做 A。用一个示踪点检验顺序。</p></div></div>
+      <div class="composition-controls panel"><label for="compose-a">操作 A <select id="compose-a"></select></label><span class="compose-times">×</span><label for="compose-b">操作 B <select id="compose-b"></select></label><span id="commute-result" class="commute-pill"></span></div>
+      <div class="composition-grid"><div class="panel composition-card"><h2>A B · 先 B 后 A</h2><canvas id="ab-canvas" tabindex="0" aria-label="先 B 后 A 的终态。方向键可调整共同视角。"></canvas><div id="ab-coordinate" class="composition-coordinate"></div><div id="ab-matrix" class="matrix compact"></div></div><div class="panel composition-card"><h2>B A · 先 A 后 B</h2><canvas id="ba-canvas" tabindex="0" aria-label="先 A 后 B 的终态。方向键可调整共同视角。"></canvas><div id="ba-coordinate" class="composition-coordinate"></div><div id="ba-matrix" class="matrix compact"></div></div></div>
+      <p class="composition-legend">空心点：p = (1.20, 0.70, 1.00) · 实心点：变换后的 p · 虚线：经中间点的顺序示意，非运动轨迹</p>
+      <div class="group-bottom-grid"><div class="panel group-table-card"><p class="mini-label">一个完整的小群</p><h2>水分子的 mm2 / C₂ᵥ</h2><p>把四个对称操作两两组合，结果仍在这四个里面。点击表格中的结果，在实验室查看。</p><div id="cayley-table"></div><p class="table-caption">行 A × 列 B：先做列，再做行。mₓ𝓏 与 mᵧ𝓏 表示过原点的两个镜面。</p></div><div class="panel axioms-card"><p class="mini-label">群的四个条件</p><div><b>01</b><p><strong>封闭性</strong>组合任意两个操作，结果仍属于这个群。</p></div><div><b>02</b><p><strong>结合律</strong>(A B) C = A (B C)，改变括号不改变结果。</p></div><div><b>03</b><p><strong>恒等操作</strong>E A = A E = A，什么也不改变。</p></div><div><b>04</b><p><strong>逆操作</strong>每个操作都有能撤销它的操作，A⁻¹ A = E。</p></div><p class="axiom-note">交换律 A B = B A 不是群的必要条件。</p></div></div>
+    </section>
+
+    <section class="page" id="page-quiz" aria-label="小练习" hidden>
+      <div class="page-heading"><div><p class="eyebrow">CHECK YOUR INTUITION</p><h1>你能预测，<span>操作的结果吗？</span></h1><p class="lead">先回答，再看解释。答错也可以回到实验室亲手验证。</p></div><span class="quiz-score" id="quiz-score"></span></div>
+      <div class="quiz-shell panel"><div class="quiz-meta"><span id="quiz-position"></span><div id="quiz-dots" aria-label="练习进度"></div></div><h2 id="quiz-question"></h2><div id="quiz-options" class="quiz-options"></div><div id="quiz-feedback" class="quiz-feedback" hidden aria-live="polite"></div><div class="quiz-actions"><button id="quiz-prev" class="secondary-button">上一题</button><button id="quiz-lab" class="quiet-button">去实验室验证 ↗</button><button id="quiz-next" class="primary-button">下一题 →</button></div></div>
+      <div class="glossary-grid" id="glossary-grid"></div>
+    </section>
+  </main>
+  <footer><div><strong>点群实验室</strong><span>基于 L03 · Symmetry Operations, Groups, and Lattices</span></div><details><summary>范围与参考资料</summary><p>聚焦点群操作、32 晶体学点群和群的组合；平移、螺旋轴、滑移面与完整空间群不在此版本范围内。所有模型为理想几何示意。</p><div id="source-links"></div><p>课件对应：PDF 第 3、8、11–19、36–39、58 页。符号采用国际符号为主，化学符号为补充。动画插值是教学示意，不表示实际原子运动。</p></details></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript>此项目需要浏览器启用 JavaScript 才能播放三维对称操作。</noscript>
+</body>
+</html>
