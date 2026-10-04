@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#153d52">
   <title>点群实验室 · 看见对称性</title>
-  <link rel="stylesheet" href="styles.css?v=1.1">
+  <link rel="stylesheet" href="styles.css?v=1.2">
   <script defer src="math.js?v=1.0"></script>
   <script defer src="lattice-math.js?v=1.1"></script>
   <script defer src="learning-data.js?v=1.0"></script>
-  <script defer src="app.js?v=1.0"></script>
+  <script defer src="point-group-math.js?v=1.2"></script>
+  <script defer src="app.js?v=1.2"></script>
+  <script defer src="point-group-view.js?v=1.2"></script>
   <script defer src="lattice-view.js?v=1.1"></script>
 </head>
 <body>
@@ -84,10 +86,36 @@
 
     <section class="page" id="page-atlas" aria-label="32 点群图谱" hidden>
       <div class="page-heading"><div><p class="eyebrow">THE BIG PICTURE</p><h1>32 种组合，<span>7 个晶系。</span></h1><p class="lead">晶体学点群速查：把国际符号和 Schoenflies 符号放在一起看。</p></div><span class="large-badge">32</span></div>
-      <div class="atlas-controls panel"><label for="system-filter">晶系 <select id="system-filter"><option value="all">全部晶系</option></select></label><label for="property-filter">对称性 <select id="property-filter"><option value="all">全部点群</option><option value="centro">含反演中心</option><option value="chiral">仅含保手性操作</option><option value="other">其余非中心对称群</option></select></label><span id="atlas-count" aria-live="polite"></span><button type="button" class="quiet-button" id="lattice-jump">为什么没有 5？查看 3D 示意 ↓</button></div>
+      <div class="atlas-controls panel"><label for="system-filter">晶系 <select id="system-filter"><option value="all">全部晶系</option></select></label><label for="property-filter">对称性 <select id="property-filter"><option value="all">全部点群</option><option value="centro">含反演中心</option><option value="chiral">仅含保手性操作</option><option value="other">其余非中心对称群</option></select></label><span id="atlas-count" aria-live="polite"></span><button type="button" class="quiet-button" id="pg-jump">探索全部 32 种 3D 模型 ↓</button><button type="button" class="quiet-button" id="lattice-jump">为什么没有 5？查看 3D 示意 ↓</button></div>
       <div class="atlas-note"><strong>读图提示</strong><span>群的阶 |G| 是操作总数；n 是某个轴的折数。两者不能混用。“仅含保手性操作”指群的性质，不能仅据此断言一个未指定结构具有手性。</span></div>
       <div id="atlas-grid" class="atlas-grid"></div>
       <div class="atlas-detail panel" id="atlas-detail" aria-live="polite"></div>
+      <section class="panel pg-section" id="point-group-viewer" aria-labelledby="pg-heading">
+        <div class="pg-heading"><div><p class="eyebrow">EVERY GROUP. EVERY OPERATION.</p><h2 id="pg-heading">这个点群的三维模型</h2><p id="pg-group-note"></p></div><span class="pg-badge" id="pg-order-badge"></span></div>
+        <div class="pg-group-switch"><label for="pg-group-select">切换点群 <select id="pg-group-select" aria-label="三维模型点群（全部32种）"></select></label><span>32 / 32 种均可交互观察</span></div>
+        <div class="pg-layout">
+          <aside class="pg-controls">
+            <label class="section-label" for="pg-operation-select">① 选择群内操作</label><select id="pg-operation-select" aria-label="选择该点群的对称操作"></select>
+            <p class="pg-operation-description" id="pg-operation-description"></p>
+            <div class="pg-operation-meta"><span id="pg-operation-order"></span><span id="pg-operation-parity"></span></div>
+            <div class="section-label pg-element-label">② 显示对称元素</div>
+            <div class="pg-toggles"><label><input type="checkbox" id="pg-axes" checked> 全部对称轴</label><label><input type="checkbox" id="pg-mirrors"> 全部镜面</label><label><input type="checkbox" id="pg-inversion" checked> 反演中心</label><label><input type="checkbox" id="pg-ghost" checked> 原始轮廓</label><label><input type="checkbox" id="pg-links" checked> 辅助连线</label><label><input type="checkbox" id="pg-labels"> 点的编号</label></div>
+            <p class="pg-selected-note">所选操作的轴或镜面会高亮；拖动仅改变观察视角。</p>
+            <details class="pg-matrix-panel"><summary>查看所选操作矩阵</summary><div class="matrix compact" id="pg-matrix"></div><p>p′ = M p · 使用列向量</p></details>
+          </aside>
+          <div class="pg-observation">
+            <div class="pg-viewport"><div class="pg-scene-heading"><strong id="pg-scene-title"></strong><span id="pg-phase"></span></div><canvas id="pg-canvas" tabindex="0" aria-label="点群完整模型的三维观察台。拖动视角，滚轮缩放；方向键调整视角，加减键缩放，空格播放或暂停，点击彩色点追踪其坐标。"></canvas><div class="pg-view-tools"><button type="button" data-pg-view="perspective">立体</button><button type="button" data-pg-view="top">沿 z 轴</button><button type="button" data-pg-view="front">沿 y 轴</button><button type="button" data-pg-view="reset">↺ 视角</button></div><div class="pg-legend"><span><i class="pg-dot a"></i>A 型</span><span><i class="pg-dot b"></i>B 型</span><span><i class="pg-dot c"></i>C 型</span><span id="pg-origin-legend" hidden><i class="pg-dot o"></i>O 标记</span><span><i class="pg-dot outline"></i>原位置</span></div></div>
+            <div class="pg-playback"><button type="button" class="primary-button" id="pg-play">播放操作</button><button type="button" class="secondary-button" id="pg-step">下一步</button><button type="button" class="secondary-button" id="pg-end">看终态</button><button type="button" class="secondary-button" id="pg-reset">回到起点</button><span id="pg-progress-label">0%</span><input type="range" id="pg-progress" min="0" max="1000" value="0" aria-label="点群操作播放进度"></div>
+            <div class="pg-stage-track" id="pg-stage-track"></div>
+            <p class="pg-animation-note" id="pg-animation-note"></p>
+            <div class="pg-results"><div><span class="mini-label">完整操作的终态</span><strong id="pg-match-result"></strong><p id="pg-match-note"></p></div><div><label class="mini-label" for="pg-point-select">追踪一个点 <select id="pg-point-select" aria-label="点群模型追踪点"></select></label><code id="pg-point-coordinates"></code><p id="pg-point-mapping"></p></div></div>
+          </div>
+        </div>
+        <div class="pg-elements-summary" id="pg-elements-summary"></div>
+        <details class="pg-elements-detail"><summary>按方向查看所有对称轴与镜面</summary><p>轴方向与其反方向表示同一条轴，同轴的不同旋转以最高重数归类；旋转反演轴另行标记，也以最高重数显示。全部操作仍列在操作表中。镜面用法向表示。这里使用右手直角坐标，方向是教学模型的约定，改变整体朝向不改变点群类型。</p><div id="pg-element-list" class="pg-element-list"></div></details>
+        <details class="pg-operations-detail"><summary id="pg-operations-summary">查看完整操作列表</summary><div id="pg-operation-list" class="pg-operation-list"></div></details>
+        <p class="pg-model-note"><strong>这是体现完整点群的理想彩色几何模型。</strong>同色点可以互换，异色点不能互换；编号只用于追踪。辅助连线帮助读形状，不表示化学键。模型由三类一般位置在群内所有操作下的轨道构成，并核对了完整对称性；部分模型加入独特的 O 点以固定原点。操作实验室仍提供 H₂O 等分子示例。<a href="https://www.iucr.org/what-we-do/education/pamphlets/teaching-crystallographic-and-magnetic-point-group-symmetry-using" target="_blank" rel="noopener noreferrer">等价点模型的教学参考 ↗</a></p>
+      </section>
       <section class="reading-card panel lattice-section" id="why-rotation" aria-labelledby="lattice-heading">
         <div class="lattice-heading"><div><p class="eyebrow">ROTATION MEETS TRANSLATION</p><h2 id="lattice-heading">为什么这里没有 5？</h2><p>把周期晶格绕轴旋转 360°/n，所有格点还能落回格点吗？</p></div><span class="lattice-badge">三维周期晶格</span></div>
         <div class="lattice-orders" role="group" aria-label="尝试旋转折数">

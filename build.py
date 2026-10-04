@@ -11,7 +11,7 @@ if count != 1:
     raise ValueError("Expected exactly one styles.css link")
 
 scripts = []
-for name in ("math.js", "lattice-math.js", "learning-data.js", "app.js", "lattice-view.js"):
+for name in ("math.js", "lattice-math.js", "learning-data.js", "point-group-math.js", "app.js", "point-group-view.js", "lattice-view.js"):
     source = (project / name).read_text(encoding="utf-8").replace("</script", "<\\/script")
     scripts.append("// " + name + "\n" + source)
     pattern = r'<script defer src="' + re.escape(name) + r'(?:\?[^\"]*)?"></script>'

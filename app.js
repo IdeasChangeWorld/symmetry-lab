@@ -248,7 +248,7 @@
   function renderAtlasDetail() {
     const group = L.pointGroups.find(g => g.hm === state.atlas); if (!group) return;
     const model = M.models.find(m => hmByModel[m.id] === group.hm);
-    $('atlas-detail').innerHTML = '<div><h2>' + hmHTML(group.hm) + ' / ' + sfHTML(group.schoenflies) + '</h2><p>' + group.note + '</p><p>' + group.system + '晶系 · ' + group.order + ' 个操作 · ' + (group.centrosymmetric ? '具有反演中心' : '无反演中心') + '</p></div>' + (model ? '<button class="primary-button" data-atlas-model="' + model.id + '">用 ' + model.formula + ' 观察 ↗</button>' : '<span class="mini-label">此点群提供分类与符号速查</span>');
+    $('atlas-detail').innerHTML = '<div><h2>' + hmHTML(group.hm) + ' / ' + sfHTML(group.schoenflies) + '</h2><p>' + group.note + '</p><p>' + group.system + '晶系 · ' + group.order + ' 个操作 · ' + (group.centrosymmetric ? '具有反演中心' : '无反演中心') + '</p></div><div class="atlas-detail-actions"><button class="primary-button" data-atlas-group="' + escapeHTML(group.hm) + '">查看此点群的 3D 模型 ↓</button>' + (model ? '<button class="secondary-button" data-atlas-model="' + model.id + '">用 ' + model.formula + ' 观察 ↗</button>' : '') + '</div>';
   }
 
   const compositionOps = [
@@ -342,6 +342,11 @@
   $('system-filter').addEventListener('change', renderAtlas); $('property-filter').addEventListener('change', renderAtlas);
   $('atlas-grid').addEventListener('click', e => { const button = e.target.closest('[data-hm]'); if (!button) return; state.atlas = button.dataset.hm; renderAtlas(); });
   $('atlas-detail').addEventListener('click', e => { const button = e.target.closest('[data-atlas-model]'); if (button) { setModel(button.dataset.atlasModel); selectPage('lab'); window.scrollTo({ top: 0, behavior: 'auto' }); } });
+  document.addEventListener('symmetry-atlas-select', e => {
+    const group = L.pointGroups.find(g => g.hm === e.detail.hm); if (!group) return;
+    if (!Array.from(document.querySelectorAll('.atlas-tile')).some(button => button.dataset.hm === group.hm)) { $('system-filter').value = 'all'; $('property-filter').value = 'all'; }
+    state.atlas = group.hm; renderAtlas();
+  });
   const compositionOptions = compositionOps.map(op => '<option value="' + op.id + '">' + op.name + '</option>').join('');
   $('compose-a').innerHTML = compositionOptions; $('compose-b').innerHTML = compositionOptions; $('compose-b').value = 'mxz';
   $('compose-a').addEventListener('change', updateComposition); $('compose-b').addEventListener('change', updateComposition);

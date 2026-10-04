@@ -16,6 +16,19 @@
 
 .lattice-section{margin-top:24px;padding:28px;scroll-margin-top:20px}
 .atlas-controls{flex-wrap:wrap}
+.atlas-detail-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.pg-section{margin-top:24px;padding:28px;scroll-margin-top:20px}
+.pg-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:20px}.pg-heading h2{font-size:25px;line-height:1.5;font-weight:650}.pg-heading p:last-child{font-size:12px;line-height:1.8;color:var(--muted);margin-top:7px}.pg-badge{border:1px solid var(--line);border-radius:30px;padding:9px 15px;font-size:13px;white-space:nowrap;color:var(--teal)}
+.pg-group-switch{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--line)}.pg-group-switch label{display:flex;align-items:center;gap:12px;font-size:12px}.pg-group-switch select{min-width:225px}.pg-group-switch>span{font-size:11px;color:var(--teal)}
+.pg-layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:20px;align-items:start}.pg-controls{padding:18px;border:1px solid var(--line);border-radius:12px;background:#fafcfb}.pg-controls>.section-label{font-size:12px;margin-bottom:12px}#pg-operation-select{width:100%;font-size:11px;padding-left:7px}.pg-operation-description{font-size:11px;color:var(--muted);line-height:1.85;margin-top:12px;overflow-wrap:anywhere}.pg-operation-meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px;font-size:10px;color:var(--muted)}.pg-operation-meta>span{border:1px solid var(--line);border-radius:5px;padding:4px 6px}.pg-controls .pg-element-label{margin-top:22px}.pg-toggles{display:grid;grid-template-columns:1fr;gap:10px;font-size:11px;color:var(--muted)}.pg-toggles label{display:flex;gap:5px;align-items:center}.pg-selected-note{font-size:10px;color:var(--muted);line-height:1.8;margin-top:13px}.pg-matrix-panel{border-top:1px solid var(--line);margin-top:18px;padding-top:14px;font-size:10px}.pg-matrix-panel summary{cursor:pointer;color:var(--teal);line-height:1.6}.pg-matrix-panel .matrix{margin:14px auto 10px}.pg-matrix-panel p{font-size:10px;color:var(--muted)}
+.pg-observation{min-width:0}.pg-viewport{position:relative;height:440px;overflow:hidden;border:1px solid var(--line);border-radius:13px;background:radial-gradient(ellipse at 50% 50%,#fff,#f7faf9)}.pg-scene-heading{position:absolute;top:17px;left:18px;right:18px;display:flex;justify-content:space-between;align-items:start;gap:10px;pointer-events:none}.pg-scene-heading strong{font-size:12px;font-weight:600;max-width:75%;line-height:1.7}.pg-scene-heading>span{font-size:10px;color:var(--muted);white-space:nowrap;padding-top:3px}.pg-view-tools{position:absolute;top:57px;left:14px;display:flex;gap:4px;flex-wrap:wrap;max-width:240px}.pg-view-tools button{font-size:9px;border:1px solid var(--line);border-radius:5px;padding:6px 8px;background:#ffffffd9}.pg-view-tools button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}.pg-legend{position:absolute;bottom:14px;left:18px;display:flex;gap:15px;font-size:10px;color:var(--muted);pointer-events:none}.pg-legend>span{display:flex;align-items:center;gap:5px}.pg-dot{display:inline-block;width:8px;height:8px;border-radius:50%}.pg-dot.a{background:#217b78}.pg-dot.b{background:#3262a6}.pg-dot.c{background:#b16a23}.pg-dot.outline{border:1px solid #879daa;background:transparent}
+.pg-playback{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:12px}.pg-playback button{font-size:11px;padding:10px 12px}.pg-playback>span{font-size:10px;color:var(--muted);margin-left:auto}.pg-playback input{flex-basis:100%;margin-top:3px}.pg-stage-track{display:flex;justify-content:space-between;gap:10px;margin:5px 0 9px}.pg-stage-track button{font-size:10px;border:0;background:transparent;color:var(--muted);padding:3px}.pg-stage-track button.active{color:var(--teal);font-weight:600}.pg-animation-note{font-size:10px;line-height:1.8;color:var(--muted)}
+.pg-results{display:grid;grid-template-columns:1fr 1.05fr;gap:12px;margin-top:12px}.pg-results>div{border:1px solid var(--line);border-radius:10px;padding:14px 16px;min-width:0}.pg-results strong{display:block;font-size:14px;color:var(--teal);line-height:1.6;margin-top:9px}.pg-results p{font-size:10px;color:var(--muted);line-height:1.85;margin-top:6px}.pg-results label{display:flex;align-items:center;justify-content:space-between;gap:6px}.pg-results select{font-size:10px;max-width:55%;padding:5px 7px}.pg-results code{display:block;font-size:11px;line-height:1.7;color:var(--ink);margin-top:12px;overflow-wrap:anywhere}
+.pg-elements-summary{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:22px;padding:15px 17px;background:var(--teal-soft);border-radius:9px;font-size:11px;color:var(--muted)}.pg-elements-summary>span{display:flex;align-items:center;gap:7px;padding-right:12px}.pg-elements-summary b{font-weight:550;color:var(--teal)}
+.pg-elements-detail,.pg-operations-detail{border-top:1px solid var(--line);margin-top:18px;padding-top:16px}.pg-elements-detail summary,.pg-operations-detail summary{font-size:12px;color:var(--teal);line-height:1.8;cursor:pointer}.pg-elements-detail>p{font-size:11px;line-height:1.85;color:var(--muted);margin:12px 0}.pg-element-list,.pg-operation-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}.pg-element-list button,.pg-operation-list button{border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:#fafcfb;font-size:11px;line-height:1.6;text-align:left;overflow-wrap:anywhere}.pg-element-list small,.pg-operation-list small{display:block;font-size:9px;color:var(--muted);margin-top:4px}.pg-operation-list button[aria-pressed=true]{background:var(--teal-soft);border-color:var(--teal);color:var(--teal)}.pg-element-list>p{font-size:11px;line-height:1.8;color:var(--muted);grid-column:1/-1}.pg-model-note{font-size:11px;color:var(--muted);line-height:1.9;margin-top:20px}.pg-model-note a{white-space:nowrap}
+@media(max-width:1000px){.pg-layout{grid-template-columns:200px minmax(0,1fr);gap:14px}.pg-controls{padding:15px}.pg-heading h2{font-size:22px}.pg-results{grid-template-columns:1fr}.pg-element-list,.pg-operation-list{grid-template-columns:repeat(2,minmax(0,1fr))}.pg-group-switch>span{font-size:10px}}
+@media(max-width:700px){.pg-layout{grid-template-columns:1fr}.pg-controls{display:grid;grid-template-columns:1fr 1fr;gap:0 15px}.pg-controls>.section-label:first-child{grid-column:1/-1}.pg-controls>select,.pg-operation-description,.pg-operation-meta{grid-column:1/-1}.pg-controls .pg-element-label{grid-column:1/-1;margin-top:18px}.pg-toggles{grid-template-columns:1fr 1fr;grid-column:1/-1;gap:10px}.pg-selected-note{grid-column:1/-1}.pg-matrix-panel{grid-column:1/-1}.pg-group-switch{align-items:start;flex-direction:column;gap:9px}.pg-group-switch label{width:100%;justify-content:space-between}.pg-group-switch select{min-width:0;max-width:75%}.pg-viewport{height:400px}.pg-results{grid-template-columns:1fr 1fr}.pg-playback button{font-size:10px;padding:9px}.pg-elements-summary{gap:10px;font-size:10px}}
+@media(max-width:500px){.pg-section{padding:20px 15px}.pg-heading{gap:9px;align-items:start}.pg-heading h2{font-size:20px}.pg-heading .eyebrow{font-size:8px;letter-spacing:1.4px}.pg-heading p:last-child{font-size:11px}.pg-badge{font-size:10px;padding:7px 9px;margin-top:28px}.pg-results{grid-template-columns:1fr}.pg-viewport{height:370px}.pg-scene-heading{left:13px;right:13px;top:13px}.pg-scene-heading strong{font-size:10px;max-width:68%}.pg-scene-heading>span{font-size:8px}.pg-view-tools{top:61px;left:11px;gap:3px}.pg-view-tools button{font-size:8px;padding:5px 6px}.pg-legend{font-size:9px;gap:12px;left:13px}.pg-element-list,.pg-operation-list{grid-template-columns:1fr}.pg-element-list button,.pg-operation-list button{font-size:11px}.pg-elements-summary{padding:12px}.pg-elements-summary>span{padding-right:0}.pg-playback>span{font-size:9px}.atlas-detail-actions{justify-content:flex-start}.pg-model-note{font-size:10px}}
 .lattice-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:22px}
 .lattice-heading h2{font-size:25px}.lattice-heading .eyebrow{margin:0 0 8px;font-size:10px}
 .lattice-heading p:last-child{margin-top:9px;font-size:13px}.lattice-badge{padding:7px 11px;border:1px solid var(--line);border-radius:30px;font-size:10px;color:var(--teal);white-space:nowrap}
@@ -44,7 +57,11 @@
 @media(max-width:1000px){.lattice-layout{grid-template-columns:1fr}.lattice-insights{grid-template-columns:1fr 1fr;padding-top:0}.lattice-viewport{height:420px}}
 @media(max-width:600px){.lattice-section{padding:19px 15px}.lattice-heading{align-items:start;gap:10px}.lattice-heading h2{font-size:22px}.lattice-heading .eyebrow{font-size:8px;letter-spacing:1.5px}.lattice-heading p:last-child{font-size:12px}.lattice-badge{display:none}.lattice-orders{gap:6px}.lattice-orders>span{flex-basis:100%;margin-bottom:3px}.lattice-orders button{width:36px;height:36px}.lattice-example-controls{align-items:start;flex-direction:column;gap:5px;margin-bottom:12px}.lattice-example-controls label{width:100%;justify-content:space-between}.lattice-example-controls select{max-width:70%}.lattice-insights{grid-template-columns:1fr}.lattice-viewport{height:340px}.lattice-scene-heading strong{font-size:11px}.lattice-scene-heading>span{font-size:9px}.lattice-legend{font-size:9px;gap:11px}.lattice-playback button{font-size:10px;padding:9px}.lattice-playback>span{font-size:10px}.lattice-trace>span{font-size:11px}.lattice-result{padding:17px}.lattice-section .lattice-result p{font-size:12px}}
 
+.pg-toggles .unavailable{opacity:.4}.pg-dot.o{background:#6a7c87}.pg-legend{flex-wrap:wrap;max-width:calc(100% - 26px);row-gap:5px}
+
 </style>
+  
+  
   
   
   
@@ -123,10 +140,36 @@
 
     <section class="page" id="page-atlas" aria-label="32 点群图谱" hidden>
       <div class="page-heading"><div><p class="eyebrow">THE BIG PICTURE</p><h1>32 种组合，<span>7 个晶系。</span></h1><p class="lead">晶体学点群速查：把国际符号和 Schoenflies 符号放在一起看。</p></div><span class="large-badge">32</span></div>
-      <div class="atlas-controls panel"><label for="system-filter">晶系 <select id="system-filter"><option value="all">全部晶系</option></select></label><label for="property-filter">对称性 <select id="property-filter"><option value="all">全部点群</option><option value="centro">含反演中心</option><option value="chiral">仅含保手性操作</option><option value="other">其余非中心对称群</option></select></label><span id="atlas-count" aria-live="polite"></span><button type="button" class="quiet-button" id="lattice-jump">为什么没有 5？查看 3D 示意 ↓</button></div>
+      <div class="atlas-controls panel"><label for="system-filter">晶系 <select id="system-filter"><option value="all">全部晶系</option></select></label><label for="property-filter">对称性 <select id="property-filter"><option value="all">全部点群</option><option value="centro">含反演中心</option><option value="chiral">仅含保手性操作</option><option value="other">其余非中心对称群</option></select></label><span id="atlas-count" aria-live="polite"></span><button type="button" class="quiet-button" id="pg-jump">探索全部 32 种 3D 模型 ↓</button><button type="button" class="quiet-button" id="lattice-jump">为什么没有 5？查看 3D 示意 ↓</button></div>
       <div class="atlas-note"><strong>读图提示</strong><span>群的阶 |G| 是操作总数；n 是某个轴的折数。两者不能混用。“仅含保手性操作”指群的性质，不能仅据此断言一个未指定结构具有手性。</span></div>
       <div id="atlas-grid" class="atlas-grid"></div>
       <div class="atlas-detail panel" id="atlas-detail" aria-live="polite"></div>
+      <section class="panel pg-section" id="point-group-viewer" aria-labelledby="pg-heading">
+        <div class="pg-heading"><div><p class="eyebrow">EVERY GROUP. EVERY OPERATION.</p><h2 id="pg-heading">这个点群的三维模型</h2><p id="pg-group-note"></p></div><span class="pg-badge" id="pg-order-badge"></span></div>
+        <div class="pg-group-switch"><label for="pg-group-select">切换点群 <select id="pg-group-select" aria-label="三维模型点群（全部32种）"></select></label><span>32 / 32 种均可交互观察</span></div>
+        <div class="pg-layout">
+          <aside class="pg-controls">
+            <label class="section-label" for="pg-operation-select">① 选择群内操作</label><select id="pg-operation-select" aria-label="选择该点群的对称操作"></select>
+            <p class="pg-operation-description" id="pg-operation-description"></p>
+            <div class="pg-operation-meta"><span id="pg-operation-order"></span><span id="pg-operation-parity"></span></div>
+            <div class="section-label pg-element-label">② 显示对称元素</div>
+            <div class="pg-toggles"><label><input type="checkbox" id="pg-axes" checked> 全部对称轴</label><label><input type="checkbox" id="pg-mirrors"> 全部镜面</label><label><input type="checkbox" id="pg-inversion" checked> 反演中心</label><label><input type="checkbox" id="pg-ghost" checked> 原始轮廓</label><label><input type="checkbox" id="pg-links" checked> 辅助连线</label><label><input type="checkbox" id="pg-labels"> 点的编号</label></div>
+            <p class="pg-selected-note">所选操作的轴或镜面会高亮；拖动仅改变观察视角。</p>
+            <details class="pg-matrix-panel"><summary>查看所选操作矩阵</summary><div class="matrix compact" id="pg-matrix"></div><p>p′ = M p · 使用列向量</p></details>
+          </aside>
+          <div class="pg-observation">
+            <div class="pg-viewport"><div class="pg-scene-heading"><strong id="pg-scene-title"></strong><span id="pg-phase"></span></div><canvas id="pg-canvas" tabindex="0" aria-label="点群完整模型的三维观察台。拖动视角，滚轮缩放；方向键调整视角，加减键缩放，空格播放或暂停，点击彩色点追踪其坐标。"></canvas><div class="pg-view-tools"><button type="button" data-pg-view="perspective">立体</button><button type="button" data-pg-view="top">沿 z 轴</button><button type="button" data-pg-view="front">沿 y 轴</button><button type="button" data-pg-view="reset">↺ 视角</button></div><div class="pg-legend"><span><i class="pg-dot a"></i>A 型</span><span><i class="pg-dot b"></i>B 型</span><span><i class="pg-dot c"></i>C 型</span><span id="pg-origin-legend" hidden><i class="pg-dot o"></i>O 标记</span><span><i class="pg-dot outline"></i>原位置</span></div></div>
+            <div class="pg-playback"><button type="button" class="primary-button" id="pg-play">播放操作</button><button type="button" class="secondary-button" id="pg-step">下一步</button><button type="button" class="secondary-button" id="pg-end">看终态</button><button type="button" class="secondary-button" id="pg-reset">回到起点</button><span id="pg-progress-label">0%</span><input type="range" id="pg-progress" min="0" max="1000" value="0" aria-label="点群操作播放进度"></div>
+            <div class="pg-stage-track" id="pg-stage-track"></div>
+            <p class="pg-animation-note" id="pg-animation-note"></p>
+            <div class="pg-results"><div><span class="mini-label">完整操作的终态</span><strong id="pg-match-result"></strong><p id="pg-match-note"></p></div><div><label class="mini-label" for="pg-point-select">追踪一个点 <select id="pg-point-select" aria-label="点群模型追踪点"></select></label><code id="pg-point-coordinates"></code><p id="pg-point-mapping"></p></div></div>
+          </div>
+        </div>
+        <div class="pg-elements-summary" id="pg-elements-summary"></div>
+        <details class="pg-elements-detail"><summary>按方向查看所有对称轴与镜面</summary><p>轴方向与其反方向表示同一条轴，同轴的不同旋转以最高重数归类；旋转反演轴另行标记，也以最高重数显示。全部操作仍列在操作表中。镜面用法向表示。这里使用右手直角坐标，方向是教学模型的约定，改变整体朝向不改变点群类型。</p><div id="pg-element-list" class="pg-element-list"></div></details>
+        <details class="pg-operations-detail"><summary id="pg-operations-summary">查看完整操作列表</summary><div id="pg-operation-list" class="pg-operation-list"></div></details>
+        <p class="pg-model-note"><strong>这是体现完整点群的理想彩色几何模型。</strong>同色点可以互换，异色点不能互换；编号只用于追踪。辅助连线帮助读形状，不表示化学键。模型由三类一般位置在群内所有操作下的轨道构成，并核对了完整对称性；部分模型加入独特的 O 点以固定原点。操作实验室仍提供 H₂O 等分子示例。<a href="https://www.iucr.org/what-we-do/education/pamphlets/teaching-crystallographic-and-magnetic-point-group-symmetry-using" target="_blank" rel="noopener noreferrer">等价点模型的教学参考 ↗</a></p>
+      </section>
       <section class="reading-card panel lattice-section" id="why-rotation" aria-labelledby="lattice-heading">
         <div class="lattice-heading"><div><p class="eyebrow">ROTATION MEETS TRANSLATION</p><h2 id="lattice-heading">为什么这里没有 5？</h2><p>把周期晶格绕轴旋转 360°/n，所有格点还能落回格点吗？</p></div><span class="lattice-badge">三维周期晶格</span></div>
         <div class="lattice-orders" role="group" aria-label="尝试旋转折数">
@@ -697,6 +740,209 @@
 });
 
 
+// point-group-math.js
+/* Cartesian representatives of the 32 crystallographic point groups.
+ * Conventional generators and operation classification follow IUCr:
+ * https://www.iucr.org/what-we-do/education/pamphlets/metric-tensor-and-symmetry-operations-in-crystallography
+ * The axis convention is unique b=y for monoclinic groups, principal z for
+ * axial groups, and Cartesian cubic axes plus the [111] threefold axis.
+ */
+(function (root, factory) {
+  'use strict';
+  const math = typeof module === 'object' && module.exports ? require('./math.js') : root.SymmetryMath;
+  const api = factory(math);
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  if (root) root.SymmetryPointGroups = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function (M) {
+  'use strict';
+  if (!M) throw new Error('SymmetryPointGroups requires SymmetryMath.');
+  const EPS = 1e-8;
+  const x = [1, 0, 0], y = [0, 1, 0], z = [0, 0, 1];
+  const I = M.identityMatrix(), inversion = M.inversionMatrix();
+  const negative = matrix => matrix.map(row => row.map(value => -value));
+  const clean = value => Math.abs(value) < 1e-12 ? 0 : Math.abs(value - Math.round(value)) < 1e-12 ? Math.round(value) : value;
+  const cleanMatrix = matrix => matrix.map(row => row.map(clean));
+  const matrixKey = matrix => matrix.flat().map(value => Math.round(value * 1e8)).join(',');
+  const lineKey = line => line.map(value => Math.round(value * 1e8)).join(',');
+  const rot = (n, axis = z) => cleanMatrix(M.rotationMatrix(axis, 2 * Math.PI / n));
+  const mirror = normal => cleanMatrix(M.reflectionMatrix(normal));
+  const bar = (n, axis = z) => negative(rot(n, axis));
+  const C2x = rot(2, x), C2y = rot(2, y), C3z = rot(3), C4z = rot(4), C6z = rot(6);
+  const mx = mirror(x), my = mirror(y), mz = mirror(z);
+  const cubic3 = rot(3, [1, 1, 1]);
+  const definitions = [
+    ['1', 1, []], ['-1', 2, [inversion]], ['2', 2, [C2y]], ['m', 2, [my]], ['2/m', 4, [C2y, my]],
+    ['222', 4, [C2x, C2y]], ['mm2', 4, [mx, my]], ['mmm', 8, [mx, my, mz]],
+    ['4', 4, [C4z]], ['-4', 4, [bar(4)]], ['4/m', 8, [C4z, mz]],
+    ['422', 8, [C4z, C2x]], ['4mm', 8, [C4z, my]], ['-42m', 8, [bar(4), C2x]], ['4/mmm', 16, [C4z, C2x, mz]],
+    ['3', 3, [C3z]], ['-3', 6, [bar(3)]], ['32', 6, [C3z, C2x]], ['3m', 6, [C3z, my]], ['-3m', 12, [bar(3), C2x]],
+    ['6', 6, [C6z]], ['-6', 6, [bar(6)]], ['6/m', 12, [C6z, mz]],
+    ['622', 12, [C6z, C2x]], ['6mm', 12, [C6z, my]], ['-62m', 12, [bar(6), C2x]], ['6/mmm', 24, [C6z, C2x, mz]],
+    ['23', 12, [cubic3, C2x]], ['m-3', 24, [cubic3, C2x, inversion]],
+    ['432', 24, [C4z, cubic3]], ['-43m', 24, [cubic3, C2x, mirror([1, -1, 0])]], ['m-3m', 48, [C4z, cubic3, inversion]]
+  ];
+
+  function closure(generators, expectedOrder) {
+    const matrices = [I.map(row => row.slice())], keys = new Set([matrixKey(I)]);
+    for (let index = 0; index < matrices.length; index++) {
+      for (const generator of generators) {
+        const product = cleanMatrix(M.multiplyMatrices(generator, matrices[index]));
+        const key = matrixKey(product);
+        if (!keys.has(key)) {
+          keys.add(key); matrices.push(product);
+          if (matrices.length > 48) throw new Error('Point-group generators did not close within 48 operations.');
+        }
+      }
+    }
+    if (matrices.length !== expectedOrder) throw new Error('Incorrect generated point-group order: ' + matrices.length + ' instead of ' + expectedOrder);
+    return matrices;
+  }
+
+  function canonicalLine(vector) {
+    const unit = M.normalize(vector).map(clean);
+    const leading = unit.find(value => Math.abs(value) > EPS);
+    return (leading < 0 ? M.scale(unit, -1) : unit).map(clean);
+  }
+
+  function lineFromSymmetricOuter(matrix) {
+    // matrix = u u^T. Choosing the largest diagonal avoids a zero division.
+    let index = 0;
+    for (let i = 1; i < 3; i++) if (matrix[i][i] > matrix[index][index]) index = i;
+    const component = Math.sqrt(Math.max(0, matrix[index][index]));
+    return canonicalLine(matrix.map(row => row[index] / component));
+  }
+
+  function directionLabel(direction) {
+    const nonzero = direction.filter(value => Math.abs(value) > EPS);
+    const smallest = Math.min(...nonzero.map(Math.abs));
+    const ratios = direction.map(value => value / smallest);
+    if (ratios.every(value => Math.abs(value - Math.round(value)) < EPS)) return '[' + ratios.map(value => Math.round(value)).join(',') + ']';
+    return '[' + direction.map(value => Math.abs(value) < EPS ? '0' : value.toFixed(3)).join(',') + ']';
+  }
+
+  function rotationInfo(matrix) {
+    const cosine = M.clamp((matrix[0][0] + matrix[1][1] + matrix[2][2] - 1) / 2, -1, 1);
+    let axis;
+    if (cosine < -1 + EPS) {
+      axis = lineFromSymmetricOuter(matrix.map((row, i) => row.map((value, j) => (value + I[i][j]) / 2)));
+    } else {
+      axis = canonicalLine([matrix[2][1] - matrix[1][2], matrix[0][2] - matrix[2][0], matrix[1][0] - matrix[0][1]]);
+    }
+    const skew = [matrix[2][1] - matrix[1][2], matrix[0][2] - matrix[2][0], matrix[1][0] - matrix[0][1]];
+    let angle = Math.atan2(M.dot(skew, axis) / 2, cosine);
+    if (angle < -EPS) angle += 2 * Math.PI;
+    if (Math.abs(angle) < EPS && cosine < 0) angle = Math.PI;
+    const n = M.operationOrder(matrix, 12, EPS);
+    if (!n) throw new Error('Non-crystallographic proper rotation in a point group.');
+    return { axis, angle, n };
+  }
+
+  const subscript = number => String(number).replace(/\d/g, digit => '₀₁₂₃₄₅₆₇₈₉'[Number(digit)]);
+  function classify(matrix) {
+    const order = M.operationOrder(matrix, 12, EPS);
+    let operation;
+    if (M.matrixError(matrix, I) < EPS) {
+      operation = { type: 'E', n: 1, angle: 0, label: 'E · 恒等操作', stageNames: ['保持原位'] };
+    } else if (M.matrixError(matrix, inversion) < EPS) {
+      operation = { type: 'inversion', n: 1, angle: 0, label: 'i · 中心反演', stageNames: ['反演'] };
+    } else if (M.determinant(matrix) > 0) {
+      const info = rotationInfo(matrix);
+      operation = { ...info, type: 'rotation', label: 'C' + subscript(info.n) + ' · 绕 ' + directionLabel(info.axis) + ' ' + Math.round(info.angle * 180 / Math.PI) + '°', stageNames: ['旋转'] };
+    } else if (Math.abs(matrix[0][0] + matrix[1][1] + matrix[2][2] - 1) < EPS) {
+      const normal = lineFromSymmetricOuter(matrix.map((row, i) => row.map((value, j) => (I[i][j] - value) / 2)));
+      operation = { type: 'reflection', n: 2, angle: 0, normal, label: 'm · 法向 ' + directionLabel(normal) + ' 的镜面', stageNames: ['镜映'] };
+    } else {
+      const info = rotationInfo(negative(matrix));
+      operation = { ...info, type: 'rotoinversion', label: info.n + '\u0305 · 绕 ' + directionLabel(info.axis) + ' ' + Math.round(info.angle * 180 / Math.PI) + '° 后中心反演', stageNames: ['旋转', '中心反演'] };
+    }
+    return { ...operation, matrix: cleanMatrix(matrix), order };
+  }
+
+  function elementsFromOperations(operations) {
+    const axes = new Map(), mirrors = new Map();
+    let hasInversion = false;
+    for (const operation of operations) {
+      if (operation.type === 'inversion') hasInversion = true;
+      if (operation.type === 'reflection') mirrors.set(lineKey(operation.normal), { normal: operation.normal.slice() });
+      if (operation.type === 'rotation' || operation.type === 'rotoinversion') {
+        const direction = canonicalLine(operation.axis), key = lineKey(direction);
+        if (!axes.has(key)) axes.set(key, { direction, fold: 1 });
+        const axis = axes.get(key);
+        if (operation.type === 'rotation') axis.fold = Math.max(axis.fold, operation.n);
+        else axis.improperFold = Math.max(axis.improperFold || 1, operation.n);
+      }
+    }
+    return {
+      axes: Array.from(axes.values()).sort((a, b) => b.fold - a.fold || lineKey(a.direction).localeCompare(lineKey(b.direction))),
+      mirrors: Array.from(mirrors.values()).sort((a, b) => lineKey(a.normal).localeCompare(lineKey(b.normal))),
+      inversion: hasInversion
+    };
+  }
+
+  // Three independent, distinctly typed generic orbits eliminate extra O(3)
+  // symmetries. The exhaustive test verifies their full stabilizer for all 32.
+  const seedPoints = [[0.713, 0.241, 0.487], [-0.319, 1.037, 0.563], [0.271, -0.683, 1.429]];
+  const orbitColors = ['#217b78', '#3262a6', '#b16a23'];
+  function orbitModel(hm, operations) {
+    const atoms = [], seedIndices = [];
+    seedPoints.forEach((seed, orbit) => {
+      const element = 'ABC'[orbit];
+      seedIndices.push(atoms.length);
+      operations.forEach((operation, index) => {
+        atoms.push({ id: element + (index + 1), element, position: M.applyMatrix(operation.matrix, seed).map(clean), color: orbitColors[orbit], radius: 0.065 });
+      });
+    });
+    const centroid = M.scale(atoms.reduce((sum, atom) => M.add(sum, atom.position), [0, 0, 0]), 1 / atoms.length);
+    let centerFixedBy = 'centroid';
+    if (M.norm(centroid) > EPS) {
+      // A uniquely typed origin point anchors polar models. This also prevents
+      // the offset plane through the three C1 seed points being an extra mirror.
+      atoms.push({ id: 'O', element: 'O', position: [0, 0, 0], color: '#6a7c87', radius: 0.045 });
+      centerFixedBy = 'origin-marker';
+    }
+    return { id: 'point-group-' + hm, name: hm + ' 点群的三色轨道模型', formula: 'A · B · C', pointGroup: hm, atoms, bonds: [], seedIndices, centerFixedBy };
+  }
+
+  function makeGroup(definition) {
+    const [hm, expectedOrder, generatingMatrices] = definition;
+    const typeOrder = { E: 0, rotation: 1, reflection: 2, inversion: 3, rotoinversion: 4 };
+    const operations = closure(generatingMatrices, expectedOrder).map(classify).sort((a, b) => typeOrder[a.type] - typeOrder[b.type] || b.n - a.n || lineKey(a.axis || a.normal || z).localeCompare(lineKey(b.axis || b.normal || z)) || a.angle - b.angle);
+    operations.forEach((operation, index) => { operation.id = 'op-' + String(index).padStart(2, '0'); });
+    const generators = generatingMatrices.map(matrix => operations.find(operation => M.matrixError(matrix, operation.matrix) < EPS).id);
+    const model = orbitModel(hm, operations);
+    return { hm, operations, model, elements: elementsFromOperations(operations), generators, expectedOrder, centerFixedBy: model.centerFixedBy };
+  }
+
+  function animateOperation(operation, t) {
+    t = M.clamp(Number(t) || 0, 0, 1);
+    if (t === 0 || operation.type === 'E') return M.identityMatrix();
+    if (t === 1) return operation.matrix.map(row => row.slice());
+    if (operation.type === 'rotation') return M.rotationMatrix(operation.axis, operation.angle * t);
+    if (operation.type === 'reflection' || operation.type === 'inversion') return I.map((row, i) => row.map((value, j) => value + t * (operation.matrix[i][j] - value)));
+    if (operation.type === 'rotoinversion' || operation.type === 'improper') {
+      if (t <= 0.5) return M.rotationMatrix(operation.axis, operation.angle * t * 2);
+      const rotation = M.rotationMatrix(operation.axis, operation.angle);
+      const second = operation.type === 'rotoinversion' ? inversion : M.reflectionMatrix(operation.axis);
+      const u = 2 * t - 1;
+      const intermediate = I.map((row, i) => row.map((value, j) => value + u * (second[i][j] - value)));
+      return M.multiplyMatrices(intermediate, rotation);
+    }
+    throw new RangeError('Unknown operation animation type: ' + operation.type);
+  }
+
+  function phaseOperation(operation, t) {
+    t = M.clamp(Number(t) || 0, 0, 1);
+    const names = operation.stageNames;
+    const count = names.length, index = count === 2 && t >= 0.5 ? 1 : 0;
+    return { name: names[index], index, count, localT: count === 2 ? index === 0 ? 2 * t : 2 * t - 1 : t };
+  }
+
+  const groups = definitions.map(makeGroup);
+  const getGroup = hm => groups.find(group => group.hm === hm) || null;
+  return { groups, getGroup, animateOperation, phaseOperation };
+});
+
+
 // app.js
 (function () {
   'use strict';
@@ -948,7 +1194,7 @@
   function renderAtlasDetail() {
     const group = L.pointGroups.find(g => g.hm === state.atlas); if (!group) return;
     const model = M.models.find(m => hmByModel[m.id] === group.hm);
-    $('atlas-detail').innerHTML = '<div><h2>' + hmHTML(group.hm) + ' / ' + sfHTML(group.schoenflies) + '</h2><p>' + group.note + '</p><p>' + group.system + '晶系 · ' + group.order + ' 个操作 · ' + (group.centrosymmetric ? '具有反演中心' : '无反演中心') + '</p></div>' + (model ? '<button class="primary-button" data-atlas-model="' + model.id + '">用 ' + model.formula + ' 观察 ↗</button>' : '<span class="mini-label">此点群提供分类与符号速查</span>');
+    $('atlas-detail').innerHTML = '<div><h2>' + hmHTML(group.hm) + ' / ' + sfHTML(group.schoenflies) + '</h2><p>' + group.note + '</p><p>' + group.system + '晶系 · ' + group.order + ' 个操作 · ' + (group.centrosymmetric ? '具有反演中心' : '无反演中心') + '</p></div><div class="atlas-detail-actions"><button class="primary-button" data-atlas-group="' + escapeHTML(group.hm) + '">查看此点群的 3D 模型 ↓</button>' + (model ? '<button class="secondary-button" data-atlas-model="' + model.id + '">用 ' + model.formula + ' 观察 ↗</button>' : '') + '</div>';
   }
 
   const compositionOps = [
@@ -1042,6 +1288,11 @@
   $('system-filter').addEventListener('change', renderAtlas); $('property-filter').addEventListener('change', renderAtlas);
   $('atlas-grid').addEventListener('click', e => { const button = e.target.closest('[data-hm]'); if (!button) return; state.atlas = button.dataset.hm; renderAtlas(); });
   $('atlas-detail').addEventListener('click', e => { const button = e.target.closest('[data-atlas-model]'); if (button) { setModel(button.dataset.atlasModel); selectPage('lab'); window.scrollTo({ top: 0, behavior: 'auto' }); } });
+  document.addEventListener('symmetry-atlas-select', e => {
+    const group = L.pointGroups.find(g => g.hm === e.detail.hm); if (!group) return;
+    if (!Array.from(document.querySelectorAll('.atlas-tile')).some(button => button.dataset.hm === group.hm)) { $('system-filter').value = 'all'; $('property-filter').value = 'all'; }
+    state.atlas = group.hm; renderAtlas();
+  });
   const compositionOptions = compositionOps.map(op => '<option value="' + op.id + '">' + op.name + '</option>').join('');
   $('compose-a').innerHTML = compositionOptions; $('compose-b').innerHTML = compositionOptions; $('compose-b').value = 'mxz';
   $('compose-a').addEventListener('change', updateComposition); $('compose-b').addEventListener('change', updateComposition);
@@ -1056,6 +1307,229 @@
   const observer = new ResizeObserver(() => requestAnimationFrame(renderAll)); scenes.forEach(scene => observer.observe(scene.canvas));
   document.addEventListener('visibilitychange', () => { if (document.hidden) { stop(); updateDynamic(); } });
   setModel('water'); renderAtlas(); updateComposition(); renderCayleyTable(); renderQuiz(); selectPage(location.hash.slice(1) || 'lab', false);
+})();
+
+
+// point-group-view.js
+(function () {
+  'use strict';
+  const P = window.SymmetryPointGroups, M = window.SymmetryMath, L = window.SymmetryLearning;
+  const $ = id => document.getElementById(id), canvas = $('pg-canvas'), section = $('point-group-viewer');
+  if (!P || !M || !L || !canvas) return;
+  const ctx = canvas.getContext('2d');
+  const state = { group: null, op: null, selected: 0, progress: 0, playing: false, view: 'perspective', camera: { yaw: -.5, pitch: .45, zoom: 1 }, elementPreferences: { axes: true, mirrors: false, inversion: true } };
+  let frame = 0, lastTime = 0, drag = null, hits = [], edges = [], result = null, radius = 1.8;
+  const esc = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const hmHTML = value => esc(value).replace(/-(\d)/g, '<span class="overbar">$1</span>');
+  const fmt = value => (Math.abs(value) < .0005 ? 0 : value).toFixed(2);
+  const xyz = point => '(' + point.map(fmt).join(', ') + ')';
+  const direction = vector => xyz(M.normalize(vector));
+  const sameLine = (a, b) => Math.abs(M.dot(M.normalize(a), M.normalize(b))) > 1 - 1e-7;
+  const stages = op => op.stageNames || (op.type === 'rotoinversion' || op.type === 'improper' ? ['旋转', op.type === 'rotoinversion' ? '反演' : '镜映'] : ['操作']);
+  const typeNames = { E: '恒等', rotation: '旋转', reflection: '镜映', inversion: '反演', rotoinversion: '旋转反演', improper: '旋转镜映' };
+  const reduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function stop() { state.playing = false; cancelAnimationFrame(frame); frame = 0; lastTime = 0; }
+  function jump() { section.scrollIntoView({ behavior: reduced() ? 'auto' : 'smooth', block: 'start' }); }
+
+  function referenceEdges(model) {
+    const list = [];
+    model.atoms.forEach((atom, i) => {
+      const candidates = model.atoms.map((b, j) => ({ j, d: M.distance(atom.position, b.position) })).filter(item => item.j !== i && model.atoms[item.j].element === atom.element && item.d > 1e-6);
+      if (!candidates.length) return;
+      const shortest = Math.min(...candidates.map(item => item.d));
+      candidates.forEach(item => { if (item.j > i && item.d <= shortest * 1.025) list.push([i, item.j]); });
+    });
+    return list;
+  }
+  function setGroup(hm) {
+    const group = P.getGroup(hm), info = L.pointGroups.find(item => item.hm === hm);
+    if (!group || !info) return;
+    stop(); state.group = group; state.selected = 0;
+    $('pg-group-select').value = hm;
+    $('pg-heading').innerHTML = hmHTML(hm) + ' / ' + esc(info.schoenflies) + ' · 三维对称模型';
+    $('pg-heading').setAttribute('aria-label', hm.replace(/-(\d)/g, '$1\u0305') + ' / ' + info.schoenflies + ' · 三维对称模型');
+    $('pg-group-note').textContent = info.system + '晶系 · ' + info.note;
+    $('pg-order-badge').textContent = '|G| = ' + group.operations.length;
+    $('pg-operation-select').innerHTML = group.operations.map((op, i) => '<option value="' + esc(op.id) + '">' + String(i + 1).padStart(2, '0') + ' · ' + esc(op.label) + '</option>').join('');
+    $('pg-point-select').innerHTML = group.model.atoms.map((atom, i) => '<option value="' + i + '">' + esc(atom.id) + ' · ' + esc(atom.element) + ' 型</option>').join('');
+    $('pg-point-select').value = '0';
+    edges = referenceEdges(group.model);
+    radius = Math.max(...group.model.atoms.map(atom => M.norm(atom.position)), 1);
+    renderElements();
+    const first = group.operations.find(op => (group.generators || []).includes(op.id)) || group.operations.find(op => op.type !== 'E') || group.operations[0];
+    setOperation(first.id);
+  }
+  function setOperation(id) {
+    const op = state.group.operations.find(item => item.id === id); if (!op) return;
+    stop(); state.op = op; state.progress = 0;
+    result = M.matchModel(state.group.model, op.matrix, 1e-6);
+    $('pg-operation-select').value = op.id;
+    const degrees = Math.round((op.angle || 0) * 180 / Math.PI);
+    const explanation = {
+      E: '所有点保持原位。恒等操作属于每个点群。',
+      rotation: '绕单位方向 ' + (op.axis ? direction(op.axis) : '') + ' 按右手规则旋转 ' + degrees + '°；轴上的点保持不动。',
+      reflection: '镜面通过 O，法向为 ' + (op.normal ? direction(op.normal) : '') + '。垂直镜面的坐标分量变号。',
+      inversion: '以 O 为中心，将 (x, y, z) 变为 (−x, −y, −z)。',
+      rotoinversion: '先绕方向 ' + (op.axis ? direction(op.axis) : '') + ' 旋转 ' + degrees + '°，再关于 O 反演。两个分步骤不一定单独属于这个点群。',
+      improper: '先绕轴旋转，再关于垂直于轴的镜面反射。'
+    }[op.type];
+    $('pg-operation-description').textContent = explanation;
+    $('pg-operation-order').textContent = '操作的阶：' + (op.order || M.operationOrder(op.matrix));
+    $('pg-operation-parity').textContent = M.determinant(op.matrix) > 0 ? 'det M = +1' : 'det M = −1';
+    $('pg-matrix').innerHTML = op.matrix.flat().map(value => '<span>' + fmt(value) + '</span>').join('');
+    const composite = stages(op).length === 2;
+    $('pg-stage-track').innerHTML = (composite ? [[0, '起始'], [.5, '① 旋转结束'], [1, '② ' + (op.type === 'improper' ? '镜映' : '反演') + '结束']] : [[0, '起始'], [1, typeNames[op.type] + '结束']]).map(([t, label]) => '<button type="button" data-pg-progress="' + t + '">' + label + '</button>').join('');
+    $('pg-animation-note').textContent = ['reflection', 'inversion', 'rotoinversion', 'improper'].includes(op.type) ? '镜映与反演的中间形变只作教学示意；完整操作的终态才用于判断。' : '只看完整操作的终态；中间角度不必属于这个点群。';
+    $('pg-operations-summary').textContent = '查看完整操作列表 · ' + state.group.operations.length + ' 个';
+    $('pg-operation-list').innerHTML = state.group.operations.map(item => '<button type="button" data-pg-operation="' + esc(item.id) + '" aria-pressed="' + (item.id === op.id) + '"><span>' + esc(item.label) + '</span><small>阶 ' + item.order + '</small></button>').join('');
+    update();
+  }
+  function renderElements() {
+    const elements = state.group.elements;
+    const axes = elements.axes.filter(axis => axis.fold > 1), improper = elements.axes.filter(axis => axis.improperFold > 2);
+    Object.entries({ axes: elements.axes.length > 0, mirrors: elements.mirrors.length > 0, inversion: elements.inversion }).forEach(([name, available]) => {
+      const input = $('pg-' + name); input.disabled = !available; input.checked = available && state.elementPreferences[name]; input.closest('label').classList.toggle('unavailable', !available);
+    });
+    $('pg-origin-legend').hidden = state.group.model.centerFixedBy !== 'origin-marker';
+    $('pg-elements-summary').innerHTML = '<span>正旋转轴 <b>' + axes.length + ' 条</b></span><span>旋转反演轴 <b>' + improper.length + ' 条</b></span><span>镜面 <b>' + elements.mirrors.length + ' 个</b></span><span>反演中心 <b>' + (elements.inversion ? '有' : '无') + '</b></span>';
+    const buttons = [];
+    elements.axes.forEach((axis, i) => {
+      if (axis.fold > 1) buttons.push('<button type="button" data-pg-element="axis:' + i + '">' + axis.fold + ' 重轴 <small>' + direction(axis.direction) + '</small></button>');
+      if (axis.improperFold > 2) buttons.push('<button type="button" data-pg-element="improper:' + i + '">' + hmHTML('-' + axis.improperFold) + ' 轴 <small>' + direction(axis.direction) + '</small></button>');
+    });
+    elements.mirrors.forEach((plane, i) => buttons.push('<button type="button" data-pg-element="mirror:' + i + '">镜面 <small>法向 ' + direction(plane.normal) + '</small></button>'));
+    if (elements.inversion) buttons.push('<button type="button" data-pg-element="inversion:0">反演中心 O</button>');
+    $('pg-element-list').innerHTML = buttons.join('') || '<p>这个点群只有 E，没有非平凡的对称轴、镜面或反演中心。</p>';
+  }
+  function update() {
+    if (!state.group || !state.op) return;
+    const ended = state.progress >= 1 - 1e-9, composite = stages(state.op).length === 2;
+    $('pg-progress').value = Math.round(state.progress * 1000);
+    $('pg-progress-label').textContent = Math.round(state.progress * 100) + '%';
+    $('pg-play').textContent = state.playing ? '暂停' : ended ? '重播操作' : composite && state.progress === .5 ? '继续第二步' : '播放操作';
+    $('pg-step').disabled = ended;
+    $('pg-phase').textContent = ended ? '完整操作结束' : state.progress === 0 ? '起始状态' : composite && state.progress === .5 ? '旋转结束 · 中间态' : composite ? (state.progress < .5 ? '① 旋转中' : '② ' + (state.op.type === 'improper' ? '镜映中' : '反演中')) : '操作进行中';
+    $('pg-scene-title').textContent = state.op.label;
+    $('pg-match-result').textContent = ended ? result.isSymmetry ? '✓ 全部同类点重合' : '模型验证异常' : '所选操作属于这个点群';
+    $('pg-match-note').textContent = ended ? state.group.model.atoms.length + ' 个点均能找到同类型的原始位置；同类点的编号可以交换。' : '完整操作后，所有同类型点将重合。可点“看终态”直接比较。';
+    const atom = state.group.model.atoms[state.selected], current = M.applyMatrix(P.animateOperation(state.op, state.progress), atom.position);
+    $('pg-point-coordinates').textContent = xyz(atom.position) + ' → ' + xyz(current);
+    $('pg-point-mapping').textContent = ended && result.mapping ? '终态：' + atom.id + ' → ' + state.group.model.atoms[result.mapping[state.selected]].id : atom.id + ' · 颜色代表类型，编号用于追踪';
+    document.querySelectorAll('[data-pg-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.pgView === state.view)));
+    document.querySelectorAll('[data-pg-progress]').forEach(button => button.classList.toggle('active', Math.abs(Number(button.dataset.pgProgress) - state.progress) < .001));
+    draw();
+  }
+  function play() {
+    if (state.playing) { stop(); update(); return; }
+    if (reduced()) { state.progress = 1; update(); return; }
+    if (state.progress >= 1) state.progress = 0;
+    state.playing = true; lastTime = 0;
+    function tick(time) {
+      if (!state.playing) return;
+      const previous = state.progress, duration = stages(state.op).length === 2 ? 4200 : 2600;
+      if (lastTime) state.progress = Math.min(1, state.progress + Math.min(time - lastTime, 80) / duration);
+      lastTime = time;
+      if (stages(state.op).length === 2 && previous < .5 && state.progress >= .5) { state.progress = .5; stop(); }
+      if (state.progress >= 1) stop();
+      update(); if (state.playing) frame = requestAnimationFrame(tick);
+    }
+    update(); frame = requestAnimationFrame(tick);
+  }
+  function draw() {
+    const w = canvas.clientWidth, h = canvas.clientHeight; if (!w || !h || !ctx || !state.group) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    if (canvas.width !== Math.round(w * dpr) || canvas.height !== Math.round(h * dpr)) { canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr); }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+    const cam = state.camera, scale = Math.min(w / (radius * 3.1), h / (radius * 3.15)) * cam.zoom;
+    const project = p => {
+      const x = Math.cos(cam.yaw) * p[0] - Math.sin(cam.yaw) * p[1], y = Math.sin(cam.yaw) * p[0] + Math.cos(cam.yaw) * p[1];
+      return { x: w * .53 + x * scale, y: h * .57 - (Math.cos(cam.pitch) * p[2] + Math.sin(cam.pitch) * y) * scale, depth: -Math.cos(cam.pitch) * y + Math.sin(cam.pitch) * p[2] };
+    };
+    const line = (points, color, width = 1, dash = []) => {
+      if (!points.length) return; ctx.beginPath(); points.forEach((point, i) => { const p = project(point); if (i) ctx.lineTo(p.x, p.y); else ctx.moveTo(p.x, p.y); }); ctx.strokeStyle = color; ctx.lineWidth = width; ctx.setLineDash(dash); ctx.stroke(); ctx.setLineDash([]);
+    };
+    const plane = (normal, selected = false) => {
+      const n = M.normalize(normal), u = M.normalize(M.cross(n, Math.abs(n[2]) < .9 ? [0, 0, 1] : [0, 1, 0])), v = M.cross(n, u), size = radius * 1.02;
+      const corners = [[-1, -1], [1, -1], [1, 1], [-1, 1]].map(([a, b]) => project(M.add(M.scale(u, a * size), M.scale(v, b * size))));
+      ctx.beginPath(); corners.forEach((p, i) => { if (i) ctx.lineTo(p.x, p.y); else ctx.moveTo(p.x, p.y); }); ctx.closePath(); ctx.fillStyle = selected ? '#e9b45723' : '#e9b4570b'; ctx.strokeStyle = selected ? '#b16a2399' : '#b16a2335'; ctx.lineWidth = selected ? 1.4 : .7; ctx.fill(); ctx.stroke();
+    };
+    const elements = state.group.elements, op = state.op;
+    if ($('pg-mirrors').checked) elements.mirrors.forEach(item => plane(item.normal));
+    if (op.type === 'reflection') plane(op.normal, true);
+    if (op.type === 'improper') plane(op.axis, true);
+    if ($('pg-axes').checked) elements.axes.forEach(axis => line([M.scale(axis.direction, -radius * 1.25), M.scale(axis.direction, radius * 1.25)], axis.improperFold > 2 ? '#977ca455' : '#217b7860', .9, [4, 5]));
+    if (op.axis && ['rotation', 'rotoinversion', 'improper'].includes(op.type)) {
+      const length = radius * 1.3;
+      line([M.scale(op.axis, -length), M.scale(op.axis, length)], '#217b78c0', 2, [6, 4]);
+      const q = project(M.scale(op.axis, length)); ctx.font = '11px system-ui'; ctx.fillStyle = '#217b78'; ctx.fillText('所选轴', q.x + 7, q.y + 3);
+    }
+    // Coordinate guides and camera are references; neither contributes to model symmetry.
+    [[1, 0, 0], [0, 1, 0], [0, 0, 1]].forEach((v, i) => { line([[0, 0, 0], M.scale(v, radius * 1.15)], '#7f96a247', .7); const q = project(M.scale(v, radius * 1.17)); ctx.font = '10px system-ui'; ctx.fillStyle = '#718692'; ctx.fillText(['x', 'y', 'z'][i], q.x + 5, q.y); });
+    const matrix = P.animateOperation(op, state.progress), model = state.group.model, points = model.atoms.map(atom => M.applyMatrix(matrix, atom.position));
+    if ($('pg-links').checked) edges.forEach(([a, b]) => line([points[a], points[b]], model.atoms[a].color + '50', .85));
+    if ($('pg-ghost').checked) model.atoms.forEach(atom => { const q = project(atom.position); ctx.beginPath(); ctx.arc(q.x, q.y, 5.5, 0, Math.PI * 2); ctx.strokeStyle = '#7a929b60'; ctx.lineWidth = 1; ctx.stroke(); });
+    const atom = model.atoms[state.selected];
+    const path = Array.from({ length: 65 }, (_, i) => M.applyMatrix(P.animateOperation(op, i / 64), atom.position)); line(path, '#b16a2377', 1, [3, 4]);
+    hits = [];
+    points.map((p, i) => ({ p, i, projected: project(p) })).sort((a, b) => a.projected.depth - b.projected.depth).forEach(item => {
+      const point = model.atoms[item.i], q = item.projected, r = model.atoms.length > 75 ? 3.6 : model.atoms.length > 30 ? 4.4 : 5.6;
+      ctx.beginPath(); ctx.arc(q.x, q.y, r, 0, Math.PI * 2); ctx.fillStyle = point.color; ctx.fill(); ctx.strokeStyle = '#ffffffa8'; ctx.lineWidth = .7; ctx.stroke();
+      if (item.i === state.selected) { ctx.beginPath(); ctx.arc(q.x, q.y, r + 3.5, 0, Math.PI * 2); ctx.strokeStyle = '#17384b'; ctx.lineWidth = 1.5; ctx.stroke(); ctx.font = '600 10px system-ui'; ctx.fillStyle = '#17384b'; ctx.fillText(point.id, q.x + r + 5, q.y - 4); }
+      else if ($('pg-labels').checked) { ctx.font = '9px system-ui'; ctx.fillStyle = '#17384b'; ctx.fillText(point.id, q.x + r + 3, q.y - 3); }
+      hits.push({ x: q.x, y: q.y, r, index: item.i });
+    });
+    const origin = project([0, 0, 0]); ctx.fillStyle = '#617a89'; ctx.font = '10px system-ui'; ctx.fillText('O', origin.x + 8, origin.y + 14);
+    if (elements.inversion && $('pg-inversion').checked || op.type === 'inversion') { ctx.beginPath(); ctx.arc(origin.x, origin.y, 8, 0, Math.PI * 2); ctx.strokeStyle = '#995c98'; ctx.lineWidth = 1.5; ctx.stroke(); }
+  }
+
+  $('pg-group-select').innerHTML = L.crystalSystems.map(system => '<optgroup label="' + esc(system) + '晶系">' + L.pointGroups.filter(group => group.system === system).map(group => '<option value="' + esc(group.hm) + '">' + esc(group.hm.replace(/-(\d)/g, '$1\u0305') + ' / ' + group.schoenflies + ' · ' + group.order + ' 个操作') + '</option>').join('') + '</optgroup>').join('');
+  $('pg-group-select').addEventListener('change', e => { setGroup(e.target.value); document.dispatchEvent(new CustomEvent('symmetry-atlas-select', { detail: { hm: e.target.value } })); });
+  $('pg-operation-select').addEventListener('change', e => setOperation(e.target.value));
+  $('pg-point-select').addEventListener('change', e => { state.selected = Number(e.target.value); update(); });
+  $('pg-play').addEventListener('click', play);
+  $('pg-step').addEventListener('click', () => { stop(); state.progress = stages(state.op).length === 2 && state.progress < .5 ? .5 : 1; update(); });
+  $('pg-end').addEventListener('click', () => { stop(); state.progress = 1; update(); });
+  $('pg-reset').addEventListener('click', () => { stop(); state.progress = 0; update(); });
+  $('pg-progress').addEventListener('input', e => { stop(); state.progress = Number(e.target.value) / 1000; update(); });
+  $('pg-stage-track').addEventListener('click', e => { const button = e.target.closest('[data-pg-progress]'); if (button) { stop(); state.progress = Number(button.dataset.pgProgress); update(); } });
+  $('pg-operation-list').addEventListener('click', e => { const button = e.target.closest('[data-pg-operation]'); if (button) setOperation(button.dataset.pgOperation); });
+  $('pg-element-list').addEventListener('click', e => {
+    const button = e.target.closest('[data-pg-element]'); if (!button) return;
+    const [type, textIndex] = button.dataset.pgElement.split(':'), i = Number(textIndex), elements = state.group.elements;
+    let choices = state.group.operations.filter(op => type === 'inversion' ? op.type === 'inversion' : type === 'mirror' ? op.type === 'reflection' && sameLine(op.normal, elements.mirrors[i].normal) : op.type === (type === 'axis' ? 'rotation' : 'rotoinversion') && sameLine(op.axis, elements.axes[i].direction) && op.n === (type === 'axis' ? elements.axes[i].fold : elements.axes[i].improperFold));
+    choices.sort((a, b) => a.angle - b.angle); if (choices.length) setOperation(choices[0].id);
+  });
+  document.querySelectorAll('.pg-toggles input').forEach(input => input.addEventListener('change', () => { const name = input.id.replace('pg-', ''); if (name in state.elementPreferences) state.elementPreferences[name] = input.checked; draw(); }));
+  document.querySelectorAll('[data-pg-view]').forEach(button => button.addEventListener('click', () => {
+    state.view = button.dataset.pgView === 'reset' ? 'perspective' : button.dataset.pgView;
+    Object.assign(state.camera, state.view === 'top' ? { yaw: 0, pitch: Math.PI / 2, zoom: 1 } : state.view === 'front' ? { yaw: 0, pitch: 0, zoom: 1 } : { yaw: -.5, pitch: .45, zoom: 1 }); update();
+  }));
+  $('atlas-detail').addEventListener('click', e => { if (e.target.closest('[data-atlas-group]')) jump(); });
+  $('pg-jump').addEventListener('click', jump);
+  canvas.addEventListener('pointerdown', e => { drag = { x: e.clientX, y: e.clientY, startX: e.clientX, startY: e.clientY }; canvas.setPointerCapture(e.pointerId); });
+  canvas.addEventListener('pointermove', e => { if (!drag) return; state.camera.yaw += (e.clientX - drag.x) * .007; state.camera.pitch = M.clamp(state.camera.pitch + (e.clientY - drag.y) * .007, -1.5, 1.5); drag.x = e.clientX; drag.y = e.clientY; state.view = 'free'; update(); });
+  canvas.addEventListener('pointerup', e => {
+    if (drag && Math.hypot(e.clientX - drag.startX, e.clientY - drag.startY) < 5) { const rect = canvas.getBoundingClientRect(), hit = hits.slice().reverse().find(item => Math.hypot(e.clientX - rect.left - item.x, e.clientY - rect.top - item.y) < item.r + 6); if (hit) { state.selected = hit.index; $('pg-point-select').value = hit.index; update(); } }
+    drag = null;
+  });
+  canvas.addEventListener('pointercancel', () => { drag = null; });
+  canvas.addEventListener('wheel', e => { e.preventDefault(); state.camera.zoom = M.clamp(state.camera.zoom * Math.exp(-e.deltaY * .001), .55, 1.7); draw(); }, { passive: false });
+  canvas.addEventListener('keydown', e => {
+    if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', '+', '=', '-'].includes(e.key)) {
+      e.preventDefault(); if (e.key === 'ArrowLeft') state.camera.yaw -= .12; if (e.key === 'ArrowRight') state.camera.yaw += .12;
+      if (e.key === 'ArrowUp') state.camera.pitch = M.clamp(state.camera.pitch + .12, -1.5, 1.5); if (e.key === 'ArrowDown') state.camera.pitch = M.clamp(state.camera.pitch - .12, -1.5, 1.5);
+      if (e.key === '+' || e.key === '=') state.camera.zoom = M.clamp(state.camera.zoom * 1.1, .55, 1.7); if (e.key === '-') state.camera.zoom = M.clamp(state.camera.zoom / 1.1, .55, 1.7); state.view = 'free'; update();
+    } else if (e.key === ' ') { e.preventDefault(); play(); }
+  });
+  function observeAtlas() {
+    const active = document.querySelector('.atlas-tile[aria-pressed="true"]'); section.hidden = !active;
+    if (active && (!state.group || state.group.hm !== active.dataset.hm)) setGroup(active.dataset.hm);
+  }
+  new MutationObserver(observeAtlas).observe($('atlas-detail'), { childList: true, attributes: true, attributeFilter: ['hidden'] });
+  new MutationObserver(() => { if ($('page-atlas').hidden) { stop(); update(); } else draw(); }).observe($('page-atlas'), { attributes: true, attributeFilter: ['hidden'] });
+  new ResizeObserver(() => requestAnimationFrame(draw)).observe(canvas);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) { stop(); update(); } });
+  observeAtlas();
 })();
 
 
