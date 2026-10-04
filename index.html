@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#153d52">
   <title>点群实验室 · 看见对称性</title>
-  <link rel="stylesheet" href="styles.css?v=1.0">
+  <link rel="stylesheet" href="styles.css?v=1.1">
   <script defer src="math.js?v=1.0"></script>
+  <script defer src="lattice-math.js?v=1.1"></script>
   <script defer src="learning-data.js?v=1.0"></script>
   <script defer src="app.js?v=1.0"></script>
+  <script defer src="lattice-view.js?v=1.1"></script>
 </head>
 <body>
   <header class="topbar">
@@ -82,11 +84,31 @@
 
     <section class="page" id="page-atlas" aria-label="32 点群图谱" hidden>
       <div class="page-heading"><div><p class="eyebrow">THE BIG PICTURE</p><h1>32 种组合，<span>7 个晶系。</span></h1><p class="lead">晶体学点群速查：把国际符号和 Schoenflies 符号放在一起看。</p></div><span class="large-badge">32</span></div>
-      <div class="atlas-controls panel"><label for="system-filter">晶系 <select id="system-filter"><option value="all">全部晶系</option></select></label><label for="property-filter">对称性 <select id="property-filter"><option value="all">全部点群</option><option value="centro">含反演中心</option><option value="chiral">仅含保手性操作</option><option value="other">其余非中心对称群</option></select></label><span id="atlas-count" aria-live="polite"></span></div>
+      <div class="atlas-controls panel"><label for="system-filter">晶系 <select id="system-filter"><option value="all">全部晶系</option></select></label><label for="property-filter">对称性 <select id="property-filter"><option value="all">全部点群</option><option value="centro">含反演中心</option><option value="chiral">仅含保手性操作</option><option value="other">其余非中心对称群</option></select></label><span id="atlas-count" aria-live="polite"></span><button type="button" class="quiet-button" id="lattice-jump">为什么没有 5？查看 3D 示意 ↓</button></div>
       <div class="atlas-note"><strong>读图提示</strong><span>群的阶 |G| 是操作总数；n 是某个轴的折数。两者不能混用。“仅含保手性操作”指群的性质，不能仅据此断言一个未指定结构具有手性。</span></div>
       <div id="atlas-grid" class="atlas-grid"></div>
       <div class="atlas-detail panel" id="atlas-detail" aria-live="polite"></div>
-      <div class="reading-card panel"><h2>为什么这里没有 5？</h2><p>三维周期晶格允许的旋转折数为 1、2、3、4、6。有限分子可以有五重轴甚至更高折数；“32 种”说的是晶体学点群，并非所有有限物体的点群。</p><p>图谱是分类速查；实验室的模型是少量理想结构，不能用一次操作检验自动判定任意结构的完整点群。</p></div>
+      <section class="reading-card panel lattice-section" id="why-rotation" aria-labelledby="lattice-heading">
+        <div class="lattice-heading"><div><p class="eyebrow">ROTATION MEETS TRANSLATION</p><h2 id="lattice-heading">为什么这里没有 5？</h2><p>把周期晶格绕轴旋转 360°/n，所有格点还能落回格点吗？</p></div><span class="lattice-badge">三维周期晶格</span></div>
+        <div class="lattice-orders" role="group" aria-label="尝试旋转折数">
+          <span>旋转折数 n</span>
+          <button type="button" data-lattice-n="1" aria-label="尝试1重旋转">1</button><button type="button" data-lattice-n="2" aria-label="尝试2重旋转">2</button><button type="button" data-lattice-n="3" aria-label="尝试3重旋转">3</button><button type="button" data-lattice-n="4" aria-label="尝试4重旋转">4</button><button type="button" data-lattice-n="5" aria-label="尝试5重旋转">5</button><button type="button" data-lattice-n="6" aria-label="尝试6重旋转">6</button><button type="button" data-lattice-n="7" aria-label="尝试7重旋转">7</button><button type="button" data-lattice-n="8" aria-label="尝试8重旋转">8</button><button type="button" data-lattice-n="9" aria-label="尝试9重旋转">9</button><button type="button" data-lattice-n="10" aria-label="尝试10重旋转">10</button><button type="button" data-lattice-n="11" aria-label="尝试11重旋转">11</button><button type="button" data-lattice-n="12" aria-label="尝试12重旋转">12</button>
+        </div>
+        <div class="lattice-layout">
+          <div class="lattice-observation">
+            <div class="lattice-example-controls"><label for="lattice-kind">示例晶格 <select id="lattice-kind"><option value="auto">自动选择合适示例</option><option value="square">方格层 · 沿 z 堆叠</option><option value="hexagonal">三角网格层 · 沿 z 堆叠</option></select></label><span id="lattice-kind-label"></span></div>
+            <div class="lattice-viewport"><div class="lattice-scene-heading"><strong id="lattice-scene-title"></strong><span id="lattice-phase"></span></div><canvas id="lattice-canvas" tabindex="0" aria-label="三维周期晶格示意。拖动改变视角，滚轮缩放；方向键调整视角，加减键缩放。空心点是原格点，实心点是旋转后的格点。"></canvas><div class="lattice-view-tools"><button type="button" data-lattice-view="perspective">立体</button><button type="button" data-lattice-view="top">俯视</button><button type="button" data-lattice-view="reset">↺ 视角</button></div><div class="lattice-legend"><span><i class="lattice-dot original"></i>原格点</span><span><i class="lattice-dot match"></i>终态重合</span><span><i class="lattice-dot miss"></i>终态错位</span></div></div>
+            <div class="lattice-playback"><button type="button" class="primary-button" id="lattice-play">播放旋转</button><button type="button" class="secondary-button" id="lattice-end">看终态</button><button type="button" class="secondary-button" id="lattice-reset">回到起点</button><span id="lattice-progress-label"></span><input id="lattice-progress" type="range" min="0" max="1000" value="1000" aria-label="晶格旋转进度"></div>
+            <p class="lattice-display-note">显示的是无限点阵的一小段，三层沿 z 重复。拖动看第三维，点“俯视”比较格点位置；网格线只作空间参照。中间的蓝色点表示旋转过程，判断重合看终态。</p>
+          </div>
+          <div class="lattice-insights">
+            <div class="lattice-result" id="lattice-theory"><span class="mini-label">① 对所有三维周期晶格</span><h3 id="lattice-theory-title"></h3><p id="lattice-theory-note"></p><div class="lattice-trace"><span>tr R = 1 + 2cos(360°/n)</span><strong id="lattice-trace-value"></strong></div><p class="lattice-integer-note">若旋转保持晶格，迹必须是整数。</p></div>
+            <div class="lattice-result" id="lattice-example"><span class="mini-label">② 在当前示例中 · 绕 z 轴</span><h3 id="lattice-example-title"></h3><p id="lattice-example-note"></p><div class="lattice-basis-info"><span>基矢 a 旋转后，需要走几步？</span><code id="lattice-basis-coordinates"></code><span id="lattice-basis-note"></span></div></div>
+          </div>
+        </div>
+        <details class="lattice-proof"><summary>为什么“整数步”能限制任意三维周期晶格？</summary><div><p>三维晶格由三根独立的原胞基矢 a、b、c 反复平移生成。若旋转是晶格的对称性，每根旋转后的基矢就必须是 a、b、c 的<strong>整数倍组合</strong>。因此，旋转在原胞基底下的矩阵 A = B⁻¹RB 必为整数矩阵，它的迹（对角项之和）也是整数。</p><p>换一组坐标不会改变迹。三维正旋转沿轴方向贡献 1，垂直平面的旋转贡献 2cosθ，所以 <strong>tr A = tr R = 1 + 2cos(360°/n)</strong>。迹只能取 −1、0、1、2、3，对应 n = 2、3、4、6、1。五重的迹约为 1.618；所有 n ≥ 7 的迹都严格位于 2 和 3 之间，均不可能是整数。</p><p>这里的两个点阵提供具体示例；一般结论来自三维矩阵条件。终态检验使用无限晶格的坐标与基矢，不依赖显示窗口的边缘。</p><p><a href="https://www.iucr.org/what-we-do/education/pamphlets/metric-tensor-and-symmetry-operations-in-crystallography" target="_blank" rel="noopener noreferrer">IUCr：晶格基底、旋转矩阵与晶体学限制 ↗</a></p></div></details>
+        <p class="lattice-scope"><strong>“允许”表示存在合适的晶格，不是每一种晶格都拥有这些旋转。</strong>例如这个方格层绕 z 轴没有三重对称，三角网格层可以有。有限分子与非周期准晶不受三维平移周期的这个条件约束；本实验不会自动识别任意结构的完整点群。</p>
+      </section>
     </section>
 
     <section class="page" id="page-group" aria-label="组合与群" hidden>
