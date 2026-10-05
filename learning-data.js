@@ -92,7 +92,17 @@
       id: 'composition', question: '本项目使用列向量 r′ = AB r。操作 AB 按什么顺序执行？',
       options: ['先 A，再 B', '先 B，再 A', '把 A 与 B 的矩阵逐项相加', '任何顺序都相同'], answer: 1,
       explanation: '矩阵最右边先作用于列向量，因此 AB r = A(B r)。一般 AB ≠ BA；同轴旋转等特殊情况可以交换，不能推广到所有操作。'
-    }
+    },
+    {id:'stereogram',question:'立体投影中，上下半球的方向落在同一圆盘里，怎样区分它们？',options:['上下半球必须是同一个方向','按不同的点符号区分，不能忽略半球标签','所有空心点都是镜面','投影圆上的线都是镜面'],answer:1,explanation:'上半球从南极投影，下半球从北极投影，分别标记。实际镜面的线来自镜面与球面的交线；辅助线不是镜面。',explore:{page:'advanced',target:'stereo-root'}},
+    {id:'subgroups',question:'从母群删去一些操作，就一定得到子群吗？',options:['一定，数量少就行','只要操作数整除母群阶数就行','还必须保留 E、逆元，并满足组合闭包','必须删去所有旋转'],answer:2,explanation:'操作数整除只是必要条件。任意挑选一个子集可能在组合后产生不在子集中的操作，因此不一定是子群。嵌入方向也必须一致。',explore:{page:'advanced',target:'subgroup-root'}},
+    {id:'polarity',question:'纤锌矿的点群 6mm 没有反演中心，但含镜面。哪项描述正确？',options:['非中心对称，所以必然手性','非中心对称、极性、非手性；是否铁电另需证据','有镜面，所以必有反演中心','极性就一定铁电'],answer:1,explanation:'非中心对称、手性、极性不是同一分类。镜面是不正操作，所以 6mm 非手性；沿主轴允许极性向量，但可切换极化的铁电性质不能只靠点群判断。',explore:{page:'advanced',target:'property-root',hm:'6mm'}},
+    {id:'neumann',question:'立方晶体的对称二阶极性张量为 diag(a,a,a)。这意味着什么？',options:['所有阶数的物性都各向同性','这个二阶性质各向同性，但高阶性质仍可能各向异性','晶体没有方向信息','a 必须为零'],answer:1,explanation:'Neumann 原理使立方群的对称二阶张量只有一个独立系数。不能把这个二阶结论推广到弹性等所有高阶张量。',explore:{page:'advanced',target:'property-root',hm:'m-3m'}},
+    {id:'hcp-cell',question:'HCP 课件画法的六棱柱含 6 个原子，原始平行六面体胞含几个？',options:['1','2','6','12'],answer:1,explanation:'HCP 的 P 型平移晶格在原胞中搭配 2 原子的基元。常见六棱柱显示窗的体积是这个原胞的 3 倍，因此计入 6 个原子。必须先说明使用哪一种胞。',explore:{page:'crystal',tab:'structures',structure:'hcp'}},
+    {id:'lattice-structure',question:'FCC 晶格搭配不同的原子基元，可以形成什么？',options:['只能形成单原子 FCC 金属','NaCl、闪锌矿或金刚石等不同结构','基元不影响结构','这些结构一定具有同一完整点群'],answer:1,explanation:'晶格描述无限重复的几何规则；基元描述每个原胞里的内容。FCC 晶格可以配不同基元，形成不同结构与完整空间对称性。',explore:{page:'crystal',tab:'lattice'}},
+    {id:'void-count',question:'一个含 4 个密堆积球的 FCC 传统胞有多少四面体孔隙和八面体孔隙？',options:['4 T、8 O','8 T、4 O','4 T、4 O','12 T、12 O'],answer:1,explanation:'每个密堆积球对应 2 个四面体孔隙、1 个八面体孔隙，因此 FCC 传统胞对应 8 T、4 O。胞边界位点需按共享比例计数。',explore:{page:'crystal',tab:'packing'}},
+    {id:'site-occupancy',question:'把 FCC 阴离子骨架的四面体孔隙填满一半，阳离子与阴离子之比是多少？',options:['1:2','1:1','2:1','3:1'],answer:1,explanation:'每个阴离子对应两个 T 位点，填一半便是每个阴离子一个阳离子。选取有序的一半可以得到闪锌矿 AB；只靠占位比例还不能唯一决定结构。',explore:{page:'crystal',tab:'packing'}},
+    {id:'radius-model',question:'硬球半径比达到约 0.414，能否据此断定真实材料必为八面体配位？',options:['能，几何唯一决定结构','不能；这是接触模型的几何临界，真实结构还受键合等因素影响','能，价态完全不重要','不能，因为 0.414 没有几何来源'],answer:1,explanation:'sqrt(2)−1 是接触八面体壳的几何临界比。离子半径本身与配位、价态相关，真实结构还涉及电子结构、占位、温度和压力。',explore:{page:'crystal',tab:'radius'}},
+    {id:'screw-operation',question:'对示踪点连续做两次 2₁ 螺旋操作，会怎样？',options:['绝对坐标回到起点','旋转回到原朝向，同时沿轴平移一个周期','只旋转 180°','等于中心反演'],answer:1,explanation:'每次旋转 180°并平移 c/2；两次合计旋转 360°并平移 c。它回到平移等价的位置，而不是相同的绝对坐标。',explore:{page:'advanced',target:'space-root'}}
   ];
 
   var glossary = [
@@ -103,7 +113,15 @@
     { term: '生成元', definition: '通过反复复合和取逆，就能得到群中所有操作的一组操作；同一点群可选不同的生成元。' },
     { term: '复合 AB', definition: '采用列向量约定时，先执行 B，再执行 A。操作满足结合律，但不一定满足交换律。' },
     { term: '正操作与非正操作', definition: '正操作保持空间手性，三维正交矩阵的行列式为 +1；非正操作改变空间手性，行列式为 −1。' },
-    { term: '中心对称', definition: '群中包含单独的中心反演 i。旋转反演使用某个反演点，不代表 i 本身也属于该群。' }
+    { term: '中心对称', definition: '群中包含单独的中心反演 i。旋转反演使用某个反演点，不代表 i 本身也属于该群。' },
+    { term: '晶格', definition: '由三根独立平移基矢的全部整数倍组合生成的无限几何点集；格点不是某一种原子。' },
+    { term: '基元', definition: '随每个原胞重复的一组原子及其相对位置。晶格与基元一起形成结构；传统胞的完整原子表不等于原胞基元。' },
+    { term: '原胞与传统胞', definition: '原胞含一个平移格点；传统胞便于显示晶体对称性，可以含多个格点。原子数还取决于基元。' },
+    { term: '配位数', definition: '在指定原子类型和配位壳约定下，中心原子周围的邻居数。周期边界外的邻居也要计入。' },
+    { term: '立体投影', definition: '把球面方向从相反极点投到赤道平面的表示法；上下半球用不同符号区分，投影位置不是原子坐标。' },
+    { term: '子群', definition: '母群中仍满足群条件的一组操作；母群本身也是子群。比较几何子群时要说明嵌入方向。' },
+    { term: '极性', definition: '全部点群操作共同允许非零极性向量的方向。极性、手性和非中心对称不同，极性也不自动证明铁电性。' },
+    { term: '螺旋轴与滑移面', definition: '把旋转与沿轴平移组合，或把镜映与平行于面的平移组合的空间对称元素；一般没有共同固定点。' }
   ];
 
   var cautions = [

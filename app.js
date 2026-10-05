@@ -28,13 +28,14 @@
 
   function toast(message) { $('toast').textContent = message; $('toast').classList.add('visible'); clearTimeout(toastTimer); toastTimer = setTimeout(() => $('toast').classList.remove('visible'), 5500); }
   function selectPage(page, updateHash = true) {
-    if (!['lab', 'atlas', 'group', 'quiz'].includes(page)) page = 'lab';
+    if (!['lab', 'atlas', 'group', 'advanced', 'crystal', 'quiz'].includes(page)) page = 'lab';
     if (page !== 'lab') stop();
     state.page = page;
     document.querySelectorAll('.page').forEach(el => { el.hidden = el.id !== 'page-' + page; el.classList.toggle('active', !el.hidden); });
     document.querySelectorAll('.nav-item').forEach(el => { const active = el.dataset.page === page; el.classList.toggle('active', active); if (active) el.setAttribute('aria-current', 'page'); else el.removeAttribute('aria-current'); });
     if (updateHash && location.hash !== '#' + page) history.replaceState(null, '', '#' + page);
     updateDynamic();
+    document.dispatchEvent(new CustomEvent('symmetry-page-change', {detail: {page}}));
   }
 
   function makeOp() { state.op = M.makeOperation({ type: state.type, n: state.n, axis: axisVectors[state.axis], normal: planeNormals[state.plane] }); }
@@ -354,7 +355,7 @@
   $('quiz-options').addEventListener('click', e => { const button = e.target.closest('[data-answer]'); if (!button || state.answers[state.quizIndex] !== null) return; state.answers[state.quizIndex] = Number(button.dataset.answer); renderQuiz(); });
   $('quiz-prev').addEventListener('click', () => { if (state.quizIndex > 0) state.quizIndex--; renderQuiz(); });
   $('quiz-next').addEventListener('click', () => { if (state.quizIndex === L.quiz.length - 1) { state.quizIndex = 0; state.answers.fill(null); } else state.quizIndex++; renderQuiz(); });
-  $('quiz-lab').addEventListener('click', () => { const id = L.quiz[state.quizIndex].id; if (id === 'composition') { selectPage('group'); window.scrollTo({ top: 0, behavior: 'auto' }); } else startExperiment(quizExperiments[id] || { model: 'water', type: 'rotation', n: 2 }); });
+  $('quiz-lab').addEventListener('click', () => { const question = L.quiz[state.quizIndex], id = question.id; if (question.explore) { selectPage(question.explore.page); document.dispatchEvent(new CustomEvent('symmetry-course-explore', { detail: question.explore })); } else if (id === 'composition') { selectPage('group'); window.scrollTo({ top: 0, behavior: 'auto' }); } else startExperiment(quizExperiments[id] || { model: 'water', type: 'rotation', n: 2 }); });
   $('glossary-grid').innerHTML = L.glossary.map(g => '<article class="glossary-card"><h3>' + escapeHTML(g.term) + '</h3><p>' + escapeHTML(g.definition) + '</p></article>').join('');
   $('source-links').innerHTML = L.sources.map(source => '<a href="' + escapeHTML(source.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHTML(source.title) + ' ↗</a>').join('');
   new Scene($('main-canvas'), mainSceneData, true); new Scene($('ab-canvas'), () => compositionScene(false)); new Scene($('ba-canvas'), () => compositionScene(true));

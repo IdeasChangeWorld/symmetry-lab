@@ -6,13 +6,22 @@
   <meta name="theme-color" content="#153d52">
   <title>点群实验室 · 看见对称性</title>
   <link rel="stylesheet" href="styles.css?v=1.2">
+  <link rel="stylesheet" href="course.css?v=1.3">
+  <link rel="stylesheet" href="stereo.css?v=1.3">
+  <link rel="stylesheet" href="crystal.css?v=1.3">
   <script defer src="math.js?v=1.0"></script>
   <script defer src="lattice-math.js?v=1.1"></script>
-  <script defer src="learning-data.js?v=1.0"></script>
+  <script defer src="learning-data.js?v=1.3"></script>
   <script defer src="point-group-math.js?v=1.2"></script>
-  <script defer src="app.js?v=1.2"></script>
+  <script defer src="advanced-math.js?v=1.3"></script>
+  <script defer src="course-math.js?v=1.3"></script>
+  <script defer src="crystal-math.js?v=1.3"></script>
+  <script defer src="app.js?v=1.3"></script>
   <script defer src="point-group-view.js?v=1.2"></script>
   <script defer src="lattice-view.js?v=1.1"></script>
+  <script defer src="stereo-view.js?v=1.3"></script>
+  <script defer src="crystal-view.js?v=1.3"></script>
+  <script defer src="course-view.js?v=1.3"></script>
 </head>
 <body>
   <header class="topbar">
@@ -21,13 +30,16 @@
       <button class="nav-item active" data-page="lab" aria-current="page">操作实验室</button>
       <button class="nav-item" data-page="atlas">32 点群图谱</button>
       <button class="nav-item" data-page="group">组合与群</button>
+      <button class="nav-item" data-page="advanced">进阶对称</button>
+      <button class="nav-item" data-page="crystal">晶体结构</button>
       <button class="nav-item" data-page="quiz">小练习</button>
     </nav>
-    <span class="course-tag">MATSCI 402 · Lecture 03</span>
+    <span class="course-tag">MATSCI 402 · L03–L05</span>
   </header>
 
   <main>
     <section class="page active" id="page-lab" aria-label="操作实验室">
+      <div class="course-bridge"><span>从操作到结构，沿课件继续探索</span><button type="button" data-course-link="advanced">L04 · 投影、子群与物性 →</button><button type="button" data-course-link="crystal">L05 · 堆积、孔隙与结构 →</button></div>
       <div class="page-heading"><div><p class="eyebrow">MOVE IT. SEE IT. UNDERSTAND IT.</p><h1>动一下，<span>还是它。</span></h1><p class="lead">当操作结束，结构能否与原来重合？亲手试一试。</p></div><button class="quiet-button" id="intro-toggle" aria-expanded="false">入门提示 <span aria-hidden="true">↗</span></button></div>
       <div class="intro-panel" id="intro-panel" hidden><p><strong>对称操作</strong>是使结构在终态与原结构不可区分的变换；<strong>对称元素</strong>是操作所依托的轴、面或点。点群的全部操作至少共享一个不动点，本项目将它设在原点 O。</p><p>标签 H1、H2 用来追踪原子；同种原子可以互换位置。旋转物体的操作与拖动鼠标改变观察视角是两件不同的事。</p></div>
 
@@ -147,13 +159,30 @@
       <div class="group-bottom-grid"><div class="panel group-table-card"><p class="mini-label">一个完整的小群</p><h2>水分子的 mm2 / C₂ᵥ</h2><p>把四个对称操作两两组合，结果仍在这四个里面。点击表格中的结果，在实验室查看。</p><div id="cayley-table"></div><p class="table-caption">行 A × 列 B：先做列，再做行。mₓ𝓏 与 mᵧ𝓏 表示过原点的两个镜面。</p></div><div class="panel axioms-card"><p class="mini-label">群的四个条件</p><div><b>01</b><p><strong>封闭性</strong>组合任意两个操作，结果仍属于这个群。</p></div><div><b>02</b><p><strong>结合律</strong>(A B) C = A (B C)，改变括号不改变结果。</p></div><div><b>03</b><p><strong>恒等操作</strong>E A = A E = A，什么也不改变。</p></div><div><b>04</b><p><strong>逆操作</strong>每个操作都有能撤销它的操作，A⁻¹ A = E。</p></div><p class="axiom-note">交换律 A B = B A 不是群的必要条件。</p></div></div>
     </section>
 
+    <section class="page" id="page-advanced" aria-label="进阶对称" hidden>
+      <div class="page-heading"><div><p class="eyebrow">LECTURE 04 · FROM SYMMETRY TO PROPERTIES</p><h1>对称性，<span>还告诉我们什么？</span></h1><p class="lead">把三维方向投到纸上，观察子群如何留下更少的操作，再看物性受哪些限制。</p></div></div>
+      <div class="course-path"><button type="button" data-course-scroll="stereo-root"><b>01</b>立体投影</button><button type="button" data-course-scroll="subgroup-root"><b>02</b>群与子群</button><button type="button" data-course-scroll="property-root"><b>03</b>对称与物性</button><button type="button" data-course-scroll="color-root"><b>04</b>二色反对称</button><button type="button" data-course-scroll="space-root"><b>05</b>走向空间群</button></div>
+      <div id="stereo-root"></div>
+      <div id="subgroup-root"></div>
+      <div id="property-root"></div>
+      <div id="color-root"></div>
+      <div id="space-root"></div>
+      <section class="course-reading panel"><p class="eyebrow">READ WITH THE LECTURE</p><h2>把例子放回课件</h2><p>先用 32 和 3̄m 比较石英、刚玉的二阶物性约束；再到晶体结构中比较 FCC、HCP、纤锌矿和萤石。课件的群人口统计用于讨论样本分布，比例取决于数据库与年代，不能从对称性本身推导。</p><p>课件提到的外场诱导压电研究通过重排氧空位破坏原有对称性，与普通线性体压电的对称限制相容。二色翻转、时间反演、畸变反演是不同的内部操作，本项目用双色标签演示组合思想，不模拟磁性或能量路径。</p><div class="course-reading-links"><a href="https://doi.org/10.1126/science.abm7497" target="_blank" rel="noopener noreferrer">课件中的诱导压电研究 ↗</a><a href="course-guide.html" target="_blank" rel="noopener noreferrer">逐章内容对应与学习路线 ↗</a><button class="quiet-button" type="button" data-course-link="crystal">继续 L05 · 晶体结构 →</button></div></section>
+    </section>
+
+    <section class="page" id="page-crystal" aria-label="晶体结构" hidden>
+      <div class="page-heading"><div><p class="eyebrow">LECTURE 05 · BUILD A CRYSTAL</p><h1>同样的格点，<span>不同的结构。</span></h1><p class="lead">晶格提供重复的规则，基元提供每个重复位置的内容。观察堆垛、孔隙和占位如何组织成晶体。</p></div></div>
+      <div id="crystal-root"></div>
+      <section class="course-reading panel"><h2>从几何模型到真实材料</h2><p>课件中的离子半径、价态、配位统计提醒我们：硬球堆积与电中性只是结构分析的起点。真实结构还取决于键合、电子结构、温度、压力与占位有序。近似密堆积的阴离子骨架可以发生畸变；同样的化学式也可能有不同多型。</p><p>“非中心对称”只说明没有反演，镜面等不正操作仍可能存在。纤锌矿的 6mm 就是非中心对称、极性而非手性的例子；交换阳离子与阴离子的位置是构造另一种结构，不是同一结构里可以随意交换物种的对称操作。课件的 WOBr₄ 例子则说明：非手性的局部单元可以组成手性整体。</p><p>课件还介绍了晶体学历史、结构数据库、自动文字描述工具，以及 CrI₃ 层状磁体。这里将它们作为延伸阅读：结构图只描述原子几何，不由此推断磁序或磁相变。<a href="course-guide.html" target="_blank" rel="noopener noreferrer">阅读课件内容地图 ↗</a></p></section>
+    </section>
+
     <section class="page" id="page-quiz" aria-label="小练习" hidden>
       <div class="page-heading"><div><p class="eyebrow">CHECK YOUR INTUITION</p><h1>你能预测，<span>操作的结果吗？</span></h1><p class="lead">先回答，再看解释。答错也可以回到实验室亲手验证。</p></div><span class="quiz-score" id="quiz-score"></span></div>
       <div class="quiz-shell panel"><div class="quiz-meta"><span id="quiz-position"></span><div id="quiz-dots" aria-label="练习进度"></div></div><h2 id="quiz-question"></h2><div id="quiz-options" class="quiz-options"></div><div id="quiz-feedback" class="quiz-feedback" hidden aria-live="polite"></div><div class="quiz-actions"><button id="quiz-prev" class="secondary-button">上一题</button><button id="quiz-lab" class="quiet-button">去实验室验证 ↗</button><button id="quiz-next" class="primary-button">下一题 →</button></div></div>
       <div class="glossary-grid" id="glossary-grid"></div>
     </section>
   </main>
-  <footer><div><strong>点群实验室</strong><span>基于 L03 · Symmetry Operations, Groups, and Lattices</span></div><details><summary>范围与参考资料</summary><p>聚焦点群操作、32 晶体学点群和群的组合；平移、螺旋轴、滑移面与完整空间群不在此版本范围内。所有模型为理想几何示意。</p><div id="source-links"></div><p>课件对应：PDF 第 3、8、11–19、36–39、58 页。符号采用国际符号为主，化学符号为补充。动画插值是教学示意，不表示实际原子运动。</p></details></footer>
+  <footer><div><strong>点群实验室</strong><span>MATSCI 402 · L03–L05 · 从对称操作到晶体结构</span></div><details><summary>范围与参考资料</summary><p>覆盖 32 点群、立体投影、子群示例、物性对称约束、14 Bravais 晶格与理想结构原型，以及平移、螺旋、滑移操作入门。空间操作示例不构成全部 230 空间群的浏览器；不自动识别任意结构或预测材料物性。</p><div id="source-links"></div><p>课件对应和补充来源见 <a href="course-guide.html" target="_blank" rel="noopener noreferrer">课程指南</a>。符号采用国际符号为主，化学符号为补充。所有模型和动画为教学示意。</p></details></footer>
   <div id="toast" role="status" aria-live="polite"></div>
   <noscript>此项目需要浏览器启用 JavaScript 才能播放三维对称操作。</noscript>
 </body>

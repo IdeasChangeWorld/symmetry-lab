@@ -44,8 +44,8 @@ test('group orders and notation match the crystallographic reference table', () 
 });
 
 test('quiz answers are valid and glossary and primary-source links are present', () => {
-  assert.equal(L.quiz.length, 10);
-  assert.equal(new Set(L.quiz.map(q => q.id)).size, 10);
+  assert.equal(L.quiz.length, 20);
+  assert.equal(new Set(L.quiz.map(q => q.id)).size, 20);
   for (const q of L.quiz) {
     assert.ok(q.question && q.explanation);
     assert.ok(Array.isArray(q.options) && q.options.length >= 2);
@@ -53,9 +53,13 @@ test('quiz answers are valid and glossary and primary-source links are present',
     assert.ok(q.options.every(option => typeof option === 'string' && option.length > 0));
     assert.equal(new Set(q.options).size, q.options.length);
   }
-  assert.ok(L.glossary.length > 0 && L.glossary.length <= 8);
+  assert.equal(L.glossary.length, 16);
   assert.ok(L.glossary.every(item => item.term && item.definition));
   assert.ok(L.sources.every(source => source.title && new URL(source.url).hostname.endsWith('iucr.org')));
+  for(const q of L.quiz.filter(item=>item.explore)){
+    assert.ok(['advanced','crystal'].includes(q.explore.page));
+    if(q.explore.hm) assert.ok(L.pointGroups.some(g=>g.hm===q.explore.hm));
+  }
 });
 
 test('the eight ideal models have atlas correspondences except the explanatory probe', () => {
