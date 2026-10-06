@@ -82,6 +82,23 @@
 @media(max-width:460px){.cx-workbench{padding:15px 12px}.cx-controls{padding:14px;gap:0 12px}.cx-control select{font-size:10px;padding:8px 5px}.cx-control{font-size:10px}.cx-radio-row button{font-size:9px;padding:7px 4px}.cx-viewport{height:370px}.cx-scene-heading{left:13px;right:13px;top:13px}.cx-scene-heading strong{font-size:10px;max-width:70%}.cx-scene-heading>span{font-size:8px}.cx-camera{top:60px;left:10px;max-width:280px}.cx-camera button{font-size:8px;padding:5px 7px}.cx-legend{left:13px;right:13px;font-size:9px;gap:9px}.cx-result-grid{grid-template-columns:1fr}.cx-result{padding:14px}.cx-result h3{font-size:16px}.cx-observe{padding:12px;font-size:10px;gap:8px}.cx-observe>span{font-size:8px}.cx-next{flex-direction:column;gap:10px}.cx-next button{align-self:flex-end}.cx-route button{padding:11px 12px}.cx-route strong{font-size:12px}.cx-route small{font-size:9px}.cx-definition th,.cx-definition td{padding:7px 5px;font-size:9px}}
 
 </style>
+  <style>
+/* Language controls and room for longer English labels. */
+.topbar{height:auto;min-height:91px;gap:14px}.topbar nav{min-width:0}.language-tools{display:flex;align-items:center;gap:10px;flex-shrink:0}.language-toggle{background:var(--paper,#fff);border:1px solid var(--teal,#087e82);border-radius:8px;color:var(--teal,#087e82);padding:9px 12px;font-size:12px;font-weight:600;min-width:70px;min-height:36px;white-space:nowrap}.language-toggle:hover{background:var(--teal-soft,#e6f3ef)}.language-toggle:focus-visible{outline:3px solid #ca8b39;outline-offset:3px}
+html:lang(en) .nav-item{font-size:12px;padding:11px 8px}html:lang(en) .brand{font-size:19px}html:lang(en) .op-button>span:last-child{white-space:normal;overflow-wrap:anywhere;hyphens:auto}html:lang(en) .parameter-row{flex-wrap:wrap}html:lang(en) .parameter-row select{width:100%}html:lang(en) .scene-legend,html:lang(en) .pg-legend,html:lang(en) .lattice-legend{flex-wrap:wrap;gap:8px 12px}html:lang(en) .camera-hint{display:none}html:lang(en) .viewport-heading h2{max-width:85%;line-height:1.5}html:lang(en) .phase-pill{flex-shrink:0}html:lang(en) .primary-button,html:lang(en) .secondary-button,html:lang(en) .quiet-button{white-space:normal;line-height:1.5}html:lang(en) .playback-top{flex-wrap:wrap}html:lang(en) .coordinate-card .mini-label{flex-wrap:wrap}html:lang(en) .cx-radio-row button{white-space:normal;line-height:1.5;min-width:62px}html:lang(en) .cx-intro{flex-wrap:wrap}html:lang(en) .cx-source{white-space:normal}html:lang(en) .cx-next button{white-space:normal;min-width:140px}html:lang(en) .cx-route button{line-height:1.6}html:lang(en) .cx-route strong{display:block;line-height:1.5;margin:5px 0}html:lang(en) .cx-camera-hint{display:none}html:lang(en) .course-controls{flex-wrap:wrap}html:lang(en) .course-controls select{max-width:100%}html:lang(en) .pg-group-switch{flex-wrap:wrap}html:lang(en) .pg-group-switch label{min-width:0}html:lang(en) .pg-operation-meta{flex-wrap:wrap}html:lang(en) .atlas-controls{flex-wrap:wrap}html:lang(en) .atlas-properties{flex-wrap:wrap}html:lang(en) .atlas-detail{align-items:start}html:lang(en) .composition-controls{flex-wrap:wrap}
+@media(max-width:1400px){html:lang(en) .course-tag{display:none}}
+@media(max-width:1100px){.topbar{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;padding-top:14px;padding-bottom:12px;gap:10px 14px}.topbar nav{grid-column:1/-1;grid-row:2;display:flex;justify-content:center;gap:4px}.language-tools{grid-column:2;grid-row:1}.topbar .brand{grid-column:1;grid-row:1}.course-tag{display:none}}
+@media(max-width:760px){.topbar nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.topbar .nav-item{font-size:11px;padding:10px 5px;line-height:1.5;min-height:37px;white-space:normal}.language-toggle{padding:8px 11px;min-width:66px}html:lang(en) .course-path button{white-space:normal;line-height:1.6}html:lang(en) .atlas-detail{flex-direction:column}html:lang(en) .guided-heading{align-items:start;gap:12px}html:lang(en) .guided-heading p{max-width:45%}html:lang(en) .phase-pill{max-width:42%;white-space:normal;line-height:1.5}html:lang(en) .composition-controls label{max-width:100%}}
+@media(max-width:460px){html:lang(en) .cx-controls{grid-template-columns:minmax(0,1fr)}html:lang(en) .cx-intro h2{font-size:20px}html:lang(en) .cx-scene-heading strong{max-width:70%;line-height:1.5}html:lang(en) .cx-camera{top:78px}html:lang(en) .course-controls select{max-width:100%}html:lang(en) .course-controls label{flex-wrap:wrap;gap:8px}html:lang(en) .pg-group-switch label{display:block;width:100%}html:lang(en) .pg-group-switch select{width:100%;margin-top:8px}html:lang(en) .pg-legend{bottom:15px}html:lang(en) .scene-legend{max-width:90%}html:lang(en) .stage-track{padding-left:0;padding-right:0;gap:8px}html:lang(en) .stage-track button{line-height:1.5}html:lang(en) .coordinate-pair{flex-wrap:wrap}html:lang(en) .atlas-controls label{flex-wrap:wrap;max-width:100%}html:lang(en) .atlas-controls select{max-width:100%}html:lang(en) .lattice-orders>span{width:100%}html:lang(en) .course-bridge button{text-align:left}html:lang(en) .composition-controls label{flex-wrap:wrap}html:lang(en) .composition-controls select{width:100%}}
+
+html:lang(en) .cx-scene-heading>span{white-space:normal;max-width:35%;text-align:right}html:lang(en) .cx-radio-row button{min-width:0}
+
+</style>
+  
+  
+  
+  
+  
   
   
   
@@ -107,7 +124,7 @@
       <button class="nav-item" data-page="crystal">晶体结构</button>
       <button class="nav-item" data-page="quiz">小练习</button>
     </nav>
-    <span class="course-tag">MATSCI 402 · L03–L05</span>
+    <div class="language-tools"><span class="course-tag">MATSCI 402 · L03–L05</span><button type="button" class="language-toggle" id="language-toggle" data-language-toggle data-i18n-ignore lang="en" aria-label="切换到英文">English</button></div>
   </header>
 
   <main>
@@ -259,6 +276,1567 @@
   <div id="toast" role="status" aria-live="polite"></div>
   <noscript>此项目需要浏览器启用 JavaScript 才能播放三维对称操作。</noscript>
 <script>
+// i18n.js
+(function (host, factory) {
+  'use strict';
+  const api = factory(host);
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  if (host) host.SymmetryI18n = api;
+})(typeof window === 'undefined' ? null : window, function (host) {
+  'use strict';
+  const STORAGE_KEY = 'symmetry-lab-language';
+  const messages = new Map(), patterns = [], fragments = new Map(), catalogs = new Set();
+  const han = /[\u3400-\u9fff]/;
+  let language = 'zh', observer = null, started = false, queued = false;
+  const textSources = new WeakMap(), attributeSources = new WeakMap(), pending = new Set();
+  const attributes = ['aria-label', 'aria-description', 'title', 'alt', 'placeholder', 'label'];
+  if (host) {
+    try { if (host.localStorage.getItem(STORAGE_KEY) === 'en') language = 'en'; } catch (_) { /* Local files and restricted browsers still support session switching. */ }
+    host.document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
+  }
+
+  function register(name, catalog) {
+    if (catalogs.has(name)) return;
+    catalogs.add(name);
+    Object.entries(catalog.messages || {}).forEach(([source, english]) => {
+      if (!source || typeof english !== 'string' || messages.has(source)) return;
+      messages.set(source, english);
+      if (!han.test(source)) return;
+      const first = source[0];
+      if (!fragments.has(first)) fragments.set(first, []);
+      fragments.get(first).push([source, english]);
+    });
+    fragments.forEach(list => list.sort((a, b) => b[0].length - a[0].length));
+    (catalog.patterns || []).forEach(p => patterns.push({ regex: new RegExp(p.regex, p.flags || ''), replacement: p.replacement }));
+    if (started) apply();
+  }
+
+  function translateFragments(source) {
+    let result = '', position = 0;
+    while (position < source.length) {
+      const candidates = fragments.get(source[position]);
+      const match = candidates && candidates.find(([key]) => source.startsWith(key, position));
+      if (match) { result += match[1]; position += match[0].length; }
+      else { result += source[position]; position++; }
+    }
+    return result;
+  }
+
+  function englishPunctuation(text) {
+    return text.replace(/，/g, ', ').replace(/。/g, '. ').replace(/；/g, '; ').replace(/：/g, ': ').replace(/、/g, ', ').replace(/（/g, ' (').replace(/）/g, ')').replace(/？/g, '?').replace(/！/g, '!');
+  }
+  function t(value, requestedLanguage = language) {
+    if (value == null) return '';
+    const source = String(value);
+    if (requestedLanguage !== 'en') return source;
+    if (messages.has(source)) return englishPunctuation(messages.get(source));
+    const trimmed = source.trim();
+    if (messages.has(trimmed)) return englishPunctuation(source.slice(0, source.indexOf(trimmed)) + messages.get(trimmed) + source.slice(source.indexOf(trimmed) + trimmed.length));
+    const normalized = trimmed.replace(/\s+/g, ' ');
+    if (messages.has(normalized)) return englishPunctuation(messages.get(normalized));
+    if (!han.test(source)) return englishPunctuation(source);
+    let result = source;
+    for (const p of patterns) { p.regex.lastIndex = 0; result = result.replace(p.regex, p.replacement); }
+    result = translateFragments(result);
+    return englishPunctuation(result);
+  }
+
+  function ignored(element) { return element && (element.closest('[data-i18n-ignore]') || ['SCRIPT', 'STYLE', 'TEXTAREA'].includes(element.tagName)); }
+  function canonicalRecord(records, key, current) {
+    let record = records.get(key);
+    if (!record || current !== record.last) { record = { source: current, last: current }; records.set(key, record); }
+    return record;
+  }
+  function translateText(node) {
+    if (!node.parentElement || ignored(node.parentElement)) return;
+    const record = canonicalRecord(textSources, node, node.nodeValue);
+    const translated = t(record.source);
+    record.last = translated;
+    if (node.nodeValue !== translated) node.nodeValue = translated;
+  }
+  function translateAttributes(element) {
+    if (ignored(element)) return;
+    let records = attributeSources.get(element);
+    if (!records) { records = new Map(); attributeSources.set(element, records); }
+    attributes.forEach(name => {
+      if (!element.hasAttribute(name)) { records.delete(name); return; }
+      const current = element.getAttribute(name), record = canonicalRecord(records, name, current);
+      record.last = t(record.source);
+      if (current !== record.last) element.setAttribute(name, record.last);
+    });
+  }
+  function visit(root) {
+    if (root.nodeType === 3) { translateText(root); return; }
+    if (root.nodeType !== 1 && root.nodeType !== 9) return;
+    if (root.nodeType === 1) { if (ignored(root)) return; translateAttributes(root); }
+    const walker = host.document.createTreeWalker(root, 5);
+    let node;
+    while ((node = walker.nextNode())) {
+      if (node.nodeType === 3) translateText(node);
+      else translateAttributes(node);
+    }
+  }
+  function observe() {
+    observer.observe(host.document.documentElement, { subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: attributes });
+  }
+  function buttons() {
+    host.document.querySelectorAll('[data-language-toggle]').forEach(button => {
+      button.textContent = language === 'en' ? '中文' : 'English';
+      button.setAttribute('lang', language === 'en' ? 'zh-CN' : 'en');
+      button.setAttribute('aria-label', language === 'en' ? 'Switch to Chinese' : '切换到英文');
+      button.setAttribute('title', language === 'en' ? 'Switch to Chinese' : '切换到英文');
+    });
+  }
+  function apply() {
+    if (!host || !started) return;
+    observer.disconnect();
+    visit(host.document.documentElement);
+    buttons();
+    observe();
+  }
+  function setLanguage(next, options = {}) {
+    if (!['zh', 'en'].includes(next)) return false;
+    language = next;
+    if (!host) return true;
+    host.document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
+    if (options.persist !== false) { try { host.localStorage.setItem(STORAGE_KEY, language); } catch (_) { /* In-memory preference remains usable. */ } }
+    apply();
+    host.document.dispatchEvent(new host.CustomEvent('symmetry-language-change', { detail: { language } }));
+    return true;
+  }
+  function start() {
+    if (started) return;
+    started = true;
+    function collect(records) {
+      records.forEach(record => {
+        if (record.type === 'childList') record.addedNodes.forEach(node => pending.add(node));
+        else pending.add(record.target);
+      });
+    }
+    observer = new host.MutationObserver(records => {
+      collect(records);
+      if (queued || !pending.size) return;
+      queued = true;
+      host.queueMicrotask(() => {
+        queued = false;
+        // Other module observers can render new content in the same delivery
+        // cycle. Drain those records before disconnecting for our own writes.
+        collect(observer.takeRecords());
+        observer.disconnect();
+        pending.forEach(node => { if (node.isConnected) visit(node); });
+        pending.clear();
+        observe();
+      });
+    });
+    host.document.addEventListener('click', event => {
+      if (event.target.closest('[data-language-toggle]')) setLanguage(language === 'en' ? 'zh' : 'en');
+    });
+    host.addEventListener('storage', event => {
+      if (event.key === STORAGE_KEY && ['zh', 'en'].includes(event.newValue)) setLanguage(event.newValue, { persist: false });
+    });
+    setLanguage(language, { persist: false });
+  }
+  if (host) {
+    if (host.document.readyState === 'loading') host.document.addEventListener('DOMContentLoaded', start, { once: true });
+    else host.queueMicrotask(start);
+  }
+  return { t, register, setLanguage, getLanguage: () => language, apply, stats: () => ({ catalogs: catalogs.size, messages: messages.size, patterns: patterns.length }) };
+});
+
+
+// i18n-static.js
+(function () {
+  'use strict';
+  window.SymmetryI18n.register('static', {
+  "messages": {
+    "点群实验室 · 看见对称性": "Symmetry Lab · See Symmetry",
+    "点群实验室首页": "Symmetry Lab home",
+    "点群实验室": "Symmetry Lab",
+    "主要页面": "Main pages",
+    "操作实验室": "Operation Lab",
+    "32 点群图谱": "32 Point Groups",
+    "组合与群": "Composition & Groups",
+    "进阶对称": "Advanced Symmetry",
+    "晶体结构": "Crystal Structures",
+    "小练习": "Practice",
+    "从操作到结构，沿课件继续探索": "Continue from operations to structures with the lectures",
+    "L04 · 投影、子群与物性 →": "L04 · Projections, subgroups & properties →",
+    "L05 · 堆积、孔隙与结构 →": "L05 · Packing, voids & structures →",
+    "动一下，": "Move it. ",
+    "还是它。": "Still the same?",
+    "当操作结束，结构能否与原来重合？亲手试一试。": "After the operation, can the structure coincide with the original? Try it yourself.",
+    "入门提示": "Getting started",
+    "对称操作": "Symmetry operation",
+    "是使结构在终态与原结构不可区分的变换；": " is a transformation whose final state is indistinguishable from the original structure; ",
+    "对称元素": "Symmetry element",
+    "是操作所依托的轴、面或点。点群的全部操作至少共享一个不动点，本项目将它设在原点 O。": " is the axis, plane or point associated with an operation. All operations in a point group share at least one fixed point. Here, it is the origin O.",
+    "标签 H1、H2 用来追踪原子；同种原子可以互换位置。旋转物体的操作与拖动鼠标改变观察视角是两件不同的事。": "Labels H1 and H2 help track atoms; atoms of the same species can exchange positions. Applying an operation to an object and dragging to change the viewing angle are different actions.",
+    "选择结构": "Choose a structure",
+    "示例结构": "Example structure",
+    "选择操作": "Choose an operation",
+    "恒等": "Identity",
+    "旋转": "Rotation",
+    "镜映": "Reflection",
+    "反演": "Inversion",
+    "旋转反演": "Rotoinversion",
+    "课件重点": "Lecture focus",
+    "旋转镜映": "Rotoreflection",
+    "化学补充": "Chemistry notation",
+    "旋转重数 n": "Rotation order n",
+    "5 · 72°（有限模型）": "5 · 72° (finite model)",
+    "操作轴": "Operation axis",
+    "z 轴 [001]": "z axis [001]",
+    "x 轴 [100]": "x axis [100]",
+    "y 轴 [010]": "y axis [010]",
+    "体对角线 [111]": "Body diagonal [111]",
+    "镜面": "Mirror plane",
+    "xz 面 · y = 0": "xz plane · y = 0",
+    "yz 面 · x = 0": "yz plane · x = 0",
+    "xy 面 · z = 0": "xy plane · z = 0",
+    "对角面 · x = y": "Diagonal plane · x = y",
+    "五重旋转可以出现在有限分子中；不属于三维周期晶体允许的旋转。": "Fivefold rotations can occur in finite molecules, but are incompatible with a three-dimensional periodic lattice.",
+    "这个操作做什么？": "What does this operation do?",
+    "三维观察台": "3D observation",
+    "水分子 · 二重旋转": "Water · Twofold rotation",
+    "起始状态": "Initial state",
+    "交互三维结构。拖动改变视角，滚轮缩放，点击原子查看坐标；方向键调整视角，加减键缩放。": "Interactive 3D structure. Drag to rotate the view, scroll to zoom and click an atom to see coordinates. Use arrow keys to rotate and plus/minus to zoom.",
+    "立体": "3D",
+    "沿 z 轴": "Along z",
+    "沿 y 轴": "Along y",
+    "恢复视角与缩放": "Reset view and zoom",
+    "↺ 视角": "↺ View",
+    "当前结构": "Current structure",
+    "原始位置": "Original positions",
+    "选中原子轨迹": "Selected atom path",
+    "拖动视角 · 滚轮缩放 · 点击原子": "Drag to rotate · Scroll to zoom · Click an atom",
+    "播放操作": "Play operation",
+    "下一步": "Next step",
+    "再作用一次": "Apply again",
+    "恢复原结构和播放进度": "Reset structure and playback progress",
+    "恢复原结构": "Reset structure",
+    "速度": "Speed",
+    "操作播放进度": "Operation playback progress",
+    "终态": "Final state",
+    "原始轮廓": "Original outline",
+    "原子标签": "Atom labels",
+    "运动轨迹": "Motion paths",
+    "重复操作的等价点": "Equivalent points under repetition",
+    "终态决定是否对称；中间动画只是帮助理解的过程。": "Symmetry is determined by the final state; the animation helps explain the process.",
+    "终态检验 · 与最初结构比较": "Final-state check · Compared with the original",
+    "追踪一个原子": "Track an atom",
+    "选择追踪原子": "Choose an atom to track",
+    "最初坐标": "Initial coordinates",
+    "此刻坐标": "Current coordinates",
+    "示意坐标 · 任意单位": "Illustrative coordinates · Arbitrary units",
+    "查看操作矩阵": "Show operation matrix",
+    "· 使用列向量": "· Column vectors",
+    "从这四个小实验开始": "Start with these four experiments",
+    "每个实验只关注一个关键问题。": "Each experiment explores one key question.",
+    "01 / 交换位置": "01 / Exchanging positions",
+    "H1 和 H2 换了位置，": "H1 and H2 exchange positions.",
+    "为什么仍是对称？": "Why is it still a symmetry?",
+    "02 / 一个反例": "02 / A counterexample",
+    "有二重轴，": "Does a twofold axis",
+    "就一定有反演中心吗？": "guarantee an inversion center?",
+    "03 / 分两步看": "03 / Two steps",
+    "先旋转再反演，": "Rotate, then invert.",
+    "四面体如何回到原状？": "How does a tetrahedron return to itself?",
+    "04 / 符号辨析": "04 / Reading symbols",
+    "3̄ 和 S₃，": "Are 3̄ and S₃",
+    "是同一个操作吗？": "the same operation?",
+    "示踪点 · 两种复合操作": "Tracer · Two composite operations",
+    "32 种组合，": "32 combinations. ",
+    "7 个晶系。": "7 crystal systems.",
+    "晶体学点群速查：把国际符号和 Schoenflies 符号放在一起看。": "Crystallographic point groups at a glance: compare international and Schoenflies symbols.",
+    "晶系": "Crystal system",
+    "全部晶系": "All crystal systems",
+    "对称性": "Symmetry",
+    "全部点群": "All point groups",
+    "含反演中心": "With inversion",
+    "仅含保手性操作": "Chirality-preserving operations only",
+    "其余非中心对称群": "Other noncentrosymmetric groups",
+    "探索全部 32 种 3D 模型 ↓": "Explore all 32 interactive 3D models ↓",
+    "为什么没有 5？查看 3D 示意 ↓": "Why no 5? Explore in 3D ↓",
+    "读图提示": "Reading the atlas",
+    "群的阶 |G| 是操作总数；n 是某个轴的折数。两者不能混用。“仅含保手性操作”指群的性质，不能仅据此断言一个未指定结构具有手性。": "The group order |G| counts all operations; n is the order of one rotation axis. These are different quantities. “Chirality-preserving operations only” describes the group; it does not by itself establish the chirality of an unspecified structure.",
+    "这个点群的三维模型": "3D model of this point group",
+    "切换点群": "Choose a point group",
+    "三维模型点群（全部32种）": "3D model point group (all 32)",
+    "32 / 32 种均可交互观察": "32 / 32 groups are interactive",
+    "① 选择群内操作": "① Choose a group operation",
+    "选择该点群的对称操作": "Choose a symmetry operation in this group",
+    "② 显示对称元素": "② Show symmetry elements",
+    "全部对称轴": "All symmetry axes",
+    "全部镜面": "All mirror planes",
+    "反演中心": "Inversion center",
+    "辅助连线": "Reference links",
+    "点的编号": "Point labels",
+    "所选操作的轴或镜面会高亮；拖动仅改变观察视角。": "The selected axis or mirror plane is highlighted. Dragging changes only the viewing angle.",
+    "查看所选操作矩阵": "Show the selected operation matrix",
+    "p′ = M p · 使用列向量": "p′ = M p · Column vectors",
+    "点群完整模型的三维观察台。拖动视角，滚轮缩放；方向键调整视角，加减键缩放，空格播放或暂停，点击彩色点追踪其坐标。": "3D view of the complete point-group model. Drag to rotate, scroll to zoom, use arrow keys to rotate, plus/minus to zoom and Space to play/pause. Click a colored point to track coordinates.",
+    "A 型": "Type A",
+    "B 型": "Type B",
+    "C 型": "Type C",
+    "O 标记": "O marker",
+    "原位置": "Original position",
+    "看终态": "Show final state",
+    "回到起点": "Reset",
+    "点群操作播放进度": "Point-group operation playback progress",
+    "完整操作的终态": "Final state of the full operation",
+    "追踪一个点": "Track a point",
+    "点群模型追踪点": "Point-group model tracking point",
+    "按方向查看所有对称轴与镜面": "All axes and mirror planes by direction",
+    "轴方向与其反方向表示同一条轴，同轴的不同旋转以最高重数归类；旋转反演轴另行标记，也以最高重数显示。全部操作仍列在操作表中。镜面用法向表示。这里使用右手直角坐标，方向是教学模型的约定，改变整体朝向不改变点群类型。": "A direction and its opposite describe the same axis. Rotations about one axis are summarized by their highest order; rotoinversion axes are listed separately, also by their highest order. Every operation remains in the operation list. Mirrors are described by their normals. The model uses right-handed Cartesian coordinates; changing the overall orientation does not change the point-group type.",
+    "查看完整操作列表": "Show the complete operation list",
+    "这是体现完整点群的理想彩色几何模型。": "An ideal colored geometry with this complete point group.",
+    "同色点可以互换，异色点不能互换；编号只用于追踪。辅助连线帮助读形状，不表示化学键。模型由三类一般位置在群内所有操作下的轨道构成，并核对了完整对称性；部分模型加入独特的 O 点以固定原点。操作实验室仍提供 H₂O 等分子示例。": "Points of the same color may exchange positions; different colors may not. Labels are for tracking only, and reference links are not chemical bonds. The model comprises three general-position orbits under every group operation, with its complete symmetry checked. Some models include a unique O point to fix the origin. Molecular examples such as H₂O remain in the Operation Lab.",
+    "等价点模型的教学参考 ↗": "Teaching reference for equivalent-point models ↗",
+    "为什么这里没有 5？": "Why is there no 5?",
+    "把周期晶格绕轴旋转 360°/n，所有格点还能落回格点吗？": "Rotate a periodic lattice through 360°/n. Does every lattice point return to a lattice point?",
+    "三维周期晶格": "3D periodic lattice",
+    "尝试旋转折数": "Try a rotation order",
+    "旋转折数 n": "Rotation order n",
+    "尝试1重旋转": "Try a onefold rotation",
+    "尝试2重旋转": "Try a twofold rotation",
+    "尝试3重旋转": "Try a threefold rotation",
+    "尝试4重旋转": "Try a fourfold rotation",
+    "尝试5重旋转": "Try a fivefold rotation",
+    "尝试6重旋转": "Try a sixfold rotation",
+    "尝试7重旋转": "Try a sevenfold rotation",
+    "尝试8重旋转": "Try an eightfold rotation",
+    "尝试9重旋转": "Try a ninefold rotation",
+    "尝试10重旋转": "Try a tenfold rotation",
+    "尝试11重旋转": "Try an elevenfold rotation",
+    "尝试12重旋转": "Try a twelvefold rotation",
+    "示例晶格": "Example lattice",
+    "自动选择合适示例": "Choose a suitable example automatically",
+    "方格层 · 沿 z 堆叠": "Square layers · Stacked along z",
+    "三角网格层 · 沿 z 堆叠": "Triangular layers · Stacked along z",
+    "三维周期晶格示意。拖动改变视角，滚轮缩放；方向键调整视角，加减键缩放。空心点是原格点，实心点是旋转后的格点。": "3D periodic lattice. Drag to rotate the view, scroll to zoom, use arrow keys to rotate and plus/minus to zoom. Hollow points mark original lattice sites; filled points show rotated sites.",
+    "俯视": "Top view",
+    "原格点": "Original lattice points",
+    "终态重合": "Final-state matches",
+    "终态错位": "Final-state mismatches",
+    "播放旋转": "Play rotation",
+    "晶格旋转进度": "Lattice rotation progress",
+    "显示的是无限点阵的一小段，三层沿 z 重复。拖动看第三维，点“俯视”比较格点位置；网格线只作空间参照。中间的蓝色点表示旋转过程，判断重合看终态。": "The view shows a small part of an infinite lattice, repeated in three layers along z. Rotate to see the third dimension, or use Top view to compare lattice sites. Grid lines are reference guides. Blue points show intermediate rotation; coincidence is judged at the final state.",
+    "① 对所有三维周期晶格": "① For all 3D periodic lattices",
+    "若旋转保持晶格，迹必须是整数。": "If the rotation preserves the lattice, its trace must be an integer.",
+    "② 在当前示例中 · 绕 z 轴": "② In this example · About z",
+    "基矢 a 旋转后，需要走几步？": "After rotating basis vector a, how many steps are needed?",
+    "为什么“整数步”能限制任意三维周期晶格？": "Why do integer steps restrict every 3D periodic lattice?",
+    "三维晶格由三根独立的原胞基矢 a、b、c 反复平移生成。若旋转是晶格的对称性，每根旋转后的基矢就必须是 a、b、c 的": "A 3D lattice is generated by translations along three independent primitive basis vectors a, b and c. If a rotation preserves the lattice, each rotated basis vector must be an ",
+    "整数倍组合": "integer linear combination",
+    "。因此，旋转在原胞基底下的矩阵 A = B⁻¹RB 必为整数矩阵，它的迹（对角项之和）也是整数。": " of a, b and c. Thus, the matrix A = B⁻¹RB in the primitive basis has integer entries, and its trace (sum of diagonal entries) is an integer.",
+    "换一组坐标不会改变迹。三维正旋转沿轴方向贡献 1，垂直平面的旋转贡献 2cosθ，所以": "A change of coordinates leaves the trace unchanged. A proper 3D rotation contributes 1 along the axis and 2cosθ in the perpendicular plane, so ",
+    "。迹只能取 −1、0、1、2、3，对应 n = 2、3、4、6、1。五重的迹约为 1.618；所有 n ≥ 7 的迹都严格位于 2 和 3 之间，均不可能是整数。": ". The trace can only be −1, 0, 1, 2 or 3, corresponding to n = 2, 3, 4, 6 or 1. The fivefold trace is approximately 1.618; for every n ≥ 7, the trace lies strictly between 2 and 3 and cannot be an integer.",
+    "这里的两个点阵提供具体示例；一般结论来自三维矩阵条件。终态检验使用无限晶格的坐标与基矢，不依赖显示窗口的边缘。": "The two lattices are examples; the general result follows from the 3D matrix condition. The final-state check uses infinite-lattice coordinates and basis vectors, independently of the visible window boundaries.",
+    "IUCr：晶格基底、旋转矩阵与晶体学限制 ↗": "IUCr: Lattice bases, rotation matrices and crystallographic restrictions ↗",
+    "“允许”表示存在合适的晶格，不是每一种晶格都拥有这些旋转。": "Allowed means some suitable lattice exists; it does not mean every lattice has that rotation.",
+    "例如这个方格层绕 z 轴没有三重对称，三角网格层可以有。有限分子与非周期准晶不受三维平移周期的这个条件约束；本实验不会自动识别任意结构的完整点群。": "For example, these square layers lack threefold symmetry about z, while triangular layers can have it. Finite molecules and nonperiodic quasicrystals are not subject to this condition of 3D translational periodicity. This experiment does not identify the complete point group of an arbitrary structure.",
+    "先做哪个，": "Which comes first ",
+    "有时很重要。": "can matter.",
+    "矩阵乘积 A B 表示先做 B，再做 A。用一个示踪点检验顺序。": "The matrix product A B means B first, then A. Use a tracer point to compare the order.",
+    "操作 A": "Operation A",
+    "操作 B": "Operation B",
+    "A B · 先 B 后 A": "A B · B first, then A",
+    "先 B 后 A 的终态。方向键可调整共同视角。": "Final state after B then A. Arrow keys change the shared viewing angle.",
+    "B A · 先 A 后 B": "B A · A first, then B",
+    "先 A 后 B 的终态。方向键可调整共同视角。": "Final state after A then B. Arrow keys change the shared viewing angle.",
+    "空心点：p = (1.20, 0.70, 1.00) · 实心点：变换后的 p · 虚线：经中间点的顺序示意，非运动轨迹": "Hollow point: p = (1.20, 0.70, 1.00) · Filled point: transformed p · Dashed lines: operation order through the intermediate point, not a motion path",
+    "一个完整的小群": "A complete small group",
+    "水分子的 mm2 / C₂ᵥ": "Water: mm2 / C₂ᵥ",
+    "把四个对称操作两两组合，结果仍在这四个里面。点击表格中的结果，在实验室查看。": "Compose any two of these four symmetry operations: the result is still one of the four. Click a table entry to explore it in the lab.",
+    "行 A × 列 B：先做列，再做行。mₓ𝓏 与 mᵧ𝓏 表示过原点的两个镜面。": "Row A × column B: column first, then row. mₓ𝓏 and mᵧ𝓏 denote two mirror planes through the origin.",
+    "群的四个条件": "The four group axioms",
+    "封闭性": "Closure",
+    "组合任意两个操作，结果仍属于这个群。": "Composing any two operations gives an operation in the group.",
+    "结合律": "Associativity",
+    "(A B) C = A (B C)，改变括号不改变结果。": "(A B) C = A (B C): changing the parentheses leaves the result unchanged.",
+    "恒等操作": "Identity operation",
+    "E A = A E = A，什么也不改变。": "E A = A E = A: nothing changes.",
+    "逆操作": "Inverse operation",
+    "每个操作都有能撤销它的操作，A⁻¹ A = E。": "Every operation has an operation that undoes it: A⁻¹ A = E.",
+    "交换律 A B = B A 不是群的必要条件。": "Commutativity, A B = B A, is not a required group axiom.",
+    "对称性，": "What else does ",
+    "还告诉我们什么？": "symmetry tell us?",
+    "把三维方向投到纸上，观察子群如何留下更少的操作，再看物性受哪些限制。": "Project 3D directions onto a disk, see how subgroups retain fewer operations, and explore symmetry constraints on properties.",
+    "立体投影": "Stereographic projection",
+    "群与子群": "Groups & subgroups",
+    "对称与物性": "Symmetry & properties",
+    "二色反对称": "Two-color antisymmetry",
+    "走向空间群": "Toward space groups",
+    "把例子放回课件": "Connect the examples to the lectures",
+    "先用 32 和 3̄m 比较石英、刚玉的二阶物性约束；再到晶体结构中比较 FCC、HCP、纤锌矿和萤石。课件的群人口统计用于讨论样本分布，比例取决于数据库与年代，不能从对称性本身推导。": "Compare 32 and 3̄m to explore second-rank property constraints in quartz and corundum, then compare FCC, HCP, wurtzite and fluorite in Crystal Structures. Point-group population statistics describe a sample and depend on the database and date; they do not follow from symmetry alone.",
+    "课件提到的外场诱导压电研究通过重排氧空位破坏原有对称性，与普通线性体压电的对称限制相容。二色翻转、时间反演、畸变反演是不同的内部操作，本项目用双色标签演示组合思想，不模拟磁性或能量路径。": "The lecture's field-induced piezoelectricity study breaks the original symmetry by rearranging oxygen vacancies, consistently with ordinary linear piezoelectric symmetry constraints. Color reversal, time reversal and distortion reversal are different internal operations. Here, two-color labels illustrate composition; they do not model magnetism or energy pathways.",
+    "课件中的诱导压电研究 ↗": "Field-induced piezoelectricity study ↗",
+    "逐章内容对应与学习路线 ↗": "Lecture content map & learning route ↗",
+    "继续 L05 · 晶体结构 →": "Continue to L05 · Crystal Structures →",
+    "同样的格点，": "Same lattice points. ",
+    "不同的结构。": "Different structures.",
+    "晶格提供重复的规则，基元提供每个重复位置的内容。观察堆垛、孔隙和占位如何组织成晶体。": "A lattice gives the rules of repetition; a basis supplies what is repeated. See how stacking, voids and occupancy build a crystal.",
+    "从几何模型到真实材料": "From geometry to real materials",
+    "课件中的离子半径、价态、配位统计提醒我们：硬球堆积与电中性只是结构分析的起点。真实结构还取决于键合、电子结构、温度、压力与占位有序。近似密堆积的阴离子骨架可以发生畸变；同样的化学式也可能有不同多型。": "The lecture's ionic radii, valences and coordination statistics show that hard-sphere packing and charge neutrality are starting points. Real structures also depend on bonding, electronic structure, temperature, pressure and ordered occupancy. An approximately close-packed anion framework may be distorted, and one chemical formula can have different polytypes.",
+    "“非中心对称”只说明没有反演，镜面等不正操作仍可能存在。纤锌矿的 6mm 就是非中心对称、极性而非手性的例子；交换阳离子与阴离子的位置是构造另一种结构，不是同一结构里可以随意交换物种的对称操作。课件的 WOBr₄ 例子则说明：非手性的局部单元可以组成手性整体。": "Noncentrosymmetric means that inversion is absent; mirrors and other improper operations may remain. Wurtzite's 6mm is noncentrosymmetric and polar but achiral. Exchanging the roles of cations and anions constructs a different structure; it is not a permitted exchange of species within a symmetry operation. The lecture's WOBr₄ example shows how achiral local units can form a chiral whole.",
+    "课件还介绍了晶体学历史、结构数据库、自动文字描述工具，以及 CrI₃ 层状磁体。这里将它们作为延伸阅读：结构图只描述原子几何，不由此推断磁序或磁相变。": "The lecture also introduces crystallographic history, structure databases, automated structure descriptions and the layered magnet CrI₃. These are further-reading topics: an atomic geometry does not determine magnetic order or a magnetic phase transition.",
+    "阅读课件内容地图 ↗": "Read the lecture content map ↗",
+    "你能预测，": "Can you predict ",
+    "操作的结果吗？": "the result?",
+    "先回答，再看解释。答错也可以回到实验室亲手验证。": "Answer first, then read the explanation. Return to the lab to test your prediction.",
+    "练习进度": "Practice progress",
+    "上一题": "Previous",
+    "去实验室验证 ↗": "Test in the lab ↗",
+    "下一题 →": "Next question →",
+    "MATSCI 402 · L03–L05 · 从对称操作到晶体结构": "MATSCI 402 · L03–L05 · From symmetry operations to crystal structures",
+    "范围与参考资料": "Scope & references",
+    "覆盖 32 点群、立体投影、子群示例、物性对称约束、14 Bravais 晶格与理想结构原型，以及平移、螺旋、滑移操作入门。空间操作示例不构成全部 230 空间群的浏览器；不自动识别任意结构或预测材料物性。": "Explore 32 point groups, stereographic projection, subgroup examples, property constraints, 14 Bravais lattices, ideal crystal prototypes and introductory translation, screw and glide operations. The space-operation examples are not a browser for all 230 space groups. They do not identify arbitrary structures or predict material properties.",
+    "课件对应和补充来源见": "Lecture mappings and additional sources are in the ",
+    "课程指南": "course guide",
+    "。符号采用国际符号为主，化学符号为补充。所有模型和动画为教学示意。": ". International symbols are used alongside supplementary chemistry notation. All models and animations are teaching illustrations.",
+    "此项目需要浏览器启用 JavaScript 才能播放三维对称操作。": "Enable JavaScript in your browser to play the 3D symmetry operations."
+  },
+  "patterns": []
+});
+})();
+
+
+// i18n-core.js
+/* English teaching copy for the core lab, exercises, point groups and lattice demo.
+ * Chinese source strings remain in the teaching data and UI; identifiers do not change.
+ */
+(function () {
+  'use strict';
+  window.SymmetryI18n.register('core', {
+    messages: {
+      '恒等': 'Identity',
+      '恒等操作': 'Identity operation',
+      '保持原位': 'Stay in place',
+      '旋转': 'Rotation',
+      '镜映': 'Reflection',
+      '反演': 'Inversion',
+      '中心反演': 'Inversion',
+      '旋转反演': 'Rotoinversion',
+      '旋转镜映': 'Rotation–reflection',
+      '垂直于轴的平面镜映': 'Reflection in the plane perpendicular to the axis',
+      '操作': 'Operation',
+      '起始': 'Start',
+      '起始状态': 'Initial state',
+      '操作完成': 'Operation complete',
+      '完整操作结束': 'Complete operation finished',
+      '旋转结束 · 中间态': 'Rotation complete · Intermediate state',
+      '① 旋转结束': '① Rotation complete',
+      '① 旋转中': '① Rotating',
+      '② 反演中': '② Inverting',
+      '② 镜映中': '② Reflecting',
+      '② 反演结束': '② Inversion complete',
+      '② 镜映结束': '② Reflection complete',
+      '旋转中': 'Rotating',
+      '镜映中': 'Reflecting',
+      '反演中': 'Inverting',
+      '中心反演中': 'Inverting',
+      '保持原位中': 'Staying in place',
+      '垂直于轴的平面镜映中': 'Reflecting in the perpendicular plane',
+      '操作进行中': 'Operation in progress',
+      '恒等结束': 'Identity complete',
+      '旋转结束': 'Rotation complete',
+      '镜映结束': 'Reflection complete',
+      '反演结束': 'Inversion complete',
+      '旋转反演结束': 'Rotoinversion complete',
+      '旋转镜映结束': 'Rotation–reflection complete',
+      '暂停': 'Pause',
+      '播放操作': 'Play operation',
+      '重播操作': 'Replay operation',
+      '继续第二步': 'Continue to step 2',
+      '所选轴': 'Selected axis',
+      '三斜': 'Triclinic',
+      '单斜': 'Monoclinic',
+      '正交': 'Orthorhombic',
+      '四方': 'Tetragonal',
+      '三方': 'Trigonal',
+      '六方': 'Hexagonal',
+      '立方': 'Cubic',
+      '三斜晶系': 'Triclinic system',
+      '单斜晶系': 'Monoclinic system',
+      '正交晶系': 'Orthorhombic system',
+      '四方晶系': 'Tetragonal system',
+      '三方晶系': 'Trigonal system',
+      '六方晶系': 'Hexagonal system',
+      '立方晶系': 'Cubic system',
+      '晶系': ' crystal system',
+      '点群': 'Point group',
+      '三维对称模型': '3D symmetry model',
+      '水分子': 'Water molecule',
+      '氨分子': 'Ammonia molecule',
+      '四氟化氙': 'Xenon tetrafluoride',
+      '甲烷': 'Methane',
+      '六氟化硫': 'Sulfur hexafluoride',
+      '正六边形': 'Regular hexagon',
+      '六个等价点': 'Six equivalent points',
+      '四种点的四面体': 'Tetrahedron with four point types',
+      '单个示踪点': 'Single tracer point',
+      '示踪模型': 'Tracer model',
+      '一般位置 · 示踪模型': 'General position · Tracer model',
+      '两个氢原子位于 xz 平面；z 轴是二重轴。绕 z 轴旋转 180° 后两个氢互换。': 'The two hydrogen atoms lie in the xz plane. The z axis is a twofold axis: a 180° rotation exchanges the two hydrogens.',
+      '三个氢构成三角形，氮位于三角形上方；绕 z 轴旋转 120° 后三个氢循环互换。': 'The three hydrogens form a triangle, with nitrogen above it. A 120° rotation about z cyclically permutes the hydrogens.',
+      '四个氟位于 xy 平面的正方形顶点；具有四重轴、反演中心与水平镜面。': 'The four fluorines occupy the corners of a square in the xy plane. The model has a fourfold axis, an inversion center and a horizontal mirror plane.',
+      '四个氢占据正四面体顶点；沿顶点方向有三重轴，并有四重旋转反演 4̄，也具有旋转镜映 S₄。': 'The four hydrogens occupy the vertices of a regular tetrahedron. There are threefold axes through the vertices, fourfold rotoinversions 4̄, and rotation–reflections S₄.',
+      '六个氟占据正八面体顶点；x、y、z 方向均为四重轴，并有反演中心。': 'The six fluorines occupy the vertices of a regular octahedron. The x, y and z directions are fourfold axes, and the model has an inversion center.',
+      'xy 平面中的六个等价顶点；绕 z 轴旋转 60° 后顶点循环互换。': 'Six equivalent vertices lie in the xy plane. A 60° rotation about z cyclically permutes them.',
+      'A、B、C、D 代表四种不同的点类型，并非用于追踪的编号；即使轮廓重合，交换不同类型也不构成此模型的对称操作。': 'A, B, C and D denote four distinct point types, rather than tracking labels. Even if the outline matches, exchanging different types is not a symmetry of this model.',
+      '一般位置上的示踪点用于观察坐标变化；判断整体对称性时请切换到分子或多点模型。': 'A tracer at a general position reveals how coordinates change. Use a molecule or a multipoint model to assess the symmetry of the whole object.',
+
+      '只包含恒等操作 E。': 'Contains only the identity operation E.',
+      'E 与中心反演 i；也可写 S2。': 'Contains E and inversion i; also denoted S2.',
+      '一个二重旋转轴，基本旋转角为 180°。': 'One twofold rotation axis, with a fundamental angle of 180°.',
+      'E 与一个镜面反射 σ；m 等价于二重旋转反演。': 'Contains E and one mirror reflection σ. Reflection m is equivalent to twofold rotoinversion.',
+      '二重轴与垂直于轴的镜面组合，自动产生反演。': 'A twofold axis and a mirror plane perpendicular to it also generate inversion.',
+      '三条互相垂直的二重轴。': 'Three mutually perpendicular twofold axes.',
+      '两个互相垂直的镜面相交于二重轴。': 'Two perpendicular mirror planes intersect along a twofold axis.',
+      '三个互相垂直的镜面，并包含三个二重轴及反演。': 'Three mutually perpendicular mirror planes, together with three twofold axes and inversion.',
+      '四重轴产生 E、C4、C4²、C4³。': 'A fourfold axis generates E, C4, C4² and C4³.',
+      '四重旋转反演；单独没有中心反演或镜面。与 S4 生成同一点群，单次操作的旋转方向需留意。': 'Fourfold rotoinversion, without a separate inversion or mirror reflection. It generates the same point group as S4, but pay attention to the rotation direction of each operation.',
+      '四重轴与垂直于主轴的镜面；包含中心反演。': 'A fourfold axis and a mirror plane perpendicular to the principal axis; includes inversion.',
+      '四重主轴及四条与主轴垂直的二重轴。': 'A principal fourfold axis and four twofold axes perpendicular to it.',
+      '四重主轴与四个包含主轴的镜面。': 'A principal fourfold axis and four mirror planes containing it.',
+      '四重旋转反演、横向二重轴与对角镜面；另有 -4m2 方位写法。': 'Fourfold rotoinversion, transverse twofold axes and diagonal mirror planes. The alternative orientation is denoted -4m2.',
+      '四方晶系的最高点群对称性，共 16 个操作。': 'The highest point-group symmetry in the tetragonal system, with 16 operations.',
+      '三重轴，基本旋转角为 120°。': 'A threefold axis, with a fundamental angle of 120°.',
+      '三重旋转反演重复三次得到 i；此点群也写 S6。': 'Repeating a threefold rotoinversion three times gives i. This point group is also denoted S6.',
+      '三重主轴及三条垂直二重轴；α-石英所属的晶体点群。': 'A principal threefold axis and three perpendicular twofold axes; the crystal point group of α-quartz.',
+      '三重主轴与三个包含主轴的镜面。': 'A principal threefold axis and three mirror planes containing it.',
+      '三重旋转反演、横向二重轴与镜面；含中心反演。': 'Threefold rotoinversion, transverse twofold axes and mirror planes; includes inversion.',
+      '六重轴，基本旋转角为 60°，也包含三重与二重旋转。': 'A sixfold axis, with a fundamental angle of 60°. It also generates threefold and twofold rotations.',
+      '六重旋转反演生成三重旋转及垂直于主轴的镜面，但不含 i。': 'Sixfold rotoinversion generates threefold rotations and a mirror plane perpendicular to the principal axis, but no inversion i.',
+      '六重轴与垂直于主轴的镜面；包含中心反演。': 'A sixfold axis and a mirror plane perpendicular to the principal axis; includes inversion.',
+      '六重主轴及六条与主轴垂直的二重轴。': 'A principal sixfold axis and six twofold axes perpendicular to it.',
+      '六重主轴与六个包含主轴的镜面。': 'A principal sixfold axis and six mirror planes containing it.',
+      '含三重旋转、横向二重轴，以及包含主轴和垂直于主轴的镜面；另有 -6m2 方位写法。': 'Contains threefold rotations, transverse twofold axes, mirror planes containing the principal axis, and a mirror plane perpendicular to it. The alternative orientation is denoted -6m2.',
+      '六方晶系的最高点群对称性，共 24 个操作。': 'The highest point-group symmetry in the hexagonal system, with 24 operations.',
+      '正四面体的纯旋转群：三个二重轴及四个三重轴。': 'The proper rotation group of a regular tetrahedron: three twofold axes and four threefold axes.',
+      '在 T 的纯旋转操作上加入反演及其复合操作。': 'Adds inversion and its products to the proper rotations of T.',
+      '立方体或正八面体的纯旋转群。': 'The proper rotation group of a cube or a regular octahedron.',
+      '正四面体的完整对称群；包含镜面及旋转反演，不含 i。': 'The full symmetry group of a regular tetrahedron; includes mirror reflections and rotoinversions, but no inversion i.',
+      '立方体或正八面体的完整对称群，共 48 个操作。': 'The full symmetry group of a cube or a regular octahedron, with 48 operations.',
+
+      '恒等操作 E 的作用是什么？': 'What does the identity operation E do?',
+      '所有坐标保持不变': 'Leaves all coordinates unchanged',
+      '每个原子移动到对面的原子位置': 'Moves every atom to the position of an opposite atom',
+      '绕任意轴旋转 180°': 'Rotates 180° about any axis',
+      '只让原点保持不变': 'Leaves only the origin fixed',
+      'E 把每个点映射到自身。任何点群都包含 E；绕同一轴旋转完整的 360° 也得到 E。': 'E maps every point to itself. Every point group contains E; a full 360° rotation about an axis also gives E.',
+      '一次 C₄ 操作的基本旋转角是多少？': 'What is the fundamental rotation angle of a C₄ operation?',
+      'Cₙ 的基本角为 360°/n，因此 C₄ 为 90°。轴上所有点不动，轴外的点沿圆周移动。': 'The fundamental angle of Cₙ is 360°/n, so C₄ rotates by 90°. Points on the axis stay fixed; points off the axis move along circles.',
+      '点 (1, 2, 3) 关于 yz 镜面反射后在哪里？': 'Where does (1, 2, 3) go after reflection in the yz mirror plane?',
+      'yz 镜面是 x = 0 的平面，反射只改变垂直于镜面的 x 分量：σyz(x,y,z) = (−x,y,z)。': 'The yz mirror plane is x = 0. Reflection reverses only the perpendicular x component: σyz(x,y,z) = (−x,y,z).',
+      '以原点为中心，点 (1, 2, 3) 经反演 i 后在哪里？': 'Where does (1, 2, 3) go under inversion i about the origin?',
+      '反演使相对于反演中心的三个坐标全部变号。它等价于沿穿过中心的直线移到另一侧等距处。': 'Inversion reverses all three coordinates relative to the inversion center. The point maps to an equally distant position on the opposite side, along a line through the center.',
+      '分子对称性 Sₙ 与晶体学 n̄ 的定义，哪项正确？': 'Which statement correctly defines molecular Sₙ and crystallographic n̄?',
+      '二者都是旋转后再中心反演': 'Both mean rotation followed by inversion',
+      'Sₙ 是旋转后再关于垂直于轴的镜面反射；n̄ 是旋转后再中心反演': 'Sₙ means rotation followed by reflection in a perpendicular plane; n̄ means rotation followed by inversion',
+      'Sₙ 是单独旋转，n̄ 是单独镜面反射': 'Sₙ is a rotation alone; n̄ is a reflection alone',
+      '下标相同，两个单次操作就必然相同': 'The same subscript guarantees the same individual operation',
+      '两种记号描述不同的复合方式。S₁ = σ，S₂ = i；1̄ = i，2̄ = m。3̄ 点群与 S₆ 点群对应，但不能把所有同下标操作直接等同。': 'The notations describe different compositions. S₁ = σ and S₂ = i; 1̄ = i and 2̄ = m. The 3̄ and S₆ point groups correspond, but individual operations with the same subscript are not always equivalent.',
+      '“点群的所有操作有一个共同固定点”意味着什么？': 'What does it mean for all operations of a point group to share a fixed point?',
+      '每个原子都必须原地不动': 'Every atom must stay in place',
+      '至少有一个空间位置在所有操作下不变，其他点可以互换': 'At least one position in space is fixed by every operation; other points may be exchanged',
+      '整个物体只能有一个点不动': 'Exactly one point of the object may stay fixed',
+      '原子不能交换位置': 'Atoms may not exchange positions',
+      '共同固定点可选作坐标原点，但不一定有原子占据它。点群可以固定更多点：Cₙ 固定整条轴，Cₛ 固定整个镜面。': 'The common fixed point can be chosen as the origin, even if no atom occupies it. More points may also stay fixed: Cₙ fixes an entire axis, and Cₛ fixes an entire mirror plane.',
+      '动画旋转到一半时模型没有重合，但完成 C₃ 后同类原子全部重合。C₃ 是该模型的对称操作吗？': 'The model does not match halfway through the animation, but all equivalent atoms match after the full C₃ operation. Is C₃ a symmetry of this model?',
+      '不是，中途必须始终重合': 'No; the model must match throughout the motion',
+      '是，判断完整操作后的结构是否与初始结构不可区分': 'Yes; compare the structure after the complete operation with the initial structure',
+      '只有所有原子回到自己的编号位置才算': 'Only if every atom returns to its own numbered position',
+      '任何旋转都算': 'Every rotation is a symmetry',
+      '判断离散对称操作只看完整操作的结果。原子编号与跟踪高亮用于教学；物理对称性要求同类原子、键与所表示的结构等价。动画中间状态用于解释运动。': 'For a discrete symmetry operation, assess the completed result. Atom numbers and highlights are teaching aids; physical symmetry requires equivalent atoms, bonds and the represented structure to match. Intermediate frames explain the transformation.',
+      '为什么可以演示分子或有限几何模型的 C₅，却不能把它列入普通三维周期晶体的 32 点群？': 'Why can C₅ be demonstrated for a molecule or a finite geometric model, but not included in the 32 point groups of ordinary 3D periodic crystals?',
+      'C₅ 在数学上不存在': 'C₅ does not exist mathematically',
+      '有限模型允许五重旋转，而周期晶格的旋转重数限制为 1、2、3、4、6': 'Finite models can have fivefold rotation; periodic lattices allow only 1-, 2-, 3-, 4- and 6-fold rotations',
+      '五重旋转只适用于镜面': 'Fivefold rotation applies only to mirror planes',
+      '32 点群遗漏了 C₅': 'The list of 32 point groups forgot C₅',
+      '晶体学限制适用于三维平移周期晶格。有限分子或几何模型可有五重对称；准晶涉及不同的结构框架，不在这张周期晶体点群表内。': 'The crystallographic restriction applies to lattices with 3D translational periodicity. Finite molecules and geometric models can have fivefold symmetry. Quasicrystals use a different structural framework and lie outside this table of periodic crystal point groups.',
+      '纯旋转点群 C₄ = {E, C₄, C₄², C₄³} 的群阶是多少？': 'What is the order of the rotation-only point group C₄ = {E, C₄, C₄², C₄³}?',
+      '1，因为只有一根轴': '1, because there is only one axis',
+      '3，因为 E 不计入': '3, because E is excluded',
+      '4，因为有四个不同操作': '4, because there are four distinct operations',
+      '90，因为旋转角为 90°': '90, because the angle is 90°',
+      '群阶 |G| 统计群中不同操作的数目，包含 E。轴数、旋转角和群阶是不同概念。C₄⁴ = E，不是第五个操作。': 'The group order |G| counts distinct operations, including E. The number of axes, rotation angle and group order are different concepts. C₄⁴ = E, rather than a fifth operation.',
+      '本项目使用列向量 r′ = AB r。操作 AB 按什么顺序执行？': 'This project uses column vectors, r′ = AB r. In what order are A and B applied?',
+      '先 A，再 B': 'A first, then B',
+      '先 B，再 A': 'B first, then A',
+      '把 A 与 B 的矩阵逐项相加': 'Add the entries of the two matrices',
+      '任何顺序都相同': 'The order never matters',
+      '矩阵最右边先作用于列向量，因此 AB r = A(B r)。一般 AB ≠ BA；同轴旋转等特殊情况可以交换，不能推广到所有操作。': 'The rightmost matrix acts first on a column vector, so AB r = A(B r). In general, AB ≠ BA. Special cases such as rotations about the same axis commute, but this does not hold for all operations.',
+      '立体投影中，上下半球的方向落在同一圆盘里，怎样区分它们？': 'Upper- and lower-hemisphere directions share the same stereographic disk. How are they distinguished?',
+      '上下半球必须是同一个方向': 'Both hemispheres must represent the same direction',
+      '按不同的点符号区分，不能忽略半球标签': 'Use different point symbols and keep the hemisphere labels',
+      '所有空心点都是镜面': 'Every open point is a mirror plane',
+      '投影圆上的线都是镜面': 'Every line in the projection is a mirror plane',
+      '上半球从南极投影，下半球从北极投影，分别标记。实际镜面的线来自镜面与球面的交线；辅助线不是镜面。': 'Project the upper hemisphere from the south pole and the lower hemisphere from the north pole, using distinct symbols. A mirror-plane trace comes from the intersection of the plane with the sphere; guide lines are not mirror planes.',
+      '从母群删去一些操作，就一定得到子群吗？': 'Does removing some operations from a parent group always produce a subgroup?',
+      '一定，数量少就行': 'Yes; having fewer operations is enough',
+      '只要操作数整除母群阶数就行': 'Yes, provided its number of operations divides the parent group order',
+      '还必须保留 E、逆元，并满足组合闭包': 'It must also contain E and inverses, and be closed under composition',
+      '必须删去所有旋转': 'All rotations must be removed',
+      '操作数整除只是必要条件。任意挑选一个子集可能在组合后产生不在子集中的操作，因此不一定是子群。嵌入方向也必须一致。': 'Divisibility of the order is only a necessary condition. An arbitrary subset may produce an operation outside itself under composition, so it need not be a subgroup. Its orientation within the parent group must also be consistent.',
+      '纤锌矿的点群 6mm 没有反演中心，但含镜面。哪项描述正确？': 'Wurtzite has point group 6mm, with mirror planes but no inversion center. Which description is correct?',
+      '非中心对称，所以必然手性': 'Noncentrosymmetric, and therefore necessarily chiral',
+      '非中心对称、极性、非手性；是否铁电另需证据': 'Noncentrosymmetric, polar and achiral; ferroelectricity requires further evidence',
+      '有镜面，所以必有反演中心': 'Having mirror planes guarantees an inversion center',
+      '极性就一定铁电': 'Every polar crystal is ferroelectric',
+      '非中心对称、手性、极性不是同一分类。镜面是不正操作，所以 6mm 非手性；沿主轴允许极性向量，但可切换极化的铁电性质不能只靠点群判断。': 'Noncentrosymmetry, chirality and polarity are different classifications. Mirror reflection is improper, so 6mm is achiral. A polar vector is allowed along its principal axis, but point symmetry alone does not establish switchable ferroelectric polarization.',
+      '立方晶体的对称二阶极性张量为 diag(a,a,a)。这意味着什么？': 'A cubic crystal has a symmetric second-rank polar tensor diag(a,a,a). What does this imply?',
+      '所有阶数的物性都各向同性': 'Physical properties of every tensor rank are isotropic',
+      '这个二阶性质各向同性，但高阶性质仍可能各向异性': 'This second-rank property is isotropic, but higher-rank properties may still be anisotropic',
+      '晶体没有方向信息': 'The crystal has no directional information',
+      'a 必须为零': 'a must be zero',
+      'Neumann 原理使立方群的对称二阶张量只有一个独立系数。不能把这个二阶结论推广到弹性等所有高阶张量。': 'Neumann’s principle leaves one independent coefficient in a cubic group’s symmetric second-rank tensor. This second-rank result does not extend to every higher-rank tensor, such as elasticity.',
+      'HCP 课件画法的六棱柱含 6 个原子，原始平行六面体胞含几个？': 'The lecture’s HCP hexagonal prism contains 6 atoms. How many are in the primitive parallelepiped cell?',
+      'HCP 的 P 型平移晶格在原胞中搭配 2 原子的基元。常见六棱柱显示窗的体积是这个原胞的 3 倍，因此计入 6 个原子。必须先说明使用哪一种胞。': 'HCP has a primitive translation lattice with a two-atom motif. The familiar hexagonal-prism display spans three primitive-cell volumes and contains 6 atoms. Always specify which cell is being used.',
+      'FCC 晶格搭配不同的原子基元，可以形成什么？': 'What can an FCC lattice form when combined with different atomic motifs?',
+      '只能形成单原子 FCC 金属': 'Only monatomic FCC metals',
+      'NaCl、闪锌矿或金刚石等不同结构': 'Different structures, including NaCl, zinc blende and diamond',
+      '基元不影响结构': 'The motif does not affect the structure',
+      '这些结构一定具有同一完整点群': 'All these structures must have the same full point group',
+      '晶格描述无限重复的几何规则；基元描述每个原胞里的内容。FCC 晶格可以配不同基元，形成不同结构与完整空间对称性。': 'A lattice specifies the geometry of infinite repetition; a motif specifies the contents of each primitive cell. Different motifs on an FCC lattice produce different structures and full spatial symmetries.',
+      '一个含 4 个密堆积球的 FCC 传统胞有多少四面体孔隙和八面体孔隙？': 'How many tetrahedral and octahedral sites are in an FCC conventional cell containing 4 close-packed spheres?',
+      '4 T、8 O': '4 T, 8 O',
+      '8 T、4 O': '8 T, 4 O',
+      '4 T、4 O': '4 T, 4 O',
+      '12 T、12 O': '12 T, 12 O',
+      '每个密堆积球对应 2 个四面体孔隙、1 个八面体孔隙，因此 FCC 传统胞对应 8 T、4 O。胞边界位点需按共享比例计数。': 'Each close-packed sphere corresponds to two tetrahedral sites and one octahedral site, giving 8 T and 4 O sites in an FCC conventional cell. Boundary sites are counted according to their shared fractions.',
+      '把 FCC 阴离子骨架的四面体孔隙填满一半，阳离子与阴离子之比是多少？': 'If half the tetrahedral sites in an FCC anion framework are filled, what is the cation-to-anion ratio?',
+      '每个阴离子对应两个 T 位点，填一半便是每个阴离子一个阳离子。选取有序的一半可以得到闪锌矿 AB；只靠占位比例还不能唯一决定结构。': 'There are two T sites per anion. Filling half gives one cation per anion. An ordered half-occupancy can produce zinc blende AB, but the occupancy fraction alone does not uniquely determine the structure.',
+      '硬球半径比达到约 0.414，能否据此断定真实材料必为八面体配位？': 'Does a hard-sphere radius ratio of about 0.414 prove that a real material has octahedral coordination?',
+      '能，几何唯一决定结构': 'Yes; geometry uniquely determines the structure',
+      '不能；这是接触模型的几何临界，真实结构还受键合等因素影响': 'No; it is a geometric contact threshold, while bonding and other factors also affect real structures',
+      '能，价态完全不重要': 'Yes; valence is irrelevant',
+      '不能，因为 0.414 没有几何来源': 'No, because 0.414 has no geometric basis',
+      'sqrt(2)−1 是接触八面体壳的几何临界比。离子半径本身与配位、价态相关，真实结构还涉及电子结构、占位、温度和压力。': 'sqrt(2)−1 is the geometric threshold for contact in an octahedral shell. Ionic radii depend on coordination and valence, while real structures also depend on electronic structure, occupancy, temperature and pressure.',
+      '对示踪点连续做两次 2₁ 螺旋操作，会怎样？': 'What happens when a tracer undergoes two consecutive 2₁ screw operations?',
+      '绝对坐标回到起点': 'Its absolute coordinates return to the start',
+      '旋转回到原朝向，同时沿轴平移一个周期': 'It returns to its original orientation while translating one period along the axis',
+      '只旋转 180°': 'It rotates only 180°',
+      '等于中心反演': 'The result is inversion',
+      '每次旋转 180°并平移 c/2；两次合计旋转 360°并平移 c。它回到平移等价的位置，而不是相同的绝对坐标。': 'Each step rotates 180° and translates c/2. Two steps rotate 360° and translate c, reaching a translation-equivalent position rather than the same absolute coordinates.',
+      '对称操作': 'Symmetry operation',
+      '对称元素': 'Symmetry element',
+      '群阶 |G|': 'Group order |G|',
+      '生成元': 'Generators',
+      '复合 AB': 'Composition AB',
+      '正操作与非正操作': 'Proper and improper operations',
+      '中心对称': 'Centrosymmetry',
+      '晶格': 'Lattice',
+      '基元': 'Motif',
+      '原胞与传统胞': 'Primitive and conventional cells',
+      '配位数': 'Coordination number',
+      '立体投影': 'Stereographic projection',
+      '子群': 'Subgroup',
+      '极性': 'Polarity',
+      '螺旋轴与滑移面': 'Screw axes and glide planes',
+      '使所表示的物体在操作完成后与初始结构不可区分的变换；同类原子可以相互交换。': 'A transformation that leaves the represented object indistinguishable from its initial structure after completion. Equivalent atoms may exchange positions.',
+      '描述操作所依托的几何位置，如旋转轴、镜面或反演中心；应与实际执行的操作区分。': 'The geometric feature associated with an operation, such as a rotation axis, mirror plane or inversion center. Distinguish the element from the operation performed.',
+      '在复合运算下构成群、并具有至少一个共同固定点的对称操作集合；此处将该点选为原点。': 'A set of symmetry operations that forms a group under composition and shares at least one fixed point. Here, that point is chosen as the origin.',
+      '群中不同对称操作的总数，包括恒等操作 E；不等于对称轴的数目。': 'The total number of distinct symmetry operations in the group, including E. It is not the number of symmetry axes.',
+      '通过反复复合和取逆，就能得到群中所有操作的一组操作；同一点群可选不同的生成元。': 'A set of operations whose repeated compositions and inverses produce every operation in the group. A point group can have different choices of generators.',
+      '采用列向量约定时，先执行 B，再执行 A。操作满足结合律，但不一定满足交换律。': 'With the column-vector convention, apply B first and then A. Composition is associative, but need not be commutative.',
+      '正操作保持空间手性，三维正交矩阵的行列式为 +1；非正操作改变空间手性，行列式为 −1。': 'Proper operations preserve spatial handedness and have a 3D orthogonal matrix with determinant +1. Improper operations reverse handedness and have determinant −1.',
+      '群中包含单独的中心反演 i。旋转反演使用某个反演点，不代表 i 本身也属于该群。': 'The group contains inversion i itself. Using an inversion point in a rotoinversion does not imply that i alone belongs to the group.',
+      '由三根独立平移基矢的全部整数倍组合生成的无限几何点集；格点不是某一种原子。': 'An infinite set of geometric points generated by all integer combinations of three independent translation vectors. A lattice point is not a particular atom.',
+      '随每个原胞重复的一组原子及其相对位置。晶格与基元一起形成结构；传统胞的完整原子表不等于原胞基元。': 'A group of atoms and their relative positions repeated in every primitive cell. Lattice plus motif gives the structure; the full conventional-cell atom list is not the primitive-cell motif.',
+      '原胞含一个平移格点；传统胞便于显示晶体对称性，可以含多个格点。原子数还取决于基元。': 'A primitive cell contains one translation-lattice point. A conventional cell displays crystal symmetry conveniently and may contain several lattice points. Its atom count also depends on the motif.',
+      '在指定原子类型和配位壳约定下，中心原子周围的邻居数。周期边界外的邻居也要计入。': 'The number of neighbors around a central atom, for specified atom types and a stated coordination-shell convention. Include neighbors across periodic boundaries.',
+      '把球面方向从相反极点投到赤道平面的表示法；上下半球用不同符号区分，投影位置不是原子坐标。': 'A representation of directions on a sphere, projected from the opposite pole onto the equatorial plane. Different symbols distinguish the two hemispheres. Projected positions are not atomic coordinates.',
+      '母群中仍满足群条件的一组操作；母群本身也是子群。比较几何子群时要说明嵌入方向。': 'A subset of a parent group that still satisfies the group axioms; the parent group is also its own subgroup. Specify the embedding orientation when comparing geometric subgroups.',
+      '全部点群操作共同允许非零极性向量的方向。极性、手性和非中心对称不同，极性也不自动证明铁电性。': 'Directions along which all point-group operations permit a nonzero polar vector. Polarity differs from chirality and noncentrosymmetry, and does not by itself establish ferroelectricity.',
+      '把旋转与沿轴平移组合，或把镜映与平行于面的平移组合的空间对称元素；一般没有共同固定点。': 'Space-symmetry elements combining rotation with translation along an axis, or reflection with translation parallel to a plane. They generally have no common fixed point.',
+
+      '对称性检查比较完整结构的最终状态。同类原子的编号可以交换；不同元素、键关系或人为赋予的物理标记不能任意交换。': 'A symmetry check compares the final state of the complete structure. Equivalent atoms may exchange their tracking numbers; different elements, bond relationships or assigned physical labels cannot be exchanged arbitrarily.',
+      '动画是坐标映射的教学过程。镜面反射、反演或其插值不是分子的真实刚体运动；中间形状不必保持键长或具有对称性。': 'The animation teaches coordinate mappings. Reflection, inversion and their interpolations are not physical rigid-body motions of a molecule. Intermediate shapes need not preserve bond lengths or symmetry.',
+      '点群要求至少一个共同固定点，并非所有原子固定，也不要求恰好只有一个点固定。共同固定点可能不被原子占据。': 'A point group requires at least one common fixed point. It does not fix every atom or require exactly one fixed point. No atom need occupy that point.',
+      '教材中“n-fold axis has n symmetry elements”宜理解为它生成 n 个不同旋转操作；同一根轴不是 n 根几何轴。': 'Read “an n-fold axis has n symmetry elements” as generating n distinct rotation operations. One axis is not n separate geometric axes.',
+      'Sₙ：旋转 360°/n 后关于垂直于轴的平面反射。n̄：旋转 360°/n 后关于轴上的点反演。两个分步骤不一定各自是模型的对称操作。': 'Sₙ: rotate 360°/n, then reflect in a plane perpendicular to the axis. n̄: rotate 360°/n, then invert about a point on the axis. The two individual steps need not each be a symmetry of the model.',
+      'n̄ 中的反演点不自动成为模型的反演中心。例如 4̄ 点群不含 i，而 3̄ 点群包含 i。4̄ 与 S₄ 生成相同点群，但采用同向 90° 旋转时它们是互逆操作。': 'The inversion point used in n̄ is not automatically an inversion center of the model. For example, 4̄ does not contain i, while 3̄ does. The 4̄ and S₄ operations generate the same point group, but are inverses when their 90° rotations use the same direction.',
+      '表中 HM 用 ASCII 前缀 - 代替紧随其后数字的上横线；它不是负数。-42m 与 -4m2、-62m 与 -6m2 表示不同轴方位下同类点群。': 'In the table, the ASCII prefix - replaces the overbar on the following HM digit; it is not a minus sign. The pairs -42m/-4m2 and -62m/-6m2 describe the same point-group types in different axis orientations.',
+      '32 项是三维周期晶体的点群类型。一般有限分子点群还包含 C₅、D₅h、Ih 以及线性分子的无限点群等。': 'These 32 entries are the point-group types of 3D periodic crystals. Molecular point groups also include C₅, D₅h, Ih and the infinite point groups of linear molecules.',
+      'chiral = true 表示该点群只含正旋转，可作为手性物体的完整点群；不能据此断言组成晶体的每个分子本身一定手性。': 'chiral = true means the group contains only proper rotations and can be the full point group of a chiral object. It does not imply that every molecule in the crystal is itself chiral.',
+      '晶体点群、位置的位点对称群与晶格点群有区别。物体放进晶胞后的结构可能比晶格本身的对称性低。': 'A crystal point group, a position’s site-symmetry group and a lattice point group are different. The structure formed by placing objects in a cell may have lower symmetry than the lattice.',
+      'IUCr：How to read Volume A of International Tables for Crystallography（2010），Table 2：32 点群及两套记号': 'IUCr: How to read Volume A of International Tables for Crystallography (2010), Table 2: the 32 point groups and both notations',
+      'IUCr：Fundamental motifs and parity within the crystallographic point groups（2025），Tables 2、5：群阶': 'IUCr: Fundamental motifs and parity within the crystallographic point groups (2025), Tables 2 and 5: group orders',
+      'IUCr 在线晶体学词典：Point group（共同固定点与晶体学限制）': 'IUCr Online Dictionary of Crystallography: Point group (common fixed points and the crystallographic restriction)',
+      'IUCr：Symmetry（旋转反演与 Schoenflies 旋转反射的区别）': 'IUCr: Symmetry (rotoinversion versus Schoenflies rotation–reflection)',
+      'IUCr：Matrices, mappings, and crystallographic symmetry（反演、反射与矩阵映射）': 'IUCr: Matrices, mappings, and crystallographic symmetry (inversion, reflection and matrix mappings)',
+      'IUCr International Tables for Crystallography, Volume A（11 个中心对称点群）': 'IUCr International Tables for Crystallography, Volume A (the 11 centrosymmetric point groups)',
+      'Hermann–Mauguin（晶体学）': 'Hermann–Mauguin (crystallography)',
+      'Schoenflies（常用于分子对称性）': 'Schoenflies (often used for molecular symmetry)',
+      'HM 中 -n 表示 n̄': 'In HM notation, -n represents n̄',
+      '列向量：AB 表示先 B 后 A': 'Column vectors: AB means B first, then A',
+      '点对称、晶体学限制、镜面、反演、旋转反演、群公理、32 点群': 'Point symmetry, the crystallographic restriction, mirror planes, inversion, rotoinversion, group axioms and the 32 point groups',
+      '依据用户提供的讲义安排内容；定义采用至少一个共同固定点。': 'Organized around the supplied lecture notes; the definition requires at least one common fixed point.',
+
+      '未能载入项目文件。请将 index.html、styles.css、math.js、learning-data.js 和 app.js 保存在同一文件夹后重新打开。': 'The project files could not be loaded. Keep index.html, styles.css, math.js, learning-data.js and app.js in the same folder, then reopen the page.',
+      '[111] 体对角线': '[111] body diagonal',
+      'x = y 对角面': 'the diagonal plane x = y',
+      '所有点保持原位。这是任何点群都包含的操作。': 'Every point stays in place. Every point group contains this operation.',
+      '所有点保持原位。恒等操作属于每个点群。': 'Every point stays in place. The identity belongs to every point group.',
+      '以原点 O 为中心，把每个点送到相反方向的等距位置。三个坐标全部变号。': 'Invert about the origin O: each point maps to an equally distant position in the opposite direction. All three coordinates change sign.',
+      '以 O 为中心，将 (x, y, z) 变为 (−x, −y, −z)。': 'Inversion about O maps (x, y, z) to (−x, −y, −z).',
+      '先绕轴旋转，再关于垂直于轴的镜面反射。': 'Rotate about the axis, then reflect in a plane perpendicular to it.',
+      'M = (−I) R · 先 R 后 i': 'M = (−I) R · R first, then i',
+      'M = σ⊥ R · 先 R 后 σ⊥': 'M = σ⊥ R · R first, then σ⊥',
+      '镜映与反演的中间形变仅为过程示意，不是刚体运动；只有完整操作的终态用于检验对称性。': 'Intermediate deformations for reflection and inversion illustrate the mapping; they are not rigid-body motions. Test symmetry only at the endpoint of the complete operation.',
+      '终态决定是否对称；中间角度不必属于该结构的对称操作。': 'The endpoint determines symmetry. Intermediate angles need not be symmetry operations of the structure.',
+      '+1 · 保手性': '+1 · Preserves handedness',
+      '−1 · 反转手性': '−1 · Reverses handedness',
+      '示踪点回到原位': 'The tracer returns to its initial position',
+      '示踪点移动到新位置': 'The tracer moves to a new position',
+      '此模型用于观察坐标映射，不据此判定分子或晶体的完整点群。': 'This model reveals coordinate mappings; it does not establish the full point group of a molecule or crystal.',
+      '✓ 终态与原结构重合': '✓ The endpoint matches the initial structure',
+      '↗ 终态不能重合': '↗ The endpoint does not match',
+      '所有同类型点及键关系都可匹配。': 'All points of the same type and all bond relationships match. ',
+      '所选完整操作是该模型的对称操作。': 'The selected complete operation is a symmetry of this model.',
+      '所选完整操作不是该模型的对称操作。': 'The selected complete operation is not a symmetry of this model.',
+      '位置虽能匹配，但连接关系不保持。': 'The positions match, but the connections are not preserved. ',
+      '这是重复操作的累计结果。': 'This is the cumulative result of repeated operations.',
+      '显示该点在重复操作下的轨道；它不等于完整点群。': 'Shows this point’s orbit under repeated application of the operation; this is not the full point group.',
+      '示意坐标 · 任意单位 · 编号仅用于追踪': 'Illustrative coordinates · Arbitrary units · Numbers are tracking labels',
+      '第一步结束。此刻只是旋转；点击播放或下一步，继续第二步。': 'Step 1 is complete. This is only the rotation; select Play or Next step to continue to step 2.',
+      '含 i': 'Contains i',
+      '仅正操作': 'Proper operations only',
+      '非中心对称': 'Noncentrosymmetric',
+      '具有反演中心': 'Has an inversion center',
+      '无反演中心': 'No inversion center',
+      '查看此点群的 3D 模型 ↓': 'Explore this point group in 3D ↓',
+      'C₄ · z 轴旋转 90°': 'C₄ · Rotate 90° about z',
+      'mₓ𝓏 · 关于 xz 镜映': 'mₓ𝓏 · Reflect in the xz plane',
+      'C₂ · x 轴旋转 180°': 'C₂ · Rotate 180° about x',
+      'C₃ · z 轴旋转 120°': 'C₃ · Rotate 120° about z',
+      'i · 中心反演': 'i · Inversion',
+      'E · 恒等操作': 'E · Identity',
+      '✓ A B = B A · 这两个操作可交换': '✓ A B = B A · These operations commute',
+      'A B ≠ B A · 顺序改变结果': 'A B ≠ B A · The order changes the result',
+      'mm2 点群乘法表，先做列操作再做行操作': 'Multiplication table of mm2: apply the column operation first, then the row operation',
+      '✓ 正确，理解到位。': '✓ Correct.',
+      '重新练习 ↺': 'Try again ↺',
+      '下一题 →': 'Next question →',
+      '点击播放，追踪 H1 与 H2 如何交换位置。': 'Select Play and track how H1 and H2 exchange positions.',
+      '观察反演后的氢位置。二重轴并不保证存在反演中心。': 'Examine the hydrogens after inversion. A twofold axis does not guarantee an inversion center.',
+      '先点下一步看旋转中间态，再点一次看反演终态。': 'Select Next step to see the intermediate rotation, then select it again to see the inversion endpoint.',
+      '记录 3̄ 的终态坐标，再切换 Sₙ（n = 3）比较。': 'Record the endpoint coordinates for 3̄, then switch to Sₙ (n = 3) and compare.',
+
+      '镜映与反演的中间形变只作教学示意；完整操作的终态才用于判断。': 'Intermediate deformations for reflection and inversion are teaching aids. Assess only the endpoint of the complete operation.',
+      '只看完整操作的终态；中间角度不必属于这个点群。': 'Assess the complete operation’s endpoint. Intermediate angles need not belong to this point group.',
+      '正旋转轴': 'Proper rotation axes',
+      '旋转反演轴': 'Rotoinversion axes',
+      '镜面': 'Mirror plane',
+      '反演中心': 'Inversion center',
+      '反演中心 O': 'Inversion center O',
+      '有': 'Present',
+      '无': 'Absent',
+      '这个点群只有 E，没有非平凡的对称轴、镜面或反演中心。': 'This group contains only E, with no nontrivial symmetry axes, mirror planes or inversion center.',
+      '✓ 全部同类点重合': '✓ All points of the same type match',
+      '模型验证异常': 'Model validation error',
+      '所选操作属于这个点群': 'The selected operation belongs to this point group',
+      '完整操作后，所有同类型点将重合。可点“看终态”直接比较。': 'After the complete operation, all points of the same type will match. Select “Show endpoint” to compare directly.',
+      ' · 颜色代表类型，编号用于追踪': ' · Colors identify types; numbers track points',
+
+      '方格层 · 三维重复': 'Square layers · Repeated in 3D',
+      '三角网格层 · 三维重复': 'Triangular layers · Repeated in 3D',
+      '可以存在具有这种旋转的三维周期晶格；是否适合当前点阵，还要看下面的基矢检验。': 'A 3D periodic lattice can have this rotation. Whether it works for the selected lattice is determined by the basis-vector test below.',
+      '五重旋转的迹不是整数，因此任何三维周期晶格都不能保持这种旋转。': 'The trace of a fivefold rotation is not an integer, so no 3D periodic lattice can be invariant under it.',
+      '当 n ≥ 7，迹严格处于 2 与 3 之间，没有整数可取；7、8、9 及更高折数都被排除。': 'For n ≥ 7, the trace lies strictly between 2 and 3, with no integer possible. This excludes 7-, 8-, 9-fold and all higher rotation orders.',
+      '终态：所有格点重合': 'Endpoint: all lattice points match',
+      '终态：有格点错位': 'Endpoint: some points miss the lattice',
+      '这只是当前示例绕 z 轴不支持；切换“自动选择合适示例”试试。': 'Only this example fails for rotation about z. Try “Choose a suitable example automatically”.',
+      '轴上的点仍不动，不能据此说整个晶格保持对称。': 'Points on the axis stay fixed, but this does not establish symmetry of the whole lattice.',
+      '整数步能到达原晶格中的位置。': 'Integer translation steps reach positions in the original lattice.',
+      '有非整数步：旋转后的基矢落在格点之间。': 'Noninteger steps are required: the rotated basis vectors fall between lattice points.',
+      '暂停旋转': 'Pause rotation',
+      '重播旋转': 'Replay rotation',
+      '播放旋转': 'Play rotation',
+      '旋转后的终态': 'Endpoint after rotation',
+      '旋转前的起点': 'Starting positions before rotation',
+      '中间角度 · 暂不判定': 'Intermediate angle · No symmetry judgment yet',
+      '沿 z 轴看 · c 垂直屏幕 ⊙': 'View along z · c points out of the screen ⊙',
+      'z · 旋转轴': 'z · Rotation axis',
+
+      /* Short pieces occur on either side of nested HTML or inserted symbols.
+       * Whole-sentence patterns below handle dynamic sentences before these fallbacks.
+       */
+      '点群 ': 'Point group ',
+      ' · 三维对称模型': ' · 3D symmetry model',
+      ' · 旋转反演': ' · Rotoinversion',
+      ' · 旋转镜映': ' · Rotation–reflection',
+      ' 轴': ' axis',
+      ' 平面': ' plane',
+      ' 绕 ': ' about ',
+      '绕 ': 'About ',
+      'm · 法向 ': 'm · Normal ',
+      ' 的镜面': ' mirror plane',
+      ' 型': ' type',
+      '阶 ': 'Order ',
+      ' 重轴 ': '-fold axis ',
+      '法向 ': 'Normal ',
+      '终态：': 'Endpoint: ',
+      'mm2 组合结果：': 'mm2 composition: ',
+      '查看 ': 'View ',
+      '用 ': 'Explore ',
+      ' 观察 ↗': ' ↗',
+      ' 条': ' axes',
+      ' 个': ' items',
+      ' 个操作': ' operations',
+      '结束': ' complete',
+      '中': ' in progress',
+      '旋转后的三根基矢都能用整数步平移表示。显示的 ': 'All three rotated basis vectors are integer combinations of lattice translations. All ',
+      ' 个点全部落回格点。': ' displayed points return to lattice positions.',
+      '显示的 ': 'Of the ',
+      ' 个点中，': ' displayed points, ',
+      ' 个终点不在原晶格上。': ' endpoints lie outside the original lattice. ',
+      ' 重旋转 · C': '-fold rotation · C',
+      '围绕 ': 'About ',
+      ' 按右手规则旋转 ': ' rotate, using the right-hand rule, by ',
+      '°。轴上的点保持不动。': '°. Points on the axis stay fixed.',
+      '关于 ': 'In the plane ',
+      ' 映到另一侧的等距位置。镜面上的点不动。': ', reflect to an equally distant position on the other side. Points in the plane stay fixed.',
+      '先绕 ': 'First rotate about ',
+      '°，再通过原点反演。组合成立，不要求两步单独都是该结构的对称操作。': '°, then invert through the origin. The composite can be a symmetry even when neither step is a separate symmetry.',
+      '°，再关于垂直于该轴、过原点的镜面反射。': '°, then reflect in the plane through the origin perpendicular to the axis.',
+      '此处显示一次完整操作的矩阵；det M = ': 'The matrix shown is for one complete operation; det M = ',
+      '。反转手性描述空间变换，原结构是否手性还取决于它的完整对称群。': '. Reversing handedness describes the spatial transformation. Whether the structure is chiral depends on its full symmetry group.',
+      '这个操作的阶为 ': 'This operation has order ',
+      '：重复作用 ': ': repeating it ',
+      ' 次得到 E。操作的阶、n 和完整点群的阶是不同概念。': ' times gives E. Its order, n and the full point group order are different concepts.',
+      '这是一共 ': 'This is the cumulative result of ',
+      ' 次重复操作的累计结果。': ' applications.',
+      ' 个点找不到原结构中的同类型位置。': ' points have no matching position of the same type in the initial structure. ',
+      '示意坐标 · 已完成 ': 'Illustrative coordinates · Completed applications: ',
+      ' 次，正在演示第 ': '; showing application ',
+      ' 次': ' applications',
+      '已答 ': 'Answered ',
+      ' · 正确 ': ' · Correct ',
+      '第 ': 'Question ',
+      ' 题': '',
+      '正确答案是 ': 'The correct answer is ',
+      '。再看一下原因：': '. Here is why: ',
+      '° 后中心反演': '°, then inversion',
+      '绕单位方向 ': 'About the unit direction ',
+      '°；轴上的点保持不动。': '°. Points on the axis stay fixed.',
+      '镜面通过 O，法向为 ': 'The mirror plane passes through O with normal ',
+      '。垂直镜面的坐标分量变号。': '. The coordinate component perpendicular to the plane changes sign.',
+      '先绕方向 ': 'First rotate about direction ',
+      '°，再关于 O 反演。两个分步骤不一定单独属于这个点群。': '°, then invert about O. The individual steps need not belong to this point group.',
+      '操作的阶：': 'Operation order: ',
+      '查看完整操作列表 · ': 'View all operations · ',
+      ' 个点均能找到同类型的原始位置；同类点的编号可以交换。': ' points match original positions of the same type. Tracking numbers may be exchanged within a type.',
+      ' 重旋转 · 绕 z 轴 ': '-fold rotation · About z: ',
+      ' 重：周期晶格允许': '-fold: allowed for periodic lattices',
+      ' 重：周期晶格不允许': '-fold: forbidden for periodic lattices'
+    },
+    patterns: [
+      { regex: '^(\\d+) 重旋转 · C(\\d+)$', replacement: '$1-fold rotation · C$2' },
+      { regex: '^(.*?) 点群的三色轨道模型$', replacement: 'Three-color orbit model of point group $1' },
+      { regex: '^(.*?) · 绕 (\\[[^\\]]+\\]) ([-\\d.]+)° 后中心反演$', replacement: '$1 · Rotate $3° about $2, then invert' },
+      { regex: '^(.*?) · 绕 (\\[[^\\]]+\\]) ([-\\d.]+)°$', replacement: '$1 · Rotate $3° about $2' },
+      { regex: '^(.*?)m · 法向 (\\[[^\\]]+\\]) 的镜面$', replacement: '$1m · Mirror plane with normal $2' },
+      { regex: '^围绕 (.*?) 按右手规则旋转 ([-\\d.]+)°。轴上的点保持不动。$', replacement: 'Rotate $2° about $1 using the right-hand rule. Points on the axis stay fixed.' },
+      { regex: '^关于 (.*?) 映到另一侧的等距位置。镜面上的点不动。$', replacement: 'Reflect in $1 to an equally distant position on the other side. Points in the plane stay fixed.' },
+      { regex: '^先绕 (.*?) 旋转 ([-\\d.]+)°，再通过原点反演。组合成立，不要求两步单独都是该结构的对称操作。$', replacement: 'Rotate $2° about $1, then invert through the origin. The composite can be a symmetry even when the two steps are not separate symmetries of the structure.' },
+      { regex: '^先绕 (.*?) 旋转 ([-\\d.]+)°，再关于垂直于该轴、过原点的镜面反射。$', replacement: 'Rotate $2° about $1, then reflect in the plane through the origin perpendicular to the axis.' },
+      { regex: '^绕单位方向 (.*?) 按右手规则旋转 ([-\\d.]+)°；轴上的点保持不动。$', replacement: 'Rotate $2° about the unit direction $1 using the right-hand rule. Points on the axis stay fixed.' },
+      { regex: '^镜面通过 O，法向为 (.*?)。垂直镜面的坐标分量变号。$', replacement: 'The mirror plane passes through O with normal $1. The coordinate component perpendicular to it changes sign.' },
+      { regex: '^先绕方向 (.*?) 旋转 ([-\\d.]+)°，再关于 O 反演。两个分步骤不一定单独属于这个点群。$', replacement: 'Rotate $2° about direction $1, then invert about O. The two steps need not separately belong to this point group.' },
+      { regex: '^此处显示一次完整操作的矩阵；det M = ([-−\\d.]+)。反转手性描述空间变换，原结构是否手性还取决于它的完整对称群。$', replacement: 'This is the matrix of one complete operation; det M = $1. Reversing handedness describes the spatial transformation. Whether the structure is chiral depends on its full symmetry group.' },
+      { regex: '^这个操作的阶为 (\\d+)：重复作用 (\\d+) 次得到 E。操作的阶、n 和完整点群的阶是不同概念。$', replacement: 'This operation has order $1: repeating it $2 times gives E. Its order, n, and the order of the full point group are different concepts.' },
+      { regex: '^所有同类型点及键关系都可匹配。这是一共 (\\d+) 次重复操作的累计结果。$', replacement: 'All points of the same type and all bond relationships match. This is the cumulative result of $1 applications.' },
+      { regex: '^这是一共 (\\d+) 次重复操作的累计结果。$', replacement: 'This is the cumulative result of $1 applications.' },
+      { regex: '^有 (\\d+) 个点找不到原结构中的同类型位置。(.*?)$', replacement: '$1 points have no matching position of the same type in the original structure. $2' },
+      { regex: '^示意坐标 · 已完成 (\\d+) 次，正在演示第 (\\d+) 次$', replacement: 'Illustrative coordinates · $1 applications completed; showing application $2' },
+      { regex: '^(\\d+) / 32 个点群$', replacement: '$1 / 32 point groups' },
+      { regex: '^(.*?) · (\\d+) 个操作$', replacement: '$1 · $2 operations' },
+      { regex: '^(\\d+) 个操作$', replacement: '$1 operations' },
+      { regex: '^用 (.*?) 观察 ↗$', replacement: 'Explore with $1 ↗' },
+      { regex: '^已答 (\\d+) / (\\d+) · 正确 (\\d+)$', replacement: 'Answered $1 / $2 · Correct $3' },
+      { regex: '^第 (\\d+) 题$', replacement: 'Question $1' },
+      { regex: '^正确答案是 ([A-Z])。再看一下原因：$', replacement: 'The correct answer is $1. Here is why: ' },
+      { regex: '^操作的阶：(\\d+)$', replacement: 'Operation order: $1' },
+      { regex: '^查看完整操作列表 · (\\d+) 个$', replacement: 'View all operations · $1 total' },
+      { regex: '^(\\d+) 重轴\\s*$', replacement: '$1-fold axis ' },
+      { regex: '^(\\d+) 条$', replacement: '$1 axes' },
+      { regex: '^(\\d+) 个$', replacement: '$1' },
+      { regex: '^(\\d+) 个点均能找到同类型的原始位置；同类点的编号可以交换。$', replacement: 'All $1 points match original positions of the same type. Tracking numbers may be exchanged within a type.' },
+      { regex: '^(\\d+) 重旋转 · 绕 z 轴 ([-\\d.]+)°$', replacement: '$1-fold rotation · $2° about z' },
+      { regex: '^(\\d+) 重：周期晶格允许$', replacement: '$1-fold: allowed for periodic lattices' },
+      { regex: '^(\\d+) 重：周期晶格不允许$', replacement: '$1-fold: forbidden for periodic lattices' },
+      { regex: '^旋转后的三根基矢都能用整数步平移表示。显示的 (\\d+) 个点全部落回格点。$', replacement: 'All three rotated basis vectors are integer combinations of lattice translations. All $1 displayed points return to lattice positions.' },
+      { regex: '^显示的 (\\d+) 个点中，(\\d+) 个终点不在原晶格上。(.*?)$', replacement: 'Of the $1 displayed points, $2 endpoints miss the original lattice. $3' },
+      { regex: '(\\d+) 重旋转', replacement: '$1-fold rotation' },
+      { regex: '轴上的点仍不动，不能据此说整个晶格保持对称。', replacement: 'Points on the axis stay fixed, but this does not establish symmetry of the whole lattice.' }
+    ]
+  });
+})();
+
+
+// i18n-crystal.js
+(function () {
+  'use strict';
+  window.SymmetryI18n.register('crystal', {
+    messages: {
+      '晶体结构模块尚未载入，请重新打开页面。': 'The crystal structure module has not loaded. Please reopen the page.',
+      '晶格 ＋ 基元': 'Lattice + motif',
+      '14 种点阵 · 原胞与传统胞': '14 lattices · Primitive and conventional cells',
+      '先分清重复方式，再放入原子': 'Understand the repetition, then add the atoms',
+      '晶格记录平移重复的位置；基元是在每个格点上复制的一组原子。晶格加上基元，才得到晶体结构。': 'A lattice defines positions related by translation. A motif is a group of atoms repeated at every lattice point. Lattice + motif gives the crystal structure.',
+      'L04 · PDF 2、30 页 / L05 · 4–9 页': 'L04 · PDF pp. 2, 30 / L05 · pp. 4–9',
+      '先选择 FCC 点阵，再把“晶格”切换为“结构”。同一个平移点阵可以承载不同的原子排列。': 'Choose the FCC lattice, then switch from “Lattice” to “Structure.” Different atomic arrangements can share the same translation lattice.',
+      '下一步：看结构与配位 →': 'Next: structures and coordination →',
+      '结构 ＋ 配位': 'Structure + coordination',
+      '金属 · AB / AB₂ 原型': 'Metals · AB and AB₂ prototypes',
+      '从一个原子出发，读懂整个结构': 'Start with one atom to understand the structure',
+      '选择结构，再选一种原子。配位数来自无限周期结构中的最近邻，不受当前显示几个晶胞影响。多面体将近邻围成的空间显示出来。': 'Choose a structure and a central atom. Its coordination number comes from neighbors in the infinite periodic structure, regardless of how many cells are displayed. A polyhedron outlines the space enclosed by those neighbors.',
+      'L05 · PDF 12–64 页': 'L05 · PDF pp. 12–64',
+      '切换 NaCl、CsCl 与 ZnS，观察同为 AB 化学计量的结构，配位数如何从 6、8 变为 4。': 'Compare NaCl, CsCl, and ZnS. All have AB stoichiometry, yet their coordination numbers are 6, 8, and 4.',
+      '下一步：追踪堆积与孔隙 →': 'Next: packing and interstitial sites →',
+      '堆积 ＋ 孔隙': 'Packing + interstitial sites',
+      'ABAB / ABC · 四面体与八面体空隙': 'ABAB / ABC · Tetrahedral and octahedral sites',
+      '逐层堆起来，再看看空隙在哪里': 'Build the layers, then find the spaces between them',
+      'A、B、C 表示密排层在平面内的三种错位位置。HCP 采用 ABAB…，FCC 采用 ABCABC…；每个密排球对应 2 个四面体空隙和 1 个八面体空隙。': 'A, B, and C denote three lateral positions of close-packed layers. HCP follows ABAB…; FCC follows ABCABC…. Each close-packed sphere corresponds to two tetrahedral sites and one octahedral site.',
+      'L05 · PDF 15–27、38–65 页': 'L05 · PDF pp. 15–27, 38–65',
+      '从两层开始逐层增加：第三层回到 A 是 HCP，第三层到 C 是 FCC。再切换孔隙视图，比较占据一半与全部的化学计量。': 'Start with two layers and add a third: returning to A gives HCP; placing it at C gives FCC. Then switch to interstitial sites and compare half occupation with full occupation.',
+      '下一步：尝试硬球半径比 →': 'Next: explore hard-sphere radius ratios →',
+      '半径比 ＋ 几何': 'Radius ratio + geometry',
+      '局部 CN 4 / 6 / 8 · 临界接触': 'Local CN 4 / 6 / 8 · Critical contact',
+      '用硬球看懂半径比的几何来源': 'See where radius ratios come from with hard spheres',
+      '选定一种局部配位壳，保持周围大球彼此接触，改变中心小球的半径。临界值由这个理想几何决定；实际材料还受到成键、价态和结构畸变影响。': 'Choose a local coordination shell. Keep its large outer spheres touching one another and vary the small central sphere. This ideal geometry determines the critical ratio; bonding, valence, and distortions also matter in real materials.',
+      'L05 · PDF 20、28–33 页': 'L05 · PDF pp. 20, 28–33',
+      '在四面体壳中把 r/R 调到约 0.225：中心球恰好接触四个大球。切换八面体与立方壳，比较相应临界值。': 'In the tetrahedral shell, set r/R to about 0.225: the central sphere just touches four outer spheres. Compare this with the critical ratios for octahedral and cubic shells.',
+      '回到晶格与基元 ↻': 'Back to lattice and motif ↻',
+      '显示范围': 'Display region',
+      '1 个晶胞': '1 cell',
+      '球半径显示 ·': 'Displayed sphere radius ·',
+      '显示晶胞边框': 'Show cell edges',
+      '选择晶胞': 'Cell choice',
+      '传统晶胞': 'Conventional cell',
+      '传统胞': 'conventional cell',
+      '原胞': 'Primitive cell',
+      '单质与共价结构': 'Elemental and covalent structures',
+      'AB · 两种粒子数量相等': 'AB · Equal numbers of both species',
+      'AB₂ / A₂B · 数量比 1:2': 'AB₂ / A₂B · A 1:2 number ratio',
+      'AB₃ / A₃B · 数量比 1:3': 'AB₃ / A₃B · A 1:3 number ratio',
+      '其他结构': 'Other structures',
+      '选择结构原型': 'Structure prototype',
+      '14 种 Bravais 点阵': '14 Bravais lattices',
+      '分开看三个概念': 'Explore three separate concepts',
+      '晶格': 'Lattice',
+      '基元': 'Motif',
+      '结构': 'Structure',
+      '双原子基元是教学示例。': 'This two-atom motif is a teaching example.',
+      '绿色与蓝色分别代表不同类型。它们在每个格点上以相同方向、相同相对位置重复；这个基元可以降低点阵原有的点对称性。': 'Green and blue represent different species. The same orientation and relative positions repeat at every lattice point. This motif can lower the point symmetry of the bare lattice.',
+      '选择配位中心': 'Central atom',
+      '高亮完整周期近邻': 'Highlight all periodic neighbors',
+      '显示配位多面体': 'Show coordination polyhedron',
+      '球大小只控制显示，不改变原子坐标或配位数。近邻可跨过晶胞边界；浅色点是上下文或共享边界的原子，实色点是当前配位壳。': 'Sphere size only affects the display; coordinates and coordination numbers stay fixed. Neighbors can cross cell boundaries. Faint atoms provide context or show shared boundaries; solid atoms belong to the selected shell.',
+      '看对应点群': 'View its point group',
+      '观察对象': 'Explore',
+      '逐层密堆积': 'Layer stacking',
+      'FCC 孔隙': 'FCC sites',
+      '堆积顺序': 'Stacking sequence',
+      '显示层数 ·': 'Number of layers ·',
+      '选择孔隙种类': 'Site type',
+      '四面体孔隙 · 每胞 8 个': 'Tetrahedral · 8 per cell',
+      '八面体孔隙 · 每胞 4 个': 'Octahedral · 4 per cell',
+      '选中一个孔隙看配位': 'Select a site to see its shell',
+      '孔隙占据': 'Site occupation',
+      '空：只标出孔隙': 'Empty: mark the sites',
+      '填 1/3 · 三胞计数示意': 'One third · A 3-cell counting example',
+      '填一半': 'Half occupied',
+      '全部填满': 'Fully occupied',
+      'FCC 骨架离子': 'FCC host species',
+      '大阴离子 X · 填小阳离子 M': 'Anion X host · Cation M guest',
+      '阳离子 M · 填阴离子 X': 'Cation M host · Anion X guest',
+      '显示所选孔隙配位壳': 'Show the selected site’s shell',
+      '显示晶胞 / 层参考框': 'Show cell / layer reference frame',
+      '密排层字母只表示位置，不代表元素。孔隙占据的有序示例用于理解数量关系；不能只凭填充比例判定任意材料的真实结构。': 'Layer letters describe positions, not elements. These ordered site-occupation examples illustrate number ratios. An occupation fraction alone does not determine a material’s actual structure.',
+      '固定一种局部配位壳': 'Choose a fixed local shell',
+      '中心球 / 外围球 · r/R =': 'Central / outer sphere · r/R =',
+      '调到几何临界值': 'Set to the critical ratio',
+      '显示局部配位多面体': 'Show the local polyhedron',
+      '这里只改变中心球大小。': 'Only the central sphere changes size.',
+      '外围大球相互接触，坐标固定。临界值以下中心球与外围球间有空隙；临界值以上在这组固定坐标中会发生重叠，需要结构松弛。': 'The outer spheres touch one another and remain fixed. Below the critical ratio, a gap surrounds the central sphere. Above it, spheres overlap at these fixed positions, so the geometry would need to relax.',
+      '晶体结构学习步骤': 'Crystal structure learning steps',
+      '可拖动、缩放的晶体结构三维示意图。方向键转动，加减键缩放，点击原子选择配位中心。': 'Interactive 3D crystal structure. Drag or use arrow keys to rotate; scroll or use plus and minus to zoom. Click an atom to select a coordination center.',
+      '三维': '3D',
+      '俯视': 'Top',
+      '正视': 'Front',
+      '重置视角': 'Reset view',
+      '拖动转动 · 滚轮缩放 · 点击原子': 'Drag to rotate · Scroll to zoom · Click an atom',
+      '试着观察': 'Try this',
+      '每一步都可独立尝试；按这个顺序连接点群、晶格与真实结构。': 'Explore any step independently, or follow this sequence to connect point groups, lattices, and crystal structures.',
+      '基元 A': 'Motif A',
+      '基元 B': 'Motif B',
+      '只看平移格点': 'Translation lattice points',
+      '一个格点携带的基元': 'The motif at one lattice point',
+      '每个格点复制相同基元': 'The same motif at every lattice point',
+      '原胞 · 1 个等效格点': 'Primitive cell · 1 equivalent lattice point',
+      '理想密排层': 'Ideal close-packed layers',
+      'A 层': 'Layer A',
+      'B 层': 'Layer B',
+      'C 层': 'Layer C',
+      '阴离子 X 骨架': 'Anion X host',
+      '阳离子 M 骨架': 'Cation M host',
+      '阳离子 M 填充': 'Cation M guest',
+      '阴离子 X 填充': 'Anion X guest',
+      '外围球 R = 1 · 半透明': 'Outer spheres R = 1 · Translucent',
+      '中心小球 r': 'Central sphere r',
+      '配位中心': 'Coordination center',
+      '空孔隙': 'Empty site',
+      '点阵与晶胞': 'Lattice and cell',
+      '传统胞含': 'The conventional cell contains',
+      '个等效格点，原胞含': 'lattice points; the primitive cell contains',
+      '个。选择原胞改变的是重复区域与基矢，同一无限点阵没有改变。': '. Choosing the primitive cell changes the repeat region and basis vectors, while preserving the same infinite lattice.',
+      '晶格 + 基元 = 结构': 'Lattice + motif = structure',
+      '只标重复位置': 'Mark the repeated positions',
+      '每个格点附带 2 个原子': 'Two atoms at each lattice point',
+      '重复基元得到结构': 'Repeat the motif to build the structure',
+      '晶格点是数学位置。这里的双原子基元示例固定绿色 A 与蓝色 B 的相对位置；结构中的原子数 = 格点数 × 基元原子数。': 'Lattice points are mathematical positions. This two-atom motif fixes the relative positions of green A and blue B. Number of atoms = number of lattice points × atoms per motif.',
+      '传统胞基矢长度': 'Conventional basis-vector lengths',
+      '原胞/传统胞体积': 'Primitive / conventional cell volume',
+      '半开区域含': 'The half-open region contains',
+      '格点': 'lattice points',
+      '原子': 'atoms',
+      '为什么 7 个晶系对应 14 种 Bravais 点阵？': 'Why do 7 crystal systems give 14 Bravais lattices?',
+      '晶系依据点对称性分类，Bravais 点阵进一步区分平移格点的排列。并非每个晶系都能独立采用所有 P、I、F、C、R 中心化；有些看似不同的晶胞可通过换基矢描述为同一类点阵。': 'Crystal systems classify point symmetry; Bravais lattices also distinguish the arrangement of translation points. Not every system has distinct P, I, F, C, and R types. Some apparently different cells describe the same lattice after a change of basis.',
+      'P：简单；I：体心；F：面心；C：底心；R：菱方点阵的六方轴传统胞。三方晶系中的菱方 Bravais 点阵常以六方轴表示，此时传统胞含 3 个格点，真正菱方原胞仍只含 1 个。': 'P: primitive; I: body-centered; F: face-centered; C: base-centered; R: a conventional rhombohedral lattice cell in hexagonal axes. A rhombohedral Bravais lattice in the trigonal system is often drawn in hexagonal axes. That conventional cell contains three lattice points; its rhombohedral primitive cell still contains one.',
+      '当前基矢和球大小用于几何示意，长度采用任意单位。为显示完整边框，浅色高边界位置也画出周期等价的共享球；它们不额外计入半开区域。': 'Basis vectors and sphere sizes are illustrative, with lengths in arbitrary units. Faint periodic copies on the upper boundaries complete the cell drawing. They do not add to the half-open-region count.',
+      '无限周期近邻': 'Neighbors in the infinite crystal',
+      '第一配位壳：': 'First coordination shell: ',
+      '。距离': '. Distance',
+      '（模型单位）。跨边界的近邻也计入，所以切换 1 个胞与复胞不会改变此结果。': '(model units). Neighbors across cell boundaries are included, so displaying one cell or a supercell does not change this result.',
+      '原胞 / 传统胞中的原子数': 'Atoms in primitive / conventional cells',
+      '当前使用': 'Currently displaying the ',
+      '。按半开区间计数，浅色边界共享球不重复算入。': '. Counts use a half-open cell; faint shared boundary spheres are not counted again.',
+      'HCP 六棱柱图常用的 6 原子计数，与此处 2 原子的平行六面体原胞不同。': 'The familiar 6-atom HCP hexagonal prism differs from the 2-atom parallelepiped primitive cell used here.',
+      '晶胞选择改变重复区域，不改变无限结构的化学计量。': 'Cell choice changes the repeat region, not the stoichiometry of the infinite crystal.',
+      '空间群': 'Space group',
+      '晶体点群': 'Crystal point group',
+      '配位中心分数坐标': 'Fractional coordinates of the center',
+      '阅读这个模型：周期结构、配位与理想化': 'Read the model: periodicity, coordination, and idealization',
+      '这是理想结构原型；实际晶格参数和内部坐标可能随材料、温度与压力变化。': 'This is an ideal structure prototype. Real lattice parameters and internal coordinates can vary with composition, temperature, and pressure.',
+      '实线晶胞边框只定义重复区域。中心到近邻的连线帮助读出配位；它们不自动代表化学键。配位多面体是近邻位置的凸包，配位数相同也可能具有不同形状，例如 NiAs 中两种原子的六配位壳并不相同。': 'Solid cell edges define the repeat region. Lines from the center to its neighbors show coordination, without automatically implying chemical bonds. A coordination polyhedron is the convex hull of the neighbors. Equal coordination numbers can have different shapes: the two species in NiAs have different six-neighbor shells.',
+      '畸变结构的第一配位壳可有不同键长，例如金红石的 4 + 2 个近邻。这里把最短距离的 1.12 倍内的一组几何近邻作为配位示意，避免把分裂壳误数成 4 配位；具体配位定义仍依结构环境而定。': 'A distorted first shell can contain different bond lengths, as in the 4 + 2 neighbors of rutile. This model groups neighbors within 1.12 times the shortest distance to include the split shell rather than report fourfold coordination. The appropriate definition still depends on the structural environment.',
+      '坐标为模型中的笛卡尔 / 分数坐标。三维图当前只绘制有限区域，数学计算使用无限周期重复；不能把可见原子数当作化学计量或配位数。': 'Coordinates are Cartesian / fractional coordinates of the model. The 3D drawing shows a finite region, while the calculation uses infinite periodic repetition. The number of visible atoms is not a stoichiometric or coordination count.',
+      '课程对应：': 'Lecture reference: ',
+      '同样密排，不同层序': 'Equal close packing, different stacking',
+      '两个理想结构均为 CN 12，堆积率约 74%。A、B、C 是层的横向位置；第二层球落入第一层的三角凹处。': 'Both ideal structures have CN 12 and a packing fraction of about 74%. A, B, and C are lateral layer positions. Spheres in the second layer sit in triangular depressions of the first.',
+      '从三维看，再从顶部看': 'Compare the 3D and top views',
+      '加到第 3 层再比较': 'Add a third layer to compare',
+      '第三层回到 A': 'The third layer returns to A',
+      '第三层来到 C': 'The third layer occupies C',
+      '点击“俯视”，比较第三层与第一层是否重合。显示的是有限层片；边缘球可见邻居较少，不改变无限理想结构的 CN 12。': 'Choose “Top” and check whether the third layer aligns with the first. These are finite layer patches; fewer visible neighbors at an edge do not change CN 12 in the infinite ideal structure.',
+      '四面体孔隙占据一半，数量上得到 1:1。这里采用有序半占据示例，对应闪锌矿型排列。': 'Half of the tetrahedral sites gives a 1:1 ratio. This ordered half-occupation example uses the zinc-blende arrangement.',
+      '阳离子 FCC 骨架 + 全部四面体孔隙中的阴离子，是 CaF₂ 萤石的描述方式。': 'An FCC cation host with anions filling every tetrahedral site describes fluorite CaF₂.',
+      '阴离子 FCC 骨架 + 全部四面体孔隙中的阳离子，是 Li₂O 反萤石的描述方式。': 'An FCC anion host with cations filling every tetrahedral site describes antifluorite Li₂O.',
+      '先看 8 个四面体空隙，每个空隙由 4 个骨架球围成。': 'Explore the eight tetrahedral sites, each surrounded by four host spheres.',
+      '每个密排阴离子对应 1 个八面体孔隙，占据 1/3 后阳离子:阴离子 = 1:3，这正是课件 CrCl₃ 的 AB₃ 占位原则。这里显示三胞中的一个任意有序计数示例，不是 CrCl₃ 的真实多型坐标。': 'Each close-packed anion corresponds to one octahedral site. One-third occupation gives cations:anions = 1:3, illustrating the AB₃ counting principle used for CrCl₃ in the lecture. This is an arbitrary ordered three-cell counting example, not coordinates of a real CrCl₃ polytype.',
+      'FCC 阴离子骨架的八面体孔隙全部填阳离子，对应 NaCl 型 MX；互换两种离子只改变描述的起点。': 'Filling every octahedral site of an FCC anion host with cations gives the NaCl-type MX arrangement. Exchanging the species changes the starting description.',
+      '占据比例先确定数量关系；一半八面体孔隙的有序排布并不唯一，不能据此自动命名实际结构。': 'Occupation first establishes the number ratio. Ordered half occupation of octahedral sites is not unique, so it does not by itself identify a real structure.',
+      '这里交换骨架与填充粒子的角色，得到 M₃X。课件 CrCl₃ 的 AB₃ 描述应选择阴离子 X 骨架。占位比例不唯一决定有序排列或多型。': 'Swapping host and guest gives M₃X. To illustrate the lecture’s AB₃ description of CrCl₃, choose an anion X host. The occupation fraction does not uniquely determine the ordering or polytype.',
+      '化学计量与结构联系': 'Connecting stoichiometry and structure',
+      '孔隙、占据比例与真实结构的关系': 'Interstitial sites, occupation, and real structures',
+      '四面体空隙 CN 4，八面体空隙 CN 6。在含 N 个球的理想密排结构中，四面体空隙总数为 2N，八面体空隙总数为 N。FCC 与 HCP 都有这个数量关系，空隙在空间中的连接方式却不同。': 'Tetrahedral sites have CN 4; octahedral sites have CN 6. An ideal close-packed structure with N spheres contains 2N tetrahedral sites and N octahedral sites. Both FCC and HCP obey this count, but their sites connect differently in space.',
+      '改变孔隙占据可把堆积模型连接到 ZnS、NaCl、NiAs、CaF₂ 与 Li₂O 等结构；还需要指定哪些位置被占据。萤石以阳离子 Ca 的 FCC 骨架起步，F 阴离子填满四面体孔隙；反萤石交换了骨架与填充离子的角色。': 'Site occupation connects packing models to ZnS, NaCl, NiAs, CaF₂, and Li₂O, but the particular occupied positions must also be specified. Fluorite starts from an FCC host of Ca cations with F anions in all tetrahedral sites. Antifluorite exchanges the host and guest roles.',
+      '课件 L05 PDF 65 页以 CrCl₃ 的 CCP 阴离子骨架、BiI₃ 的 HCP 阴离子骨架介绍 AB₃：每个阴离子有一个八面体孔隙，占据 1/3 得到 1:3 化学计量。这里的三胞示意只验证数量关系；占位比例不唯一决定有序排列、多型或真实结构。': 'L05 PDF page 65 introduces AB₃ using the CCP anion host of CrCl₃ and the HCP anion host of BiI₃. One octahedral site per anion, occupied one third of the time, gives a 1:3 ratio. This three-cell example verifies that count only; occupation does not uniquely determine the ordering, polytype, or real structure.',
+      '孔隙标记是理想球模型中的中心位置；实际离子半径、畸变与成键可能使“密排”成为近似描述。这里的空心圈表示未占据位置，不是原子。': 'Site markers show centers of ideal sphere-model voids. Real ionic radii, distortions, and bonding can make “close packing” an approximate description. Hollow circles are unoccupied sites, not atoms.',
+      '中心球与外围球之间有间隙': 'A gap separates the central and outer spheres',
+      '恰好接触': 'Just touches',
+      '恰好接触 ': 'Just touches ',
+      '固定坐标中，中心球发生重叠': 'The central sphere overlaps at these fixed positions',
+      '理想硬球临界值': 'Ideal hard-sphere critical ratio',
+      '。由外围大球彼此接触时，中心到壳顶点的距离求得。': '. It follows from the center-to-vertex distance when the outer spheres touch one another.',
+      '当前固定几何': 'Current fixed geometry',
+      '中心球半径与这个局部空隙相匹配。球的接触是几何条件，不能单独确定一种材料的真实结构。': 'The central sphere fits this local site exactly. Sphere contact is a geometric condition, not sufficient to determine a material’s actual structure.',
+      '在这个固定配位壳中，中心球还没有接触外围大球。真实结构能否采用这个配位，需要进一步考虑能量和成键。': 'The central sphere does not yet touch the outer spheres in this fixed shell. Whether a real structure adopts this coordination also depends on energy and bonding.',
+      '这不表示模型自动变成更高配位。它表示当前固定壳容不下这么大的中心球；需要移动外围原子或选择其他几何。': 'This does not automatically produce a higher coordination number. The fixed shell cannot accommodate this central sphere; the outer atoms would need to move, or a different geometry would be required.',
+      '课件半径比规则：把范围作为几何参照': 'Lecture radius-ratio rules: geometric reference ranges',
+      '局部配位': 'Local coordination',
+      '几何临界 r/R': 'Critical geometric r/R',
+      '传统理想硬球规则中的区间': 'Traditional ideal hard-sphere range',
+      'CN 4 · 四面体': 'CN 4 · Tetrahedral',
+      'CN 6 · 八面体': 'CN 6 · Octahedral',
+      'CN 8 · 立方': 'CN 8 · Cubic',
+      '约 0.225–0.414': 'About 0.225–0.414',
+      '约 0.414–0.732': 'About 0.414–0.732',
+      '约 0.732–1': 'About 0.732–1',
+      '这个滑块不会根据半径比“预测”晶体结构。所选 CN 始终固定，只显示硬球在相同局部坐标中是否接触、留空或重叠。传统区间忽略了离子可极化性、共价成键、价态、压力以及结构畸变，实际材料可能不遵循简单规则。': 'This slider does not predict a crystal structure from a radius ratio. The selected CN stays fixed; it shows contact, gaps, or overlap at the same local coordinates. Traditional ranges omit ionic polarizability, covalent bonding, valence, pressure, and distortions, so real materials can depart from the simple rules.',
+
+      '任意单位；不是实验测量': 'Arbitrary units; not experimental measurements',
+      '简单立方 SC': 'Simple cubic SC',
+      '每个原胞一个原子，六个最近邻；立方边方向接触。': 'One atom per primitive cell with six nearest neighbors; spheres touch along the cube edges.',
+      'a=1 的等径硬球示意；不是 α-Po 的测量值。': 'Equal hard spheres with a=1; not measured values for α-Po.',
+      '体心立方 BCC': 'Body-centered cubic BCC',
+      '传统立方胞含两个原子，原胞一个；最近邻八个，沿体对角线接触。BCC不是密堆积。': 'Two atoms per conventional cubic cell and one per primitive cell. Eight nearest neighbors touch along body diagonals. BCC is not close packed.',
+      '理想 BCC 几何，a=1；不是 α-Fe 实验结构。': 'Ideal BCC geometry with a=1; not an experimental structure of α-Fe.',
+      '面心立方 FCC / CCP': 'Face-centered cubic FCC / CCP',
+      '传统立方胞四原子，原胞一个；十二配位，沿面对角线接触；[111] 方向 ABC 堆垛。': 'Four atoms per conventional cubic cell and one per primitive cell. CN 12, contact along face diagonals, and ABC stacking along [111].',
+      'a=1 等径密堆积示意；FCC 点阵不等于所有采用 FCC 点阵的晶体结构。': 'Equal close-packed spheres with a=1. The FCC lattice must be distinguished from crystal structures built on that lattice.',
+      '六方密堆积 HCP': 'Hexagonal close packing HCP',
+      'ABAB 堆垛，理想十二配位。P 型平行六面体原胞含两个原子；常见六棱柱示意覆盖三个原胞，含六个原子。': 'ABAB stacking with ideal CN 12. The P-type parallelepiped primitive cell contains two atoms. The familiar hexagonal prism spans three primitive cells and contains six atoms.',
+      '理想 c/a=√(8/3)，a=1；真实 HCP 材料可以偏离此比值。': 'Ideal c/a=√(8/3), with a=1. Real HCP materials can depart from this ratio.',
+      '金刚石结构': 'Diamond structure',
+      'FCC 点阵加两个同类型原子的基元；传统胞八原子、原胞两个；四面体配位。': 'An FCC lattice with a two-atom motif of the same species. Eight atoms per conventional cell, two per primitive cell, and tetrahedral coordination.',
+      '理想金刚石几何，a=1；C、Si、Ge 等可共享结构类型，但电子性质不同。': 'Ideal diamond geometry with a=1. C, Si, and Ge can share this structure type while having different electronic properties.',
+      '石墨 AB 层状结构': 'Graphite with AB stacking',
+      '每个碳有三个同层近邻，组成蜂窝网；两层基元形成 AB 堆垛。与同空间群 HCP 的基元不同。': 'Each carbon has three in-plane neighbors in a honeycomb network. A two-layer motif gives AB stacking. Its motif differs from HCP despite sharing the same space group.',
+      'a=1、c/a=2.72 的示意；最近配位是平面三配位，不计远处层间原子。': 'An illustration with a=1 and c/a=2.72. The nearest shell has planar threefold coordination; distant interlayer atoms are excluded.',
+      '岩盐 NaCl': 'Rock salt NaCl',
+      '两个互相穿插的 FCC 子结构；阴离子 CCP 的八面体位全部占据；Na 和 Cl 均为六配位。': 'Two interpenetrating FCC substructures. All octahedral sites of the CCP anion host are occupied; both Na and Cl have CN 6.',
+      'a=1 的理想岩盐原型；球的显示大小不代表测得离子半径。': 'An ideal rock-salt prototype with a=1. Displayed sphere sizes are not measured ionic radii.',
+      'CsCl 原型': 'CsCl prototype',
+      '两种不同离子占立方角与体心位置，八配位；Bravais 点阵是 P，不是 I，因为体心平移会交换种类。': 'Different ions occupy cube corners and body centers, with CN 8. Its Bravais lattice is P, not I: the body-centering translation would exchange species.',
+      'a=1 理想八配位原型，不是 BCC 单质点阵。': 'An ideal eightfold-coordinated prototype with a=1, distinct from an elemental BCC lattice.',
+      'NiAs 原型': 'NiAs prototype',
+      'As 呈 HCP 型排列，全部八面体位由 Ni 占据；Ni 的六邻域是八面体，As 的六邻域是三角棱柱。': 'As forms an HCP-type arrangement with Ni in all octahedral sites. Ni has an octahedral six-neighbor shell; As has a trigonal-prismatic six-neighbor shell.',
+      'a=1、理想 HCP 轴比；NiAs 中不同中心的六配位多面体不同。': 'a=1 with the ideal HCP axial ratio. The sixfold coordination polyhedra differ for the two centers in NiAs.',
+      '闪锌矿 Zinc blende': 'Zinc blende',
+      'S 的 CCP 型排列，半数四面体位由 Zn 占据；两种离子均四配位。几何位置与金刚石相似，种类区分降低对称性。': 'S forms a CCP-type arrangement with Zn occupying half of the tetrahedral sites. Both species have CN 4. Positions resemble diamond, but distinguishing the species lowers the symmetry.',
+      'a=1 理想原型；不同原子类型不可作为同类点互换。': 'An ideal prototype with a=1. Atoms of different species cannot be exchanged as equivalent points.',
+      '纤锌矿 Wurtzite': 'Wurtzite',
+      'HCP 型阴离子排列，半数四面体位占据；ZnS 双层 ABAB。无反演中心但有镜面，因此非中心对称、非手性。': 'An HCP-type anion arrangement with half of the tetrahedral sites occupied and ABAB stacking of ZnS double layers. It has mirrors but no inversion center, so it is noncentrosymmetric and achiral.',
+      '理想 c/a=√(8/3)、u=3/8，a=1；不是实验坐标。': 'Ideal c/a=√(8/3) and u=3/8, with a=1; not experimental coordinates.',
+      'CdI₂ 2H 型': 'CdI₂ 2H polytype',
+      '一半八面体位占据，形成边共享 CdI₆ 层；间隔的空位层产生层间间隙。此处只展示一种 2H 多型。': 'Half of the octahedral sites are occupied, forming layers of edge-sharing CdI₆ octahedra. Alternating vacant layers create interlayer gaps. Only one 2H polytype is shown.',
+      'a=1、c/a=1.62、z=1/4 的原型示意；不复现材料的全部多型。': 'A prototype illustration with a=1, c/a=1.62, and z=1/4. It does not represent every polytype of the material.',
+      'CdCl₂ 3R 型': 'CdCl₂ 3R polytype',
+      'CCP 型卤素排列，半数八面体位占据；CdCl₆ 层形成 3R 堆垛。六方轴传统 R 胞九原子，菱方原胞三个。': 'A CCP-type halogen arrangement with half of the octahedral sites occupied. CdCl₆ layers follow 3R stacking. The conventional R cell in hexagonal axes has nine atoms; its rhombohedral primitive cell has three.',
+      'a=1、c/a=4.5、z=1/4 的示意；R 中心化与真实原胞明确区分。': 'An illustration with a=1, c/a=4.5, and z=1/4. R centering and the true primitive cell are explicitly distinguished.',
+      '金红石 Rutile': 'Rutile',
+      '畸变 TiO₆ 八面体形成边共享直链；Ti 六配位，O 三配位。最短四根与稍长两根共同构成第一配位壳。': 'Distorted TiO₆ octahedra form straight edge-sharing chains. Ti has CN 6 and O has CN 3. Four shorter bonds and two slightly longer bonds together form the first shell.',
+      'a=1、c/a=0.645、u=0.305 示意；氧网为 eutactic 型，不能当作严格等径 HCP 硬球。': 'An illustration with a=1, c/a=0.645, and u=0.305. The oxygen network is eutactic, not an exact packing of equal HCP hard spheres.',
+      '锐钛矿 Anatase': 'Anatase',
+      '同为 TiO₂，TiO₆ 形成不同的边共享/锯齿连接；传统 I 胞十二原子，原胞六个。': 'Another TiO₂ structure with a different edge-sharing, zigzag arrangement of TiO₆ octahedra. The conventional I cell has twelve atoms; the primitive cell has six.',
+      'a=1、c/a=2.515、z=0.083 示意；使用 AFLOW 已纠正的 origin choice 2 坐标关系，非测量 CIF。': 'An illustration with a=1, c/a=2.515, and z=0.083, using AFLOW’s corrected origin-choice-2 coordinate relations. This is not a measured CIF.',
+      '萤石 Fluorite': 'Fluorite',
+      '这里是 Ca 阳离子构成 FCC 型阵列，全部四面体位由 F 占据；Ca 八配位，F 四配位。': 'Ca cations form the FCC-type host here, with F in all tetrahedral sites. Ca has CN 8 and F has CN 4.',
+      'a=1 理想几何；不能把所有离子结构都称为阴离子密堆积。': 'Ideal geometry with a=1. Not every ionic structure is described by close packing of anions.',
+      '反萤石 Antifluorite': 'Antifluorite',
+      '与萤石的阳/阴离子位置角色反转；O 八配位，Li 四配位。anti 在此指种类位置交换，不表示反演或另一种手性。': 'The cation and anion roles are reversed relative to fluorite. O has CN 8 and Li has CN 4. Here “anti” means exchanging the species occupying the sites, not inversion or a different handedness.',
+      'a=1 理想反萤石原型；只比较几何占位，不模拟化学变换。': 'An ideal antifluorite prototype with a=1. This compares geometric occupation without simulating a chemical transformation.',
+
+      '三斜': 'Triclinic',
+      '单斜': 'Monoclinic',
+      '正交': 'Orthorhombic',
+      '四方': 'Tetragonal',
+      '六方': 'Hexagonal',
+      '三方': 'Trigonal',
+      '立方': 'Cubic',
+      '简单': 'Primitive',
+      '体心': 'Body-centered',
+      '面心': 'Face-centered',
+      '底心': 'Base-centered',
+      '菱方': 'Rhombohedral',
+      '三斜 · 简单 (aP)': 'Triclinic · Primitive (aP)',
+      '单斜 · 简单 (mP)': 'Monoclinic · Primitive (mP)',
+      '单斜 · 底心 (mC)': 'Monoclinic · Base-centered (mC)',
+      '正交 · 简单 (oP)': 'Orthorhombic · Primitive (oP)',
+      '正交 · 底心 (oC)': 'Orthorhombic · Base-centered (oC)',
+      '正交 · 体心 (oI)': 'Orthorhombic · Body-centered (oI)',
+      '正交 · 面心 (oF)': 'Orthorhombic · Face-centered (oF)',
+      '四方 · 简单 (tP)': 'Tetragonal · Primitive (tP)',
+      '四方 · 体心 (tI)': 'Tetragonal · Body-centered (tI)',
+      '六方 · 简单 (hP)': 'Hexagonal · Primitive (hP)',
+      '三方 · 菱方 (hR)': 'Trigonal · Rhombohedral (hR)',
+      '立方 · 简单 (cP)': 'Cubic · Primitive (cP)',
+      '立方 · 体心 (cI)': 'Cubic · Body-centered (cI)',
+      '立方 · 面心 (cF)': 'Cubic · Face-centered (cF)',
+      '菱方点阵以六方轴 R 传统胞显示；包含三个原胞。': 'The rhombohedral lattice is shown using a conventional R cell in hexagonal axes, containing three primitive cells.',
+      '简单传统胞本身是原胞。': 'A primitive conventional cell is itself a primitive cell.',
+      '四面体孔隙': 'Tetrahedral site',
+      '八面体孔隙': 'Octahedral site',
+      '立方八配位孔隙': 'Cubic eightfold-coordinated site',
+      '四面体': 'Tetrahedral',
+      '八面体': 'Octahedral',
+      '等径、刚性、接触球的几何极限；不是实际化合物稳定性的充分条件。': 'A geometric limit for equal, rigid, touching spheres; not a sufficient condition for the stability of a real compound.',
+
+      '球半径显示 · ': 'Displayed sphere radius · ',
+      '显示层数 · ': 'Number of layers · ',
+      '中心球 / 外围球 · r/R = ': 'Central / outer sphere · r/R = ',
+      '传统胞含 ': 'The conventional cell contains ',
+      ' 个等效格点，原胞含 ': ' lattice points; the primitive cell contains ',
+      ' 个。选择原胞改变的是重复区域与基矢，同一无限点阵没有改变。': '. Choosing the primitive cell changes the repeat region and basis vectors, while preserving the same infinite lattice.',
+      '传统胞基矢长度 ': 'Conventional basis-vector lengths ',
+      '原胞/传统胞体积 ': 'Primitive / conventional cell volume ',
+      '半开区域含 ': 'The half-open region contains ',
+      '。距离 ': '. Distance ',
+      '空间群 ': 'Space group ',
+      '晶体点群 ': 'Crystal point group ',
+      '配位中心分数坐标 ': 'Fractional coordinates of the center ',
+      ' 个原子': ' atoms',
+      ' 个传统胞': ' conventional cells',
+      ' 个大球': ' outer spheres',
+      ' 个等效格点': ' equivalent lattice points',
+      ' 骨架': ' host',
+      ' 层': ' layers',
+      '孔隙 ': 'Site ',
+      '局部壳 · CN ': ' local shell · CN ',
+      '三胞计数示意 · CN ': '3-cell counting example · CN ',
+      '按周期区域计数 · ': 'Periodic-region count · ',
+      '传统胞便于表示对称性；实际原胞体积为传统胞的 1/': 'The conventional cell makes symmetry easier to see. The primitive-cell volume is 1/',
+      ' 倍；用于包含畸变产生的分裂键长。': ' times the shortest distance, including bond-length splitting caused by distortion.',
+      '此理想模型的第一配位壳：距离不超过最短键长的 ': 'The first shell in this ideal model contains neighbors no farther than ',
+      ' 个所选孔隙；八面体边界空隙按周期共享计数。': ' selected sites are occupied; boundary octahedral sites are counted with periodic sharing.',
+      '每个 FCC 传统胞内有 4 个等效骨架球、8 个四面体孔隙、4 个八面体孔隙。当前区域占据 ': 'Each FCC conventional cell has four host spheres, eight tetrahedral sites, and four octahedral sites. In this region, ',
+      '。': '.',
+      '，': ', ',
+      '：': ': ',
+      '、': ', ',
+      ' 个': ' ',
+      ' 页': ' pages',
+      '页': 'pages'
+    },
+    patterns: [
+      { regex: '^L0([45]) · PDF (.*?) 页$', replacement: 'L0$1 · PDF pp. $2' },
+      { regex: '^看对应点群 (.*?) →$', replacement: 'View point group $1 →' },
+      { regex: '^([PIFCR]) 传统胞 · (\\d+) 个等效格点$', replacement: '$1 conventional cell · $2 equivalent lattice points' },
+      { regex: '^孔隙 (\\d+) · (.*)$', replacement: 'Site $1 · $2' },
+      { regex: '^FCC · 四面体孔隙 (\\d+)$', replacement: 'FCC · Tetrahedral site $1' },
+      { regex: '^FCC · 八面体孔隙 (\\d+)$', replacement: 'FCC · Octahedral site $1' },
+      { regex: '^(.*?) · (\\d+) 层$', replacement: '$1 · $2 layers' },
+      { regex: '^四面体局部壳 · CN (\\d+)$', replacement: 'Tetrahedral local shell · CN $1' },
+      { regex: '^八面体局部壳 · CN (\\d+)$', replacement: 'Octahedral local shell · CN $1' },
+      { regex: '^立方局部壳 · CN (\\d+)$', replacement: 'Cubic local shell · CN $1' },
+      { regex: '^三胞计数示意 · CN (\\d+)$', replacement: '3-cell counting example · CN $1' },
+      { regex: '^按周期区域计数 · (\\d+) 个传统胞$', replacement: 'Periodic-region count · $1 conventional cells' },
+      { regex: '^恰好接触 (\\d+) 个大球$', replacement: 'Just touches $1 outer spheres' },
+      { regex: '^(\\d+) / (\\d+) 个原子$', replacement: '$1 / $2 atoms' },
+      { regex: '^传统胞便于表示对称性；实际原胞体积为传统胞的 1/(\\d+)。$', replacement: 'The conventional cell makes symmetry easier to see. The primitive-cell volume is 1/$1 of its volume.' },
+      { regex: '^此理想模型的第一配位壳：距离不超过最短键长的 ([0-9.]+) 倍；用于包含畸变产生的分裂键长。$', replacement: 'The first shell in this ideal model includes neighbors within $1 times the shortest distance, accounting for bond-length splitting caused by distortion.' },
+      { regex: '^每个 FCC 传统胞内有 4 个等效骨架球、8 个四面体孔隙、4 个八面体孔隙。当前区域占据 (\\d+)/(\\d+) 个所选孔隙；八面体边界空隙按周期共享计数。$', replacement: 'Each FCC conventional cell has four host spheres, eight tetrahedral sites, and four octahedral sites. In this region, $1 of $2 selected sites are occupied. Boundary octahedral sites are counted with periodic sharing.' }
+    ]
+  });
+})();
+
+
+// i18n-course.js
+/* English wording for the advanced lessons, stereograms and course guide.
+ * Keys retain the original Chinese; identifiers and mathematical symbols stay intact.
+ */
+(function () {
+  'use strict';
+  window.SymmetryI18n.register('course', {
+    messages: {
+      '少一些操作，仍然是一个群': 'Fewer operations, still a group',
+      '不能随便删掉操作：保留下来的集合仍要包含 E，并满足闭包与逆元。': 'Operations cannot be removed arbitrarily: the remaining set must contain E and remain closed under composition and inverses.',
+      '选择一组嵌入关系': 'Choose a subgroup embedding',
+      '看子群的三维模型 →': 'Explore the subgroup in 3D →',
+      '绿色：子群保留的操作；浅棕：从母群去掉的操作。这里比较的是已经嵌入同一坐标系的具体实例；同一种子群还可能有不同方向的嵌入。': 'Green marks operations retained in the subgroup; light brown marks those removed from the parent group. These examples share one coordinate system. A subgroup of the same type may have other orientation embeddings.',
+      '为什么“群阶整除”还不足以证明子群？': 'Why is divisibility of group orders insufficient?',
+      '有限群的子群阶数一定整除母群阶数，但反过来不成立。必须核对其操作确实属于母群，并在组合和取逆下封闭。群本身也属于自己的子群；这里显示的都是严格少一些操作的真子群。': 'A subgroup order divides the order of a finite parent group, but the converse does not hold. Its operations must belong to the parent group and be closed under composition and inverses. Every group is also a subgroup of itself; the examples here are proper subgroups with fewer operations.',
+      '母群操作': 'Parent-group operations',
+      '子群操作': 'Subgroup operations',
+      '指数 [G:H]': 'Index [G:H]',
+      ' · E、逆元和组合闭包全部保留。': ' · E, inverses and closure under composition are all retained. ',
+      '本例二重轴沿 y，垂直镜面是 xz 面。': 'In this example, the twofold axis lies along y and the mirror perpendicular to it is the xz plane.',
+      '结构的对称性，约束物性的方向': 'Structural symmetry constrains physical properties',
+      'Neumann 原理：物性必须保留晶体点群的全部对称性；物性也可以拥有更多对称性。': 'Neumann’s principle: a physical property must retain every symmetry of the crystal point group; it may also have additional symmetry.',
+      '点群': 'Point group',
+      '石英 · 32': 'Quartz · 32',
+      '刚玉 · 3̄m': 'Corundum · 3̄m',
+      '↺ 视角': '↺ Reset view',
+      '① 任意假设的二阶张量': '① An illustrative rank-two tensor',
+      '② 保留所选点群后的张量': '② Tensor invariant under the selected group',
+      '对每个操作 R 求平均：T̄ = (1/|G|) Σ R T Rᵀ。右边仍是一个示例数值张量；其自由系数数目由点群决定。椭球用 xᵀT̄⁻¹x = 1 表达方向差异，单位任意，不是实测介电数据。': 'Average over all operations R: T̄ = (1/|G|) Σ R T Rᵀ. The result is still an illustrative numerical tensor; the point group determines its number of independent coefficients. The ellipsoid xᵀT̄⁻¹x = 1 shows directional differences in arbitrary units, rather than measured dielectric data.',
+      '极性向量能留下什么？': 'Which polar-vector components can survive?',
+      '群平均投影给出所有操作都不改变的向量。某次输入平均为零，不代表这一点群必定非极性；判断看允许向量空间的维数。': 'Group averaging projects onto vectors unchanged by every operation. A zero average for one input does not prove that the group is nonpolar; examine the dimension of the allowed vector space.',
+      '石英与刚玉：相同的二阶形式，不同的奇数阶约束': 'Quartz and corundum: the same rank-two form, different odd-rank constraints',
+      '石英属于 32，刚玉属于 3̄m；这里是点群方向示意，不是这两种材料的原子模型。两群都使对称二阶极性张量成为 diag(a,a,c)，有 2 个独立系数。刚玉含反演，普通三阶极性压电张量变为其相反数，故线性体压电必须为零；石英允许非零压电。这个奇数阶论证不适用于自旋等轴矢量。': 'Quartz belongs to 32 and corundum to 3̄m. These are point-group orientation diagrams, not atomic models of the materials. Both groups constrain a symmetric rank-two polar tensor to diag(a,a,c), with two independent coefficients. Corundum contains inversion, which reverses an ordinary rank-three polar piezoelectric tensor, so its linear bulk piezoelectric response must vanish. Quartz permits a nonzero response. This odd-rank argument does not apply to axial vectors such as spin.',
+      '极性、手性、非中心对称是三个不同问题。极性允许自发极化的方向；是否实际存在极化、是否可用电场翻转而成为铁电体，还需材料证据。立方群的对称二阶张量是各向同性，但不能据此把所有高阶物性都称为各向同性。': 'Polarity, chirality and noncentrosymmetry are distinct. A polar group allows directions for spontaneous polarization; evidence from the material is needed to establish polarization and electric-field switching required for ferroelectricity. A symmetric rank-two tensor is isotropic for cubic groups, but higher-rank properties need not be isotropic.',
+      'IUCr · Neumann 原理 ↗': 'IUCr · Neumann’s principle ↗',
+      '晶体物性与张量 ↗': 'Crystal physics and tensors ↗',
+      '有反演中心': 'Centrosymmetric',
+      '无反演中心': 'Noncentrosymmetric',
+      '仅正旋转 · 手性相容': 'Proper rotations only · permits chirality',
+      '含不正操作 · 非手性': 'Contains improper operations · achiral',
+      '极性相容': 'Permits polarity',
+      '非极性': 'Nonpolar',
+      '三个主方向系数必须相同，对称二阶性质各向同性。': 'The three principal coefficients must be equal: this symmetric rank-two property is isotropic.',
+      '沿主轴与横向可以不同；两个横向系数相同。': 'The axial and transverse coefficients may differ; the two transverse coefficients are equal.',
+      '只有零向量能保持全部操作。': 'Only the zero vector is unchanged by every operation.',
+      '允许沿一条固定方向；该方向由模型坐标约定。': 'Vectors along one fixed direction are allowed; its orientation follows the model coordinate convention.',
+      '允许镜面内的任意向量。': 'Any vector within the mirror plane is allowed.',
+      '任意方向都允许。': 'Any direction is allowed.',
+      '普通线性体压电：对称性禁止。反演把普通奇数阶极性张量变号；保持反演就只能为零。': 'Linear bulk piezoelectricity: forbidden by symmetry. Inversion changes the sign of an ordinary odd-rank polar tensor, so invariance under inversion requires it to vanish.',
+      '普通线性体压电：对称性禁止。432 虽然没有反演，全部旋转共同约束仍使压电张量为零。': 'Linear bulk piezoelectricity: forbidden by symmetry. Although 432 has no inversion, its rotations together require the piezoelectric tensor to vanish.',
+      '普通线性体压电：对称性允许。允许不等于预测实际强度或保证测得非零；极性也不等于铁电。': 'Linear bulk piezoelectricity: allowed by symmetry. This does not predict its magnitude or guarantee a measured nonzero response. Polarity alone does not establish ferroelectricity.',
+      '转半圈，还要翻转颜色？': 'A half-turn—and a color reversal?',
+      '内部标签也属于对象的描述。先看普通二重旋转，再看“旋转＋二色翻转”。': 'Internal labels are part of the object. Compare an ordinary twofold rotation with a rotation combined with two-color reversal.',
+      '2 · 只转 180°': '2 · Rotate 180° only',
+      '2′ · 旋转＋换色': '2′ · Rotate and reverse colors',
+      '1′ · 只换色': '1′ · Reverse colors only',
+      '原始双色对象': 'Original two-color object',
+      '操作完成后的双色对象': 'Two-color object after the operation',
+      '这两个点的位置在旋转后互换；若各点保留自己的黑白标签，对象不能重合。再做黑白翻转，位置与标签一起重合。“只换色”也不是这个对象的对称。': 'Rotation exchanges the two positions. If each point keeps its black or white label, the object does not match. Reversing the labels as well restores both positions and colors. Color reversal alone is also not a symmetry of this object.',
+      '二色翻转与原子种类互换的区别': 'Color reversal versus exchanging chemical species',
+      '这里的黑白代表可以被指定内部操作翻转的抽象标签，不代表两种化学元素。在其他模型中不能交换不同物种来凑出对称性。磁晶体的时间反演涉及磁矩；空间旋转也作用于磁矩方向，不能只用黑白球推断实际磁群。课件中畸变反演与时间反演也应分别定义。': 'Black and white are abstract labels reversed by a specified internal operation, rather than chemical elements. Exchanging different species cannot establish symmetry in the other models. Time reversal in magnetic crystals acts on magnetic moments, and spatial rotations also transform their directions; black and white spheres alone do not determine a magnetic group. Distortion reversal and time reversal in the lecture also require separate definitions.',
+      '✓ 2′：位置与黑白标签都重合。旋转和换色这两个分操作单独都不保持对象，组合却可以保持。': '✓ 2′: both positions and colors match. Rotation and color reversal each fail to preserve this object on their own, but their combination preserves it.',
+      '↗ 普通 2：位置重合，黑白标签相反，因此不是这个双色对象的对称。': '↗ Ordinary 2: the positions match, but the colors are reversed. This is not a symmetry of the two-color object.',
+      '↗ 只换色：位置不变，标签相反，也不能重合。': '↗ Color reversal only: the positions stay fixed, but the labels are reversed. The object does not match.',
+      '黑': 'Black',
+      '白': 'White',
+      '加入平移：从点群走向空间群': 'Add translation: from point groups to space groups',
+      '空间操作写成 p′ = R p + t。看清旋转或镜映后，为什么还要走半个周期。': 'A spatial operation has the form p′ = R p + t. See how a rotation or reflection combines with a fractional-period translation.',
+      '选择操作': 'Choose an operation',
+      '空间操作的重复轨迹': 'Repeated spatial-operation trajectory',
+      '播放一次': 'Play once',
+      '下一步': 'Next stage',
+      '再作用一次': 'Apply again',
+      '回到起点': 'Return to start',
+      '空心点：各次完整操作的位置；实心点：此刻的示踪点。连线表示操作顺序，不是化学键。每次演示先完成旋转或镜映，再完成平移。': 'Open circles mark positions after complete operations; the filled point is the current tracer. Lines indicate operation order, rather than chemical bonds. Each demonstration completes the rotation or reflection before the translation.',
+      '去掉平移，留下什么？': 'What remains after removing translation?',
+      '空间群按完整晶格平移取商，得到晶体点群。这里仅展示单个操作的线性部分；螺旋轴变为同重数旋转，滑移面变为镜面。': 'Taking a space group modulo all lattice translations gives its crystal point group. Here we show the linear part of a single operation: a screw becomes a rotation of the same fold, and a glide becomes a mirror reflection.',
+      '读空间群符号：晶格、操作、方向': 'Reading space-group symbols: lattice, operations and directions',
+      '几个课件中的实例': 'Examples from the lectures',
+      '空间群': 'Space group',
+      '中心化': 'Centering',
+      '去平移后的点群': 'Point group after removing translations',
+      '结构例子': 'Structure example',
+      'F · 面心': 'F · Face-centered',
+      'P · 原始': 'P · Primitive',
+      'I · 体心': 'I · Body-centered',
+      '闪锌矿 ZnS': 'Zinc blende ZnS',
+      '纤锌矿': 'Wurtzite',
+      '金红石': 'Rutile',
+      '锐钛矿': 'Anatase',
+      '中心化字母还包括 A/B/C（分别为一组对面中心化，常称底心）和 R（菱方；六方设置中三个格点）。字母 a/b/c/n/d 描述不同滑移分量；m 表示镜面。完整解释还需要轴、面的方向和位置，不能只把所有字符作为不带几何位置的操作组合。': 'Other centering symbols include A/B/C, each centering one pair of opposite faces, and R, a rhombohedral lattice with three lattice points in the hexagonal setting. The letters a/b/c/n/d describe glide components; m denotes a mirror. Interpretation also requires the directions and positions of axes and planes; the characters are not simply a list of operations detached from geometry.',
+      '常用方向约定：单斜采用唯一轴 b；正交依次看 a、b、c；四方与六方首先看主轴 c，再看底面轴族；立方依次涉及 ⟨100⟩、⟨111⟩、⟨110⟩。具体设置要与坐标和完整符号一起阅读。': 'Common conventions use unique axis b for monoclinic groups; a, b, c in that order for orthorhombic groups; principal axis c followed by basal direction families for tetragonal and hexagonal groups; and ⟨100⟩, ⟨111⟩, ⟨110⟩ for cubic groups. Read the setting together with the coordinates and full symbol.',
+      'IUCr · 空间群操作入门 ↗': 'IUCr · Introduction to space-group operations ↗',
+      '此处是空间操作入门，不是完整空间群生成器。螺旋与滑移的幂可在相差晶格平移的意义下回到等价位置；这与在绝对坐标中真正回到原点不同。镜映的中间形变仅用于讲解。': 'This is an introduction to spatial operations, rather than a complete space-group generator. Powers of screws and glides can return to equivalent positions modulo a lattice translation; that differs from returning to the same absolute coordinates. Intermediate reflection deformations are explanatory illustrations.',
+      '真正回到原坐标。': 'The original coordinates are restored.',
+      '朝向相同，绝对坐标仍相差晶格平移。': 'The orientation is restored, but the absolute coordinates differ by a lattice translation.',
+      '暂停': 'Pause',
+      '继续平移': 'Continue translation',
+      '此刻': 'Now',
+      '拖动观察 · 滚轮缩放 · 坐标为教学约定': 'Drag to orbit · Scroll to zoom · Model coordinate convention',
+      '。拖动视角，滚轮缩放，方向键调整视角。': '. Drag to orbit, scroll to zoom, or use the arrow keys to adjust the view.',
+      '空间操作播放进度': 'Spatial-operation playback progress',
+      't · 沿 c 平移': 't · Translation along c',
+      '每次沿 c 方向移动一个周期。纯平移的线性部分是恒等操作。': 'Each application translates by one period along c. The linear part of a pure translation is the identity.',
+      '2₁ · 二重螺旋轴': '2₁ · Twofold screw axis',
+      '绕 z 轴旋转 180°，再沿 c 平移 1/2。两次后旋转回原朝向，并移动一个周期。': 'Rotate 180° about z, then translate by c/2. Two applications restore the orientation and translate by one period.',
+      '3₁ · 三重螺旋轴': '3₁ · Threefold screw axis',
+      '每次旋转 120°，沿 c 平移 1/3；三次后移动一个周期。': 'Each application rotates 120° and translates by c/3. Three applications translate by one period.',
+      '3₂ · 三重螺旋轴': '3₂ · Threefold screw axis',
+      '每次旋转 120°，沿 c 平移 2/3；三次后移动两个周期。': 'Each application rotates 120° and translates by 2c/3. Three applications translate by two periods.',
+      '4₁ · 四重螺旋轴': '4₁ · Fourfold screw axis',
+      '每次旋转 90°，沿 c 平移 1/4；四次后移动一个周期。': 'Each application rotates 90° and translates by c/4. Four applications translate by one period.',
+      '6₃ · 六重螺旋轴': '6₃ · Sixfold screw axis',
+      '每次旋转 60°，沿 c 平移 1/2；六次后移动三个周期。HCP 的空间群符号含 6₃。': 'Each application rotates 60° and translates by c/2. Six applications translate by three periods. The HCP space-group symbol includes 6₃.',
+      'm · 普通镜映': 'm · Mirror reflection',
+      '关于 z = 0 镜映，无平移。两次后真正回到原坐标。': 'Reflect across z = 0 without translating. Two applications restore the original coordinates.',
+      'a · 滑移面': 'a · Glide plane',
+      '先关于 z = 0 镜映，再沿 a 平移 1/2。两次后移动一个 a 周期。': 'Reflect across z = 0, then translate by a/2. Two applications translate by one a period.',
+      'n · 对角滑移面': 'n · Diagonal glide plane',
+      '先关于 z = 0 镜映，再平行于面移动 (a + b)/2。两次后移动 a + b。': 'Reflect across z = 0, then translate within the plane by (a + b)/2. Two applications translate by a + b.',
+      '把三维方向放进一张图': 'Put 3D directions on one diagram',
+      '立体投影记录方向，不记录原子距原点的远近。球面上的一个点代表一个有向单位方向。': 'A stereogram records direction, rather than distance from the origin. Each point on the sphere represents an oriented unit direction.',
+      'L04 · 3–8 / 23 页': 'L04 · PDF pp. 3–8 / 23',
+      '① 选择点群': '① Choose a point group',
+      '立体投影点群（全部32种）': 'Point group for the stereogram (all 32)',
+      '沿用 32 点群模型的直角坐标方向：单斜主轴沿 y，其余轴向群主轴沿 z。': 'The Cartesian orientation matches the 32 point-group models: the monoclinic principal axis is y; the other axial groups use z.',
+      '② 移动种子方向 · 极角 θ': '② Move the seed direction · Polar angle θ',
+      '种子与正z轴的极角，0到180度': 'Seed polar angle from positive z, from 0 to 180 degrees',
+      '方位角 φ': 'Azimuth φ',
+      '种子在xy平面的方位角，0到360度': 'Seed azimuth in the xy plane, from 0 to 360 degrees',
+      'θ 从 +z 轴量起；φ 在 xy 平面从 +x 向 +y 量起。灰色球面点是种子在群内所有操作下得到的方向。': 'θ is measured from +z; φ is measured in the xy plane from +x toward +y. Gray sphere points are the directions obtained by applying every group operation to the seed.',
+      '一般位置': 'General position',
+      '+z 轴': '+z axis',
+      '赤道': 'Equator',
+      '③ 读图层次': '③ Diagram layers',
+      '上半球 · 实点': 'Upper hemisphere · Filled dots',
+      '下半球 · 空心点': 'Lower hemisphere · Open circles',
+      '实际镜面的迹线': 'Actual mirror-plane traces',
+      '坐标辅助线（不是镜面）': 'Coordinate guides (not mirrors)',
+      '④ 追踪一个方向': '④ Track a direction',
+      '追踪球面轨道中的一个方向': 'Track a direction in the sphere orbit',
+      '三维球面与投影射线': '3D sphere and projection ray',
+      '拖动调整视角 · 点击圆盘中的点追踪': 'Drag to orbit · Click a disk point to track it',
+      '球面方向示意，可拖动旋转视角，方向键也可调整。橙色射线连接投影极、所选方向和赤道平面的投影点。': 'Sphere direction diagram. Drag or use the arrow keys to orbit the view. The orange ray connects the projection pole, selected direction, and projected point on the equatorial plane.',
+      '赤道平面上的单位圆盘': 'Unit disk in the equatorial plane',
+      '+x 向右，+y 向上；赤道在外圆上': '+x points right, +y up; the equator is the outer circle',
+      '上下半球方向的立体投影': 'Stereographic projection of upper and lower hemisphere directions',
+      '点群方向的立体投影': 'Point-group direction stereogram',
+      '上半球 z > 0': 'Upper hemisphere z > 0',
+      '下半球 z < 0': 'Lower hemisphere z < 0',
+      '赤道 z = 0': 'Equator z = 0',
+      '实际镜面': 'Actual mirrors',
+      '辅助线': 'Guides',
+      '为什么上下半球都能放进圆盘？': 'How do both hemispheres fit inside the disk?',
+      '上半球从': 'Project the upper hemisphere from the ',
+      '南极 S = (0,0,−1)': 'south pole S = (0,0,−1)',
+      '投到赤道平面；下半球从': ' onto the equatorial plane; project the lower hemisphere from the ',
+      '北极 N = (0,0,1)': 'north pole N = (0,0,1)',
+      '投到同一平面。把两种投影叠在一个圆盘，用实点与空心点保留半球信息。并未把下半球的方向取成反方向。': ' onto the same plane. Overlay both projections in one disk, retaining hemisphere information with filled dots and open circles. Lower-hemisphere directions have not been replaced by their opposites.',
+      '归一化方向 p = (x,y,z) 的圆盘坐标是': 'For a normalized direction p = (x,y,z), the disk coordinates are ',
+      '。赤道直接落在外圆；两极分别落在圆心。一个实点外套一个空心圈表示不同半球的两个方向投影重合。': '. The equator lies on the outer circle, and both poles project to the center. A filled dot inside an open circle marks coincident projections of two directions from different hemispheres.',
+      '镜面与单位球相交成大圆，投影后成为圆弧或直径；赤道镜面投成外圆。此图只画所选群': 'A mirror plane intersects the unit sphere in a great circle, projected as arcs or a diameter; an equatorial mirror projects to the outer circle. This diagram draws only the selected group’s ',
+      '实际拥有的镜面': 'actual mirror planes',
+      '，不把参考直径当作镜面。上下半球点可重合，镜面迹线也可重合。': ', without treating reference diameters as mirrors. Hemisphere points and mirror traces may coincide in projection.',
+      '上半球': 'Upper hemisphere',
+      '下半球': 'Lower hemisphere',
+      'P₀ · 种子': 'P₀ · Seed',
+      '当前是特殊方向：多个操作得到同一方向，轨道点数小于群阶。种子方向本身不改变点群。': 'This is a special direction: several operations produce the same direction, so the orbit contains fewer points than the group order. Moving the seed does not change the point group.',
+      '当前种子的一般位置轨道含 |G| 个方向。一个方向轨道仅用于学习映射，可能具有更高的偶然对称，不能据此识别完整点群。': 'This seed’s general-position orbit contains |G| directions. A single direction orbit illustrates mappings and may have accidental extra symmetry; it does not establish the full point group.',
+      '这个群没有镜面；坐标辅助线仍可见，不能据此认为存在镜面对称。': 'This group has no mirrors. Coordinate guides may still be visible, but they do not indicate mirror symmetry.',
+      '方向位于赤道，无需选择投影极。': 'The direction lies on the equator; no projection pole is needed.',
+      '南极 S': 'south pole S',
+      '北极 N': 'north pole N',
+      '投影点': 'Projection',
+      'L04 · PDF 第': 'L04 · PDF pp. ',
+      '页': 'pages',
+      ' 个独立二阶系数': ' independent rank-two coefficients',
+      '约束保留 ': 'The constraints leave ',
+      ' 个独立系数。显示的是当前直角坐标系中的数值。': ' independent coefficients. Values are shown in the current Cartesian coordinate system.',
+      '允许向量空间维数：': 'Allowed vector-space dimension: ',
+      '30（衔接 L05 第 2、19、58 页）': '30 (continues in L05 pp. 2, 19, 58)',
+      '起点 ': 'Start ',
+      ' 次完整作用后：': ' complete applications: ',
+      '已完成 ': 'Completed ',
+      ' 次 · ': ' applications · ',
+      ' 个操作 → ': ' operations → ',
+      ' 个不同方向': ' distinct directions',
+      '这个群有 ': 'This group has ',
+      ' 个不同镜面；勾选迹线后可与方向轨道一起读图。': ' distinct mirror planes. Enable their traces to compare them with the direction orbit.',
+      ')；圆盘 (': '); disk (',
+      '射线从': 'The ray starts at the ',
+      '发出。': '.',
+      ' 的方向立体投影': ' direction stereogram',
+      '追踪 P': 'Track P',
+      '切换到英文': 'Switch to English',
+      'L03–L05 课程整合指南 · 点群实验室': 'L03–L05 Course Guide · Symmetry Lab',
+      '← 返回点群实验室': '← Back to Symmetry Lab',
+      '从对称操作到晶体结构': 'From symmetry operations to crystal structures',
+      '从 L03 的基本操作，走到 L04 的方向、子群和物性，再用 L05 的周期结构检验这些概念。课件的文字与图片作为学习来源；项目重新绘制交互图示，没有上传或复制原课件。下表统一采用 PDF 实际页序，不是页脚印刷的幻灯片编号。': 'Start with basic operations in L03, explore directions, subgroups and physical properties in L04, then apply those concepts to periodic structures in L05. The lecture text and figures informed the lessons; the interactive diagrams were redrawn, and the original lecture files were neither uploaded nor reproduced. The tables use PDF page order, rather than the printed slide numbers.',
+      'L03：10–15 分钟': 'L03: 10–15 minutes',
+      '从水 C₂、反演反例和甲烷 4̄ 入手，再比较 AB 与 BA。': 'Start with water’s C₂ rotation, an inversion counterexample, and methane’s 4̄ operation; then compare AB with BA.',
+      'L04：15–20 分钟': 'L04: 15–20 minutes',
+      '4mm 一般方向→+z 特殊方向；4/mmm→4mm；32 与 3̄m；2′；重复两次 2₁。': 'Compare a general direction with the special +z direction in 4mm; explore 4/mmm→4mm, 32 versus 3̄m, and 2′; apply 2₁ twice.',
+      'L05：20–25 分钟': 'L05: 20–25 minutes',
+      '晶格→基元→结构；FCC 与 HCP 逐层；孔隙半占／全占；NaCl 与 NiAs、ZnS 两型、TiO₂ 两型；半径比临界。': 'Explore lattice→motif→structure, FCC and HCP stacking, half/full interstitial occupancy, NaCl versus NiAs, two ZnS and two TiO₂ prototypes, and critical radius ratios.',
+      '回顾：5–10 分钟': 'Review: 5–10 minutes',
+      '完成 20 道预测题；按“去实验室验证”回到相关新模块。': 'Answer the 20 prediction questions. Use “Check in the lab” to return to the relevant module.',
+      'L04：方向、子群与物性': 'L04: Directions, subgroups and physical properties',
+      'PDF 页': 'PDF pages',
+      '课件主题': 'Lecture topic',
+      '项目中的对应': 'Corresponding project content',
+      '导言；7 晶系、14 晶格、32 点群、230 空间群': 'Introduction; 7 crystal systems, 14 Bravais lattices, 32 point groups and 230 space groups',
+      '课程路线、32 点群图谱、14 Bravais 选择器；空间群数量与范围说明': 'Learning route, 32-point-group atlas and 14-Bravais-lattice selector; space-group count and scope',
+      '立体投影；轴、镜面与 2̄ = m': 'Stereographic projection; axes, mirrors and 2̄ = m',
+      '32 点群球面／圆盘联动、种子方向、半球标记、镜面大圆；2̄ = m 保留在操作实验室': 'Linked sphere/disk views for all 32 groups, seed directions, hemisphere markers and mirror great circles; 2̄ = m remains in the operation lab',
+      '11 正旋转＋11 中心对称＋10 其余不正群；符号与分类': '11 proper-only, 11 centrosymmetric and 10 remaining improper groups; notation and classification',
+      '32 点群完整操作、元素与投影；物性区分别标出反演、手性相容和极性': 'Complete operations, elements and projections for all 32 groups; separate indicators for inversion, chirality compatibility and polarity',
+      '群与子群，母群关系': 'Groups, subgroups and parent-group relationships',
+      '5 组已嵌入同坐标系的实例；保留／删除操作、群阶与指数；链接到三维子群模型': 'Five embeddings in a shared coordinate system; retained/removed operations, orders and indices; links to 3D subgroup models',
+      '非中心对称物性；外场诱导压电研究': 'Noncentrosymmetric properties; field-induced piezoelectricity research',
+      '32 点群的极性向量空间、普通线性体压电允许／禁止；外场破缺对称性的延伸阅读': 'Polar-vector spaces for all 32 groups and symmetry permission/prohibition of linear bulk piezoelectricity; further reading on field-induced symmetry breaking',
+      '二色反对称，2′ 的组合思想': 'Two-color antisymmetry and the combined operation 2′',
+      '普通 2、2′、1′ 三种终态对比；明确抽象内部标签与化学元素、自旋不同': 'Compare endpoints of ordinary 2, 2′ and 1′; distinguish abstract internal labels from chemical species and spin',
+      '点群人口统计': 'Point-group occurrence statistics',
+      '保留为阅读主题；不把未注明年代的样本比例变成当前普适结论': 'Retained as a reading topic; undated sample proportions are not presented as current universal conclusions',
+      'FCC、HCP、GaN、CeO₂；石英与刚玉；Neumann 原理': 'FCC, HCP, GaN and CeO₂; quartz and corundum; Neumann’s principle',
+      '晶体结构中的相应原型；32／3̄m 快捷比较；所有 32 群的二阶张量群平均与极性向量': 'Related crystal prototypes; quick comparison of 32/3̄m; rank-two tensor averaging and polar vectors for all 32 groups',
+      '中心化、螺旋／滑移、空间群方向符号': 'Centering, screws/glides and direction conventions in space-group symbols',
+      '14 Bravais；9 个空间操作例子；空间群→点群去平移及方向速查': '14 Bravais lattices; 9 spatial-operation examples; space-group→point-group reduction and a direction reference',
+      'L05：堆积、占位与结构': 'L05: Packing, occupancy and structures',
+      '导言、空间群→点群、子群和结构原则': 'Introduction, space-group→point-group reduction, subgroups and structural principles',
+      '接续进阶对称；晶体结构四个子页签': 'Continues the advanced symmetry lessons; four crystal-structure tabs',
+      'eutactic 思路、数据库与各向异性资源': 'Eutactic structures, databases and anisotropy resources',
+      '理想堆积骨架与真实畸变的说明；几何／电子结构区别；延伸阅读': 'Ideal packing frameworks versus real distortions; geometric versus electronic structure; further reading',
+      'lattice ≠ structure；晶体学人物与历史': 'Lattice ≠ structure; crystallographers and history',
+      '晶格→基元→结构切换；历史材料保持为阅读背景': 'Lattice→motif→structure switch; historical material retained as reading background',
+      'SC/BCC/FCC/HCP；ABC／AB；胞计数；HCP 对称': 'SC/BCC/FCC/HCP; ABC/AB stacking; cell counts and HCP symmetry',
+      '周期原型、近邻；逐层 ABAB／ABC；P 原胞与六棱柱画法；6₃ 操作入口': 'Periodic prototypes and neighbors; layer-by-layer ABAB/ABC stacking; primitive P cell versus hexagonal-prism diagrams; link to 6₃',
+      'T/O 孔隙、FCC 8T＋4O、四／八面体': 'T/O interstices, 8T + 4O per FCC conventional cell, tetrahedra and octahedra',
+      'FCC 孔隙选择、配位壳、占位比例与化学计量；HCP 孔隙的局部几何与每球 2T＋1O 原理': 'FCC interstice selection, coordination shells, occupancy and stoichiometry; local HCP interstice geometry and the 2T + 1O per sphere rule',
+      '位点大小、价态、电中性、离子半径与 CN': 'Site size, valence, charge neutrality, ionic radii and coordination number',
+      'CN4／6／8 局部硬球模型、半径比临界和占位计量；真实半径的配位／价态依赖说明': 'Local CN 4/6/8 hard-sphere models, critical radius ratios and occupancy counts; dependence of ionic radii on coordination and valence',
+      '构造结构；金属、金刚石、石墨表': 'Constructing structures; metal, diamond and graphite examples',
+      'SC/BCC/FCC/HCP/diamond/graphite，原胞与传统胞计数；同几何不同物种对称性说明': 'SC/BCC/FCC/HCP/diamond/graphite; primitive and conventional cell counts; how species distinguish symmetry even at identical geometric positions',
+      'NaCl、NiAs、闪锌矿、纤锌矿与投影': 'NaCl, NiAs, zinc blende, wurtzite and their projections',
+      '周期模型、阳／阴离子邻居壳、俯视／正视、点群跳转；NiAs 两种中心的不同壳形': 'Periodic models, cation/anion neighbor shells, top/front views and point-group links; different coordination-shell shapes for the two NiAs centers',
+      '非中心对称、非手性、极性；反纤锌矿；WOBr₄': 'Noncentrosymmetry, achirality and polarity; “anti-wurtzite”; WOBr₄',
+      '6mm 分类与结构跳转；课件的“反纤锌矿”例子是同一非手性结构的重定向，旋转不改变手性；局部非手性单元组成整体手性的说明，论文作为阅读背景': '6mm classification and structure links; the lecture’s “anti-wurtzite” is a reorientation of the same achiral structure, and rotation does not change chirality; achiral local units can form a chiral crystal, with the paper retained as reading background',
+      '回到结构': 'Return to structures',
+      '结构子页签导航': 'Structure-tab navigation',
+      'CdI₂、CdCl₂ 及层序对比': 'CdI₂, CdCl₂ and stacking comparisons',
+      '两种理想周期原型：P3̄m1 与 R3̄m，原胞／传统胞与配位；不将密堆积近似当成未畸变实验结构': 'Two ideal periodic prototypes: P3̄m1 and R3̄m, their primitive/conventional cells and coordination; close-packing approximations are not treated as undistorted experimental structures',
+      '金红石、锐钛矿、与 NiAs 比较；螺旋与滑移': 'Rutile, anatase and comparison with NiAs; screws and glides',
+      'TiO₂ 两种周期原型、TiO₆ 壳与 O 配位；2₁／n 操作示意。氧骨架只近似 HCP／CCP，不能判为完美硬球堆积': 'Two periodic TiO₂ prototypes, TiO₆ shells and O coordination; 2₁/n operation diagrams. Their oxygen frameworks only approximate HCP/CCP, rather than perfect hard-sphere packing',
+      '延伸阅读，区分自动文字描述和结构识别／物性预测': 'Further reading distinguishes automated descriptions from structure identification or property prediction',
+      '萤石、反萤石': 'Fluorite and antifluorite',
+      'CaF₂／Li₂O 周期结构、8／4 配位、FCC T 孔隙全占据与物种互换': 'Periodic CaF₂/Li₂O structures, 8/4 coordination, full FCC tetrahedral-site occupancy and exchanged species roles',
+      'CrCl₃／BiI₃ 的 AB₃ 占位；CrI₃；卤化物对称破缺': 'AB₃ occupancy in CrCl₃/BiI₃; CrI₃ and symmetry breaking in halides',
+      'AB₃ 由每阴离子 1 个 O 位点的 1/3 占据得到；作为占位原则和多型／磁性延伸。没有把未经核查的 CrCl₃ 多型或自旋结构放进三维原型列表': 'AB₃ follows from one-third occupancy of one octahedral site per anion; used to explain occupancy and introduce polytypes/magnetism. Unverified CrCl₃ polytypes or spin structures are not included in the 3D prototype list',
+      '核查与边界': 'Checks and scope',
+      '胞与基元': 'Cells and motifs',
+      'HCP 的原始平行六面体胞有 2 原子；常见六棱柱画法体积三倍，计入 6 原子。FCC、BCC 的传统胞格点数分别为 4、2；原胞各含一个格点。CsCl 是 P 晶格＋两物种基元，不能按几何角点／体心就叫 BCC。': 'The primitive HCP parallelepiped contains two atoms; the common hexagonal-prism diagram has three times its volume and contains six atoms. Conventional FCC and BCC cells contain four and two lattice points, respectively; each primitive cell contains one. CsCl is a P lattice with a two-species motif, not BCC merely because atoms occupy corner and body-center positions.',
+      '分类与子群': 'Classification and subgroups',
+      '群自身也是子群；本项目展示真子群实例。子群比较需要嵌入方向。课件某些蓝色／粗体标记不完整，项目依据完整矩阵重新核对 11 个仅正操作类、11 个中心对称类、10 个极性类。': 'Every group is its own subgroup; these demonstrations use proper subgroups. Comparisons require an embedding orientation. Some blue/bold markings in the lectures are incomplete; full operation matrices were used to verify the 11 proper-only, 11 centrosymmetric and 10 polar classes.',
+      '对称与物性': 'Symmetry and physical properties',
+      '本演示研究普通极性张量的 Neumann 约束；轴性张量也遵循该原理，但变换规律不同。二阶示例不替代高阶张量。中心对称类与 432 禁止普通线性体压电，其他 20 类仅在对称性上允许。极性不等于铁电，非中心对称不等于手性。': 'This demonstration examines Neumann constraints on ordinary polar tensors. Axial tensors also obey the principle, with different transformation rules. Rank-two examples do not replace higher-rank tensors. Centrosymmetric classes and 432 forbid linear bulk piezoelectricity; the other 20 classes allow it by symmetry. Polarity does not establish ferroelectricity, and noncentrosymmetry does not establish chirality.',
+      '统计与历史': 'Statistics and history',
+      'L04 第27页首句无机／有机比例与页内表的加和次序不一致，且数据库年代未明；因此保留讨论主题，不展示未经校准的现时比例。': 'The opening inorganic/organic percentages on L04 PDF page 27 disagree with the sums in its table, and the database date is unspecified. This remains a discussion topic; unverified proportions are not presented as current statistics.',
+      '结构与模型': 'Structures and models',
+      '坐标来自核查过的原型公式，长度归一化；部分自由参数取明示的教学值。配位壳采用原型预设邻居类型和距离界限，不把显示窗裁切或单一半径比作为结构判据。': 'Coordinates come from checked prototype formulas, with normalized lengths and explicitly stated illustrative parameters. Coordination shells use prototype-specific neighbor species and distance limits; neither a cropped display nor a radius ratio alone determines a structure.',
+      '磁性与多型': 'Magnetism and polytypes',
+      'CrCl₃／CrI₃ 可有不同温度和堆垛多型；课件的某个空间群不能泛化到所有样品。双色演示不等于磁矩模型，结构模型不推断磁序、磁相变或能量路径。': 'CrCl₃/CrI₃ can have temperature-dependent and stacking polytypes; a space group cited in the lecture cannot be generalized to every sample. The two-color diagram is not a magnetic-moment model, and the structure models do not predict magnetic order, phase transitions or energy pathways.',
+      '补充阅读': 'Further reading',
+      'IUCr：立体投影 ↗': 'IUCr: Stereographic projection ↗',
+      'IUCr：Neumann 原理 ↗': 'IUCr: Neumann’s principle ↗',
+      'IUCr：晶体物性与张量 ↗': 'IUCr: Crystal physics and tensors ↗',
+      'IUCr：空间群操作 ↗': 'IUCr: Space-group operations ↗',
+      'AFLOW：结构原型公式与坐标来源 ↗': 'AFLOW: Prototype formulas and coordinate sources ↗',
+      'AFLOW：锐钛矿，已纠正的原点设置 ↗': 'AFLOW: Anatase with the corrected origin setting ↗',
+      'Park 等：外场诱导压电（2022） ↗': 'Park et al.: Field-induced piezoelectricity (2022) ↗',
+      'RoboCrystallographer 官方文档 ↗': 'RoboCrystallographer documentation ↗',
+      '三斜': 'Triclinic',
+      '单斜': 'Monoclinic',
+      '正交': 'Orthorhombic',
+      '四方': 'Tetragonal',
+      '三方': 'Trigonal',
+      '六方': 'Hexagonal',
+      '立方': 'Cubic'
+    },
+    patterns: [
+      { regex: 'PDF pp\\. 第 ', replacement: 'PDF pp. ', flags: 'g' },
+      { regex: '^L04 · PDF 第 (.*?) 页$', replacement: 'L04 · PDF pp. $1' },
+      { regex: '^(.*?) · (\\d+) 个独立二阶系数$', replacement: '$1 · $2 independent rank-two coefficients' },
+      { regex: '^约束保留 (\\d+) 个独立系数。显示的是当前直角坐标系中的数值。$', replacement: 'The constraints leave $1 independent coefficients. Values are shown in the current Cartesian coordinate system.' },
+      { regex: '^允许向量空间维数：(\\d+)。只有零向量能保持全部操作。$', replacement: 'Allowed vector-space dimension: $1. Only the zero vector is unchanged by every operation.' },
+      { regex: '^允许向量空间维数：(\\d+)。允许沿一条固定方向；该方向由模型坐标约定。$', replacement: 'Allowed vector-space dimension: $1. Vectors along one fixed direction are allowed; its orientation follows the model convention.' },
+      { regex: '^允许向量空间维数：(\\d+)。允许镜面内的任意向量。$', replacement: 'Allowed vector-space dimension: $1. Any vector within the mirror plane is allowed.' },
+      { regex: '^允许向量空间维数：(\\d+)。任意方向都允许。$', replacement: 'Allowed vector-space dimension: $1. Any direction is allowed.' },
+      { regex: '^起点 (.*?) → 此刻 (.*?)$', replacement: 'Start $1 → Now $2' },
+      { regex: '^(\\d+) 次完整作用后：(.*?)。真正回到原坐标。$', replacement: 'After $1 complete applications: $2. The original coordinates are restored.' },
+      { regex: '^(\\d+) 次完整作用后：(.*?)。朝向相同，绝对坐标仍相差晶格平移。$', replacement: 'After $1 complete applications: $2. The orientation is restored, but the absolute coordinates differ by a lattice translation.' },
+      { regex: '^已完成 (\\d+) 次 · (\\d+)%$', replacement: '$1 applications completed · $2%' },
+      { regex: '^(.*?)：([0-9]+) 个操作 → ([0-9]+) 个不同方向$', replacement: '$1: $2 operations → $3 distinct directions' },
+      { regex: '^这个群有 ([0-9]+) 个不同镜面；勾选迹线后可与方向轨道一起读图。$', replacement: 'This group has $1 distinct mirror planes. Enable their traces to compare them with the direction orbit.' },
+      { regex: '^点群 (.*?) 的方向立体投影$', replacement: 'Direction stereogram for point group $1' },
+      { regex: '^p = (.*?)；圆盘 (.*?) · 上半球。射线从南极 S发出。$', replacement: 'p = $1; disk $2 · Upper hemisphere. The ray starts at the south pole S.' },
+      { regex: '^p = (.*?)；圆盘 (.*?) · 下半球。射线从北极 N发出。$', replacement: 'p = $1; disk $2 · Lower hemisphere. The ray starts at the north pole N.' },
+      { regex: '^p = (.*?)；圆盘 (.*?) · 赤道。方向位于赤道，无需选择投影极。$', replacement: 'p = $1; disk $2 · Equator. No projection pole is needed for an equatorial direction.' },
+      { regex: '^追踪 (P[0-9]+)，上半球$', replacement: 'Track $1, upper hemisphere' },
+      { regex: '^追踪 (P[0-9]+)，下半球$', replacement: 'Track $1, lower hemisphere' },
+      { regex: '^追踪 (P[0-9]+)，赤道$', replacement: 'Track $1, equator' },
+      { regex: '^(P[0-9]+) · 上半球$', replacement: '$1 · Upper hemisphere' },
+      { regex: '^(P[0-9]+) · 下半球$', replacement: '$1 · Lower hemisphere' },
+      { regex: '^(P[0-9]+) · 赤道$', replacement: '$1 · Equator' },
+      { regex: '^P₀ · 种子 · 上半球$', replacement: 'P₀ · Seed · Upper hemisphere' },
+      { regex: '^P₀ · 种子 · 下半球$', replacement: 'P₀ · Seed · Lower hemisphere' },
+      { regex: '^P₀ · 种子 · 赤道$', replacement: 'P₀ · Seed · Equator' }
+    ]
+  });
+})();
+
+
 // math.js
 (function (root, factory) {
   'use strict';
@@ -1666,7 +3244,7 @@
         if (data.labels) { ctx.font = '500 ' + Math.max(10, Math.min(12, r * .75)) + 'px system-ui'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#17384b'; ctx.fillText(atom.id, q.x, q.y + .5); ctx.textAlign = 'start'; ctx.textBaseline = 'alphabetic'; }
         this.hits.push({ x: q.x, y: q.y, r, index });
       });
-      if (data.caption) { ctx.fillStyle = '#637a86'; ctx.font = '10px system-ui'; ctx.textAlign = 'center'; ctx.fillText(data.caption, w / 2, h - 10); ctx.textAlign = 'start'; }
+      if (data.caption) { ctx.fillStyle = '#637a86'; ctx.font = '10px system-ui'; ctx.textAlign = 'center'; ctx.fillText(window.SymmetryI18n ? window.SymmetryI18n.t(data.caption) : data.caption, w / 2, h - 10); ctx.textAlign = 'start'; }
     }
   }
   function markFreeCamera() { document.querySelectorAll('[data-view]').forEach(el => { el.classList.remove('active'); el.setAttribute('aria-pressed', 'false'); }); }
@@ -1802,6 +3380,7 @@
   $('source-links').innerHTML = L.sources.map(source => '<a href="' + escapeHTML(source.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHTML(source.title) + ' ↗</a>').join('');
   new Scene($('main-canvas'), mainSceneData, true); new Scene($('ab-canvas'), () => compositionScene(false)); new Scene($('ba-canvas'), () => compositionScene(true));
   const observer = new ResizeObserver(() => requestAnimationFrame(renderAll)); scenes.forEach(scene => observer.observe(scene.canvas));
+  document.addEventListener('symmetry-language-change', renderAll);
   document.addEventListener('visibilitychange', () => { if (document.hidden) { stop(); updateDynamic(); } });
   setModel('water'); renderAtlas(); updateComposition(); renderCayleyTable(); renderQuiz(); selectPage(location.hash.slice(1) || 'lab', false);
 })();
@@ -1958,7 +3537,7 @@
     if (op.axis && ['rotation', 'rotoinversion', 'improper'].includes(op.type)) {
       const length = radius * 1.3;
       line([M.scale(op.axis, -length), M.scale(op.axis, length)], '#217b78c0', 2, [6, 4]);
-      const q = project(M.scale(op.axis, length)); ctx.font = '11px system-ui'; ctx.fillStyle = '#217b78'; ctx.fillText('所选轴', q.x + 7, q.y + 3);
+      const q = project(M.scale(op.axis, length)); ctx.font = '11px system-ui'; ctx.fillStyle = '#217b78'; ctx.fillText(window.SymmetryI18n ? window.SymmetryI18n.t('所选轴') : '所选轴', q.x + 7, q.y + 3);
     }
     // Coordinate guides and camera are references; neither contributes to model symmetry.
     [[1, 0, 0], [0, 1, 0], [0, 0, 1]].forEach((v, i) => { line([[0, 0, 0], M.scale(v, radius * 1.15)], '#7f96a247', .7); const q = project(M.scale(v, radius * 1.17)); ctx.font = '10px system-ui'; ctx.fillStyle = '#718692'; ctx.fillText(['x', 'y', 'z'][i], q.x + 5, q.y); });
@@ -2025,6 +3604,7 @@
   new MutationObserver(observeAtlas).observe($('atlas-detail'), { childList: true, attributes: true, attributeFilter: ['hidden'] });
   new MutationObserver(() => { if ($('page-atlas').hidden) { stop(); update(); } else draw(); }).observe($('page-atlas'), { attributes: true, attributeFilter: ['hidden'] });
   new ResizeObserver(() => requestAnimationFrame(draw)).observe(canvas);
+  document.addEventListener('symmetry-language-change', draw);
   document.addEventListener('visibilitychange', () => { if (document.hidden) { stop(); update(); } });
   observeAtlas();
 })();
@@ -2129,8 +3709,11 @@
     });
     line([0, 0, -1.4], [0, 0, 1.8], '#217b7880', 1.3, true);
     const axisTip = project([0, 0, 1.9]); ctx.fillStyle = colors.teal; ctx.font = '11px system-ui';
-    if (state.view === 'top') ctx.fillText('沿 z 轴看 · c 垂直屏幕 ⊙', w - 153, 68);
-    else ctx.fillText('z · 旋转轴', axisTip.x + 8, axisTip.y);
+    if (state.view === 'top') {
+      ctx.textAlign = 'right';
+      ctx.fillText(window.SymmetryI18n ? window.SymmetryI18n.t('沿 z 轴看 · c 垂直屏幕 ⊙') : '沿 z 轴看 · c 垂直屏幕 ⊙', w - 18, 68);
+      ctx.textAlign = 'start';
+    } else ctx.fillText(window.SymmetryI18n ? window.SymmetryI18n.t('z · 旋转轴') : 'z · 旋转轴', axisTip.x + 8, axisTip.y);
     const theta = angle() * state.progress, ended = state.progress >= 1 - 1e-9;
     const dots = [];
     points.forEach(p => {
@@ -2177,6 +3760,7 @@
     } else if (e.key === ' ') { e.preventDefault(); play(); }
   });
   new ResizeObserver(() => requestAnimationFrame(draw)).observe(canvas);
+  document.addEventListener('symmetry-language-change', draw);
   new MutationObserver(() => { if ($('page-atlas').hidden) { stop(); update(); } else draw(); }).observe($('page-atlas'), { attributes: true, attributeFilter: ['hidden'] });
   document.addEventListener('visibilitychange', () => { if (document.hidden) { stop(); update(); } });
   refresh();
@@ -2302,7 +3886,7 @@
     if (q.hemisphere !== 'equator') line([pole, target], '#c98a38', 1.8);
     const targetP = project(target); ctx.beginPath(); ctx.arc(targetP.x, targetP.y, 4.5, 0, Math.PI * 2); ctx.strokeStyle = '#c98a38'; ctx.lineWidth = 1.5; ctx.stroke();
     [[[0, 0, 1], 'N'], [[0, 0, -1], 'S']].forEach(([p, name]) => { const v = project(p); ctx.font = '12px system-ui'; ctx.fillStyle = '#557080'; ctx.fillText(name, v.x + 8, v.y + 4); });
-    const directionP = project(selected.direction); ctx.fillStyle = '#a26b22'; ctx.font = '11px system-ui'; ctx.fillText('P' + selected.id, directionP.x + 8, directionP.y - 7); ctx.fillText('投影点', targetP.x + 8, targetP.y + 13);
+    const directionP = project(selected.direction); ctx.fillStyle = '#a26b22'; ctx.font = '11px system-ui'; ctx.fillText('P' + selected.id, directionP.x + 8, directionP.y - 7); ctx.fillText(window.SymmetryI18n ? window.SymmetryI18n.t('投影点') : '投影点', targetP.x + 8, targetP.y + 13);
   }
   $('stereo-group-select').addEventListener('change', e => { state.hm = e.target.value; state.selected = 0; update(); document.dispatchEvent(new CustomEvent('symmetry-atlas-select', { detail: { hm: state.hm } })); });
   ['stereo-polar', 'stereo-azimuth'].forEach(id => $(id).addEventListener('input', () => { state.polar = Number($('stereo-polar').value); state.azimuth = Number($('stereo-azimuth').value); state.selected = 0; update(); }));
@@ -2325,6 +3909,7 @@
   const page = document.getElementById('page-advanced');
   if (page) new MutationObserver(() => { if (!page.hidden) requestAnimationFrame(drawSphere); }).observe(page, { attributes: true, attributeFilter: ['hidden'] });
   update();
+  document.addEventListener('symmetry-language-change', drawSphere);
   window.SymmetryStereoView = { setGroup(hm) { if (P.getGroup(hm)) { state.hm = hm; state.selected = 0; update(); } }, redraw: drawSphere };
 })();
 
@@ -2653,6 +4238,7 @@
   const page = $('page-crystal');
   if (page) new MutationObserver(() => { if (page.hidden) { cancelAnimationFrame(redrawFrame); redrawFrame = 0; } else scheduleDraw(); }).observe(page, { attributes: true, attributeFilter: ['hidden'] });
   document.addEventListener('visibilitychange', () => { if (document.hidden) { cancelAnimationFrame(redrawFrame); redrawFrame = 0; } else scheduleDraw(); });
+  document.addEventListener('symmetry-language-change', scheduleDraw);
   render();
 })();
 
@@ -2684,10 +4270,11 @@
       const project=p=>{const q=M.subtract(p,center),x=Math.cos(cam.yaw)*q[0]-Math.sin(cam.yaw)*q[1],y=Math.sin(cam.yaw)*q[0]+Math.cos(cam.yaw)*q[1];return{x:w/2+x*scale,y:h*.54-(Math.cos(cam.pitch)*q[2]+Math.sin(cam.pitch)*y)*scale,depth:-Math.cos(cam.pitch)*y+Math.sin(cam.pitch)*q[2]};};
       const line=(points,color,dash=[])=>{if(!points.length)return;ctx.beginPath();points.forEach((p,i)=>{const q=project(p);if(!i)ctx.moveTo(q.x,q.y);else ctx.lineTo(q.x,q.y);});ctx.strokeStyle=color;ctx.lineWidth=1.2;ctx.setLineDash(dash);ctx.stroke();ctx.setLineDash([]);};
       (data.lines||[]).forEach(l=>line(l.points,l.color||'#087e8277',l.dash||[]));
-      (data.points||[]).map(p=>({...p,q:project(p.position)})).sort((a,b)=>a.q.depth-b.q.depth).forEach(p=>{ctx.beginPath();ctx.arc(p.q.x,p.q.y,p.radius?Math.max(3,p.radius*scale):5,0,2*Math.PI);ctx.fillStyle=p.hollow?'#ffffffc9':p.color||'#087e82';ctx.fill();ctx.strokeStyle=p.color||'#087e82';ctx.lineWidth=1.5;ctx.stroke();if(p.label){ctx.fillStyle='#17384b';ctx.font='10px system-ui';ctx.fillText(p.label,p.q.x+8,p.q.y-8);}});
+      (data.points||[]).map(p=>({...p,q:project(p.position)})).sort((a,b)=>a.q.depth-b.q.depth).forEach(p=>{ctx.beginPath();ctx.arc(p.q.x,p.q.y,p.radius?Math.max(3,p.radius*scale):5,0,2*Math.PI);ctx.fillStyle=p.hollow?'#ffffffc9':p.color||'#087e82';ctx.fill();ctx.strokeStyle=p.color||'#087e82';ctx.lineWidth=1.5;ctx.stroke();if(p.label){ctx.fillStyle='#17384b';ctx.font='10px system-ui';ctx.fillText(window.SymmetryI18n ? window.SymmetryI18n.t(p.label) : p.label,p.q.x+8,p.q.y-8);}});
     }
   }
   function render(){sceneList.forEach(s=>s.draw());}
+  document.addEventListener('symmetry-language-change', render);
   function axes(radius){return[[1,0,0],[0,1,0],[0,0,1]].map((v,i)=>({points:[M.scale(v,-radius),M.scale(v,radius)],color:['#7290ad88','#7c9f8288','#b3916c88'][i],dash:[4,5]}));}
 
   $('subgroup-root').innerHTML=section('少一些操作，仍然是一个群','不能随便删掉操作：保留下来的集合仍要包含 E，并满足闭包与逆元。',

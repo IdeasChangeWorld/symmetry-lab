@@ -24,10 +24,11 @@
       const project=p=>{const q=M.subtract(p,center),x=Math.cos(cam.yaw)*q[0]-Math.sin(cam.yaw)*q[1],y=Math.sin(cam.yaw)*q[0]+Math.cos(cam.yaw)*q[1];return{x:w/2+x*scale,y:h*.54-(Math.cos(cam.pitch)*q[2]+Math.sin(cam.pitch)*y)*scale,depth:-Math.cos(cam.pitch)*y+Math.sin(cam.pitch)*q[2]};};
       const line=(points,color,dash=[])=>{if(!points.length)return;ctx.beginPath();points.forEach((p,i)=>{const q=project(p);if(!i)ctx.moveTo(q.x,q.y);else ctx.lineTo(q.x,q.y);});ctx.strokeStyle=color;ctx.lineWidth=1.2;ctx.setLineDash(dash);ctx.stroke();ctx.setLineDash([]);};
       (data.lines||[]).forEach(l=>line(l.points,l.color||'#087e8277',l.dash||[]));
-      (data.points||[]).map(p=>({...p,q:project(p.position)})).sort((a,b)=>a.q.depth-b.q.depth).forEach(p=>{ctx.beginPath();ctx.arc(p.q.x,p.q.y,p.radius?Math.max(3,p.radius*scale):5,0,2*Math.PI);ctx.fillStyle=p.hollow?'#ffffffc9':p.color||'#087e82';ctx.fill();ctx.strokeStyle=p.color||'#087e82';ctx.lineWidth=1.5;ctx.stroke();if(p.label){ctx.fillStyle='#17384b';ctx.font='10px system-ui';ctx.fillText(p.label,p.q.x+8,p.q.y-8);}});
+      (data.points||[]).map(p=>({...p,q:project(p.position)})).sort((a,b)=>a.q.depth-b.q.depth).forEach(p=>{ctx.beginPath();ctx.arc(p.q.x,p.q.y,p.radius?Math.max(3,p.radius*scale):5,0,2*Math.PI);ctx.fillStyle=p.hollow?'#ffffffc9':p.color||'#087e82';ctx.fill();ctx.strokeStyle=p.color||'#087e82';ctx.lineWidth=1.5;ctx.stroke();if(p.label){ctx.fillStyle='#17384b';ctx.font='10px system-ui';ctx.fillText(window.SymmetryI18n ? window.SymmetryI18n.t(p.label) : p.label,p.q.x+8,p.q.y-8);}});
     }
   }
   function render(){sceneList.forEach(s=>s.draw());}
+  document.addEventListener('symmetry-language-change', render);
   function axes(radius){return[[1,0,0],[0,1,0],[0,0,1]].map((v,i)=>({points:[M.scale(v,-radius),M.scale(v,radius)],color:['#7290ad88','#7c9f8288','#b3916c88'][i],dash:[4,5]}));}
 
   $('subgroup-root').innerHTML=section('少一些操作，仍然是一个群','不能随便删掉操作：保留下来的集合仍要包含 E，并满足闭包与逆元。',

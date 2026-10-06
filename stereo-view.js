@@ -116,7 +116,7 @@
     if (q.hemisphere !== 'equator') line([pole, target], '#c98a38', 1.8);
     const targetP = project(target); ctx.beginPath(); ctx.arc(targetP.x, targetP.y, 4.5, 0, Math.PI * 2); ctx.strokeStyle = '#c98a38'; ctx.lineWidth = 1.5; ctx.stroke();
     [[[0, 0, 1], 'N'], [[0, 0, -1], 'S']].forEach(([p, name]) => { const v = project(p); ctx.font = '12px system-ui'; ctx.fillStyle = '#557080'; ctx.fillText(name, v.x + 8, v.y + 4); });
-    const directionP = project(selected.direction); ctx.fillStyle = '#a26b22'; ctx.font = '11px system-ui'; ctx.fillText('P' + selected.id, directionP.x + 8, directionP.y - 7); ctx.fillText('投影点', targetP.x + 8, targetP.y + 13);
+    const directionP = project(selected.direction); ctx.fillStyle = '#a26b22'; ctx.font = '11px system-ui'; ctx.fillText('P' + selected.id, directionP.x + 8, directionP.y - 7); ctx.fillText(window.SymmetryI18n ? window.SymmetryI18n.t('投影点') : '投影点', targetP.x + 8, targetP.y + 13);
   }
   $('stereo-group-select').addEventListener('change', e => { state.hm = e.target.value; state.selected = 0; update(); document.dispatchEvent(new CustomEvent('symmetry-atlas-select', { detail: { hm: state.hm } })); });
   ['stereo-polar', 'stereo-azimuth'].forEach(id => $(id).addEventListener('input', () => { state.polar = Number($('stereo-polar').value); state.azimuth = Number($('stereo-azimuth').value); state.selected = 0; update(); }));
@@ -139,5 +139,6 @@
   const page = document.getElementById('page-advanced');
   if (page) new MutationObserver(() => { if (!page.hidden) requestAnimationFrame(drawSphere); }).observe(page, { attributes: true, attributeFilter: ['hidden'] });
   update();
+  document.addEventListener('symmetry-language-change', drawSphere);
   window.SymmetryStereoView = { setGroup(hm) { if (P.getGroup(hm)) { state.hm = hm; state.selected = 0; update(); } }, redraw: drawSphere };
 })();

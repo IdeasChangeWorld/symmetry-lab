@@ -148,7 +148,7 @@
     if (op.axis && ['rotation', 'rotoinversion', 'improper'].includes(op.type)) {
       const length = radius * 1.3;
       line([M.scale(op.axis, -length), M.scale(op.axis, length)], '#217b78c0', 2, [6, 4]);
-      const q = project(M.scale(op.axis, length)); ctx.font = '11px system-ui'; ctx.fillStyle = '#217b78'; ctx.fillText('所选轴', q.x + 7, q.y + 3);
+      const q = project(M.scale(op.axis, length)); ctx.font = '11px system-ui'; ctx.fillStyle = '#217b78'; ctx.fillText(window.SymmetryI18n ? window.SymmetryI18n.t('所选轴') : '所选轴', q.x + 7, q.y + 3);
     }
     // Coordinate guides and camera are references; neither contributes to model symmetry.
     [[1, 0, 0], [0, 1, 0], [0, 0, 1]].forEach((v, i) => { line([[0, 0, 0], M.scale(v, radius * 1.15)], '#7f96a247', .7); const q = project(M.scale(v, radius * 1.17)); ctx.font = '10px system-ui'; ctx.fillStyle = '#718692'; ctx.fillText(['x', 'y', 'z'][i], q.x + 5, q.y); });
@@ -215,6 +215,7 @@
   new MutationObserver(observeAtlas).observe($('atlas-detail'), { childList: true, attributes: true, attributeFilter: ['hidden'] });
   new MutationObserver(() => { if ($('page-atlas').hidden) { stop(); update(); } else draw(); }).observe($('page-atlas'), { attributes: true, attributeFilter: ['hidden'] });
   new ResizeObserver(() => requestAnimationFrame(draw)).observe(canvas);
+  document.addEventListener('symmetry-language-change', draw);
   document.addEventListener('visibilitychange', () => { if (document.hidden) { stop(); update(); } });
   observeAtlas();
 })();

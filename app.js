@@ -224,7 +224,7 @@
         if (data.labels) { ctx.font = '500 ' + Math.max(10, Math.min(12, r * .75)) + 'px system-ui'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#17384b'; ctx.fillText(atom.id, q.x, q.y + .5); ctx.textAlign = 'start'; ctx.textBaseline = 'alphabetic'; }
         this.hits.push({ x: q.x, y: q.y, r, index });
       });
-      if (data.caption) { ctx.fillStyle = '#637a86'; ctx.font = '10px system-ui'; ctx.textAlign = 'center'; ctx.fillText(data.caption, w / 2, h - 10); ctx.textAlign = 'start'; }
+      if (data.caption) { ctx.fillStyle = '#637a86'; ctx.font = '10px system-ui'; ctx.textAlign = 'center'; ctx.fillText(window.SymmetryI18n ? window.SymmetryI18n.t(data.caption) : data.caption, w / 2, h - 10); ctx.textAlign = 'start'; }
     }
   }
   function markFreeCamera() { document.querySelectorAll('[data-view]').forEach(el => { el.classList.remove('active'); el.setAttribute('aria-pressed', 'false'); }); }
@@ -360,6 +360,7 @@
   $('source-links').innerHTML = L.sources.map(source => '<a href="' + escapeHTML(source.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHTML(source.title) + ' ↗</a>').join('');
   new Scene($('main-canvas'), mainSceneData, true); new Scene($('ab-canvas'), () => compositionScene(false)); new Scene($('ba-canvas'), () => compositionScene(true));
   const observer = new ResizeObserver(() => requestAnimationFrame(renderAll)); scenes.forEach(scene => observer.observe(scene.canvas));
+  document.addEventListener('symmetry-language-change', renderAll);
   document.addEventListener('visibilitychange', () => { if (document.hidden) { stop(); updateDynamic(); } });
   setModel('water'); renderAtlas(); updateComposition(); renderCayleyTable(); renderQuiz(); selectPage(location.hash.slice(1) || 'lab', false);
 })();

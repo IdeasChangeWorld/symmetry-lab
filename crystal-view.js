@@ -321,5 +321,6 @@
   const page = $('page-crystal');
   if (page) new MutationObserver(() => { if (page.hidden) { cancelAnimationFrame(redrawFrame); redrawFrame = 0; } else scheduleDraw(); }).observe(page, { attributes: true, attributeFilter: ['hidden'] });
   document.addEventListener('visibilitychange', () => { if (document.hidden) { cancelAnimationFrame(redrawFrame); redrawFrame = 0; } else scheduleDraw(); });
+  document.addEventListener('symmetry-language-change', scheduleDraw);
   render();
 })();

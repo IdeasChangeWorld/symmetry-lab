@@ -5,7 +5,7 @@ import re
 
 project = Path(__file__).resolve().parent
 html = (project / "index.html").read_text(encoding="utf-8")
-for name in ("styles.css", "course.css", "stereo.css", "crystal.css"):
+for name in ("styles.css", "course.css", "stereo.css", "crystal.css", "i18n.css"):
     css = (project / name).read_text(encoding="utf-8")
     pattern = r'<link rel="stylesheet" href="' + re.escape(name) + r'(?:\?[^\"]*)?">'
     html, count = re.subn(pattern, lambda _: "<style>\n" + css + "\n</style>", html)
@@ -13,7 +13,7 @@ for name in ("styles.css", "course.css", "stereo.css", "crystal.css"):
         raise ValueError("Expected exactly one style link for " + name)
 
 scripts = []
-for name in ("math.js", "lattice-math.js", "learning-data.js", "point-group-math.js", "advanced-math.js", "course-math.js", "crystal-math.js", "app.js", "point-group-view.js", "lattice-view.js", "stereo-view.js", "crystal-view.js", "course-view.js"):
+for name in ("i18n.js", "i18n-static.js", "i18n-core.js", "i18n-crystal.js", "i18n-course.js", "math.js", "lattice-math.js", "learning-data.js", "point-group-math.js", "advanced-math.js", "course-math.js", "crystal-math.js", "app.js", "point-group-view.js", "lattice-view.js", "stereo-view.js", "crystal-view.js", "course-view.js"):
     source = (project / name).read_text(encoding="utf-8").replace("</script", "<\\/script")
     scripts.append("// " + name + "\n" + source)
     pattern = r'<script defer src="' + re.escape(name) + r'(?:\?[^\"]*)?"></script>'

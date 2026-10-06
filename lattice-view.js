@@ -96,8 +96,11 @@
     });
     line([0, 0, -1.4], [0, 0, 1.8], '#217b7880', 1.3, true);
     const axisTip = project([0, 0, 1.9]); ctx.fillStyle = colors.teal; ctx.font = '11px system-ui';
-    if (state.view === 'top') ctx.fillText('沿 z 轴看 · c 垂直屏幕 ⊙', w - 153, 68);
-    else ctx.fillText('z · 旋转轴', axisTip.x + 8, axisTip.y);
+    if (state.view === 'top') {
+      ctx.textAlign = 'right';
+      ctx.fillText(window.SymmetryI18n ? window.SymmetryI18n.t('沿 z 轴看 · c 垂直屏幕 ⊙') : '沿 z 轴看 · c 垂直屏幕 ⊙', w - 18, 68);
+      ctx.textAlign = 'start';
+    } else ctx.fillText(window.SymmetryI18n ? window.SymmetryI18n.t('z · 旋转轴') : 'z · 旋转轴', axisTip.x + 8, axisTip.y);
     const theta = angle() * state.progress, ended = state.progress >= 1 - 1e-9;
     const dots = [];
     points.forEach(p => {
@@ -144,6 +147,7 @@
     } else if (e.key === ' ') { e.preventDefault(); play(); }
   });
   new ResizeObserver(() => requestAnimationFrame(draw)).observe(canvas);
+  document.addEventListener('symmetry-language-change', draw);
   new MutationObserver(() => { if ($('page-atlas').hidden) { stop(); update(); } else draw(); }).observe($('page-atlas'), { attributes: true, attributeFilter: ['hidden'] });
   document.addEventListener('visibilitychange', () => { if (document.hidden) { stop(); update(); } });
   refresh();
